@@ -334,39 +334,51 @@ def build_home():
 
     ser = SERIES["series"]
 
-    def watch_url(s):
+    def ids(s):
         if s.get("external"):
-            return s["external"]["url"]
-        vids = [v for v in s["videos"] if not v.get("short")] or s["videos"]
-        return "https://www.youtube.com/watch?v=" + vids[0]["id"]
+            return []
+        long = [v["id"] for v in s["videos"] if not v.get("short")]
+        short = [v["id"] for v in s["videos"] if v.get("short")]
+        return long + short
 
-    first, rest = ser[0], ser[1:]
-    rows = "".join(f'<li><a class="sl" href="{esc(watch_url(x))}"><span class="sl-pic{" sl-pic--sq" if x.get("square") else ""}">'
-                   + img(x["cover"], sizes="(min-width: 900px) 180px, 34vw", focal=False)
-                   + f'</span><span class="sl-txt"><span class="sl-t">{esc(x["title"])}</span><span class="sl-l">{esc(x["line"])}</span></span>'
-                   + '<span class="sl-go" aria-hidden="true">&rarr;</span></a></li>' for x in rest)
-    lately = (f'<section class="sec series3" id="series" aria-labelledby="series-h"><div class="wrap">'
-              f'<div class="series3-head rv"><p class="kicker">{esc(h["latelyKicker"])}</p><h2 class="sec-h" id="series-h">Series</h2>'
+    def cover_src(s, w):
+        im = IMAGES[s["cover"]]
+        ws = [x for x in im["widths"] if x <= w] or im["widths"][:1]
+        return url(f'/img/{im["file"]}-{ws[-1]}.webp')
+
+    payload = [{"slug": s["slug"], "title": s["title"], "line": s["line"], "ids": ids(s),
+                "href": s["external"]["url"] if s.get("external") else "",
+                "cover": cover_src(s, 1280), "thumb": cover_src(s, 640), "alt": IMAGES[s["cover"]]["alt"],
+                "sq": bool(s.get("square"))} for s in ser]
+    first = ser[0]
+    rows = "".join(
+        (f'<li><a class="sl" href="{esc(s["external"]["url"])}">' if s.get("external") else f'<li{" hidden" if s is first else ""}><button class="sl" type="button" data-pick="{esc(s["slug"])}">')
+        + f'<span class="sl-pic{" sl-pic--sq" if s.get("square") else ""}">' + img(s["cover"], sizes="(min-width: 900px) 150px, 34vw", focal=False)
+        + f'</span><span class="sl-txt"><span class="sl-t">{esc(s["title"])}</span><span class="sl-l">{esc(s["line"])}</span></span>'
+        + ('<span class="sl-go" aria-hidden="true">&nearr;</span></a></li>' if s.get("external") else '<span class="sl-go" aria-hidden="true">&rarr;</span></button></li>')
+        for s in ser)
+    lately = (f'<section class="sec series3" id="series" aria-labelledby="series-h"><div class="wrap wrap--narrow">'
+              f'<div class="series3-head rv"><h2 class="sec-h" id="series-h">{esc(h["latelyTitle"])}</h2>'
               f'<p class="series3-line">{esc(h["latelyLine"])}</p></div>'
-              f'<div class="series3-grid">'
-              f'<a class="ft3 rv" href="{esc(watch_url(first))}"><span class="ft3-pic">' + img(first["cover"], sizes="(min-width: 900px) 56vw, 100vw", focal=False)
-              + '<span class="ft3-tag">Latest</span></span>'
-              + f'<span class="ft3-t">{esc(first["title"])}</span><span class="ft3-l">{esc(first["line"])}</span><span class="ft3-go">Watch on YouTube &rarr;</span></a>'
-              + f'<ul class="sl-list rv">{rows}</ul>'
-              + '</div></div></section>')
+              f'<div class="series3-grid" data-series>'
+              f'<div class="ft3 rv"><div class="ft3-pic"><img data-ft-img src="{esc(cover_src(first, 1280))}" alt="{esc(IMAGES[first["cover"]]["alt"])}" width="1280" height="720" loading="lazy">'
+              f'<span class="ft3-tag" data-ft-tag>Latest</span>'
+              f'<button class="play" type="button" data-play aria-label="Play {esc(first["title"])}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></button></div>'
+              f'<h3 class="ft3-t" data-ft-title>{esc(first["title"])}</h3><p class="ft3-l" data-ft-line>{esc(first["line"])}</p></div>'
+              f'<ul class="sl-list rv" data-list>{rows}</ul>'
+              f'</div></div>'
+              f'<script type="application/json" id="series-data">{json.dumps(payload, ensure_ascii=False).replace("</", "<\\/")}</script>'
+              f'<dialog class="player" data-player aria-label="Video player"><div class="player-in"><button class="player-x" type="button" data-close aria-label="Close video">&times;</button>'
+              f'<div class="player-frame" data-frame></div></div></dialog>'
+              f'</section>')
 
-    career = "".join(f'<li><span class="cr-k">{esc(k)}</span><span class="cr-v">{esc(v)}</span></li>' for k, v in h["career"])
-    cut = url("/img/tommy-founder-cutout-1600.webp")
-    cut_s = url("/img/tommy-founder-cutout-900.webp")
-    about = (f'<section class="sec about4" id="about" aria-labelledby="about-h"><div class="wrap about4-in">'
-             f'<div class="about4-stage rv" aria-hidden="true"><span class="about4-word">About</span>'
-             f'<img class="about4-cut" src="{esc(cut)}" srcset="{esc(cut_s)} 346w, {esc(cut)} 615w" sizes="(min-width: 900px) 300px, 46vw" width="615" height="1600" alt="" loading="lazy"></div>'
-             f'<div class="about4-text rv"><h2 class="sec-h" id="about-h">About Tommy Jackett</h2>'
-             f'<p class="about4-bio">{esc(h["aboutBio"])}</p>'
-             f'<ul class="career">{career}</ul>'
-             f'<div class="about4-vp"><p>{esc(h["aboutVidpodLine"])}</p><a class="btn btn--ghost" href="https://www.vidpod.com.au">Visit VIDPOD</a></div>'
-             f'</div></div></section>')
-    
+    about = (f'<section class="sec about5" id="about" aria-labelledby="about-h"><div class="wrap wrap--narrow about5-in">'
+             f'<figure class="about5-pic rv">' + img("salt-flats-tommy-portrait", sizes="(min-width: 900px) 380px, 100vw") + '</figure>'
+             f'<div class="about5-text rv"><h2 class="sec-h" id="about-h">About Tommy Jackett</h2>'
+             f'<p class="about5-bio">{esc(h["aboutBio"])}</p>'
+             f'<p class="about5-vp">{esc(h["aboutVidpodLine"])}</p>'
+             f'<a class="btn btn--ghost" href="https://www.vidpod.com.au">Visit VIDPOD</a></div>'
+             f'</div></section>')
 
     contact = f'''<section class="sec contact2" id="contact" aria-labelledby="contact-h"><div class="wrap contact2-in">
 <div class="rv"><h2 class="sec-h" id="contact-h">Get in touch</h2><p>{esc(h["contactLine"])}</p></div>
