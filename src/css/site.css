@@ -512,3 +512,69 @@ h0 clamp(1.3rem, 1.05rem + 1.1vw, 1.9rem)/1.2 var(--serif); color: var(--ink); m
 
 .contact2-in { display: grid; gap: 32px; }
 @media (min-width: 900px) { .contact2-in { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 6vw; } }
+
+/* ---------- 20 Oct pm: doco poster to the edge, series carousel, series page ---------- */
+.doco2 { padding-top: 0; }
+.doco2-in { display: grid; gap: 0; }
+.doco2-poster { margin: 0; }
+.doco2-poster img { width: 100%; height: auto; display: block; }
+.doco2-info { padding: 36px var(--gut) 0; }
+.doco2-now { margin-top: 18px !important; color: var(--ink) !important; font-weight: 500; }
+@media (min-width: 900px) {
+  .doco2 { padding: 0; }
+  .doco2-in { grid-template-columns: min(50vw, calc(100svh * .7)) minmax(0, 1fr); align-items: center; gap: 0; }
+  .doco2-poster img { max-height: 100svh; width: auto; max-width: 100%; }
+  .doco2-info { padding: 60px var(--gut) 60px 6vw; max-width: 46rem; }
+}
+
+.lately { overflow: hidden; }
+.lately-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; }
+.lately-line { margin-top: -6px; }
+.cf-nav { display: none; gap: 10px; }
+.cf-btn { width: 48px; height: 48px; border-radius: 0; border: 1px solid var(--ink-3); background: transparent; color: var(--ink); font-size: 1.1rem; cursor: pointer; }
+.cf-btn:hover { border-color: var(--ink); }
+@media (min-width: 900px) { .cf-nav { display: flex; } }
+.cf { --cw: min(76vw, 470px); overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; perspective: 1400px; padding: 28px 0 36px; }
+.cf::-webkit-scrollbar { display: none; }
+.cf-track { list-style: none; margin: 0; display: flex; gap: clamp(12px, 2vw, 26px); padding: 0 calc(50% - var(--cw) / 2); transform-style: preserve-3d; }
+.cf-card { flex: 0 0 var(--cw); scroll-snap-align: center; will-change: transform; transform-style: preserve-3d; }
+.cf-card a { display: block; color: var(--ink); text-decoration: none; }
+.cf-cover { display: block; aspect-ratio: 16 / 9; overflow: hidden; background: var(--bg-2); box-shadow: 0 30px 60px -30px rgba(0,0,0,.8); }
+.cf-cover img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.cf-card--sq .cf-cover img { object-fit: contain; background: #0e5e5c; }
+.cf-t { display: block; margin-top: 16px; font: 400 clamp(1.3rem, 1.1rem + 1vw, 1.9rem)/1 var(--display); text-transform: uppercase; }
+.lately-foot { margin-top: 8px; }
+.lately-foot .btn { margin: 0; }
+
+.about2-in { display: grid; gap: 32px; }
+.about2-pic { margin: 0; }
+.about2-pic img { width: 100%; height: auto; display: block; aspect-ratio: 4 / 5; object-fit: cover; }
+@media (min-width: 900px) { .about2-in { grid-template-columns: minmax(0, 4fr) minmax(0, 6fr); gap: 6vw; align-items: center; } .about2-pic { max-width: 440px; } }
+
+/* series page */
+.series-pg main { padding-top: 0; }
+.sr-top { padding-top: clamp(120px, 16vw, 190px); padding-bottom: clamp(30px, 5vw, 60px); }
+.sr-intro { max-width: 34rem; color: var(--ink-2); font-size: 1.0625rem; line-height: 1.6; }
+.sr { display: grid; gap: 22px; padding: clamp(40px, 7vw, 90px) 0; border-top: 1px solid var(--rule); scroll-margin-top: 80px; }
+.sr-pic { margin: 0; }
+.sr-pic img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block; }
+.sr-pic--sq img { object-fit: contain; background: #0e5e5c; }
+.sr-h { font: 400 clamp(2rem, 1.5rem + 2.6vw, 3.6rem)/.92 var(--display); text-transform: uppercase; margin: 0 0 16px; }
+.sr-info p { max-width: 34rem; color: var(--ink-2); font-size: 1.0625rem; line-height: 1.6; }
+.sr-btns { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+.sr-btns .btn { margin: 0; padding-left: 18px; padding-right: 18px; }
+@media (min-width: 900px) {
+  .sr { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 5vw; align-items: center; }
+  .sr--flip .sr-pic { order: 2; }
+}
+.st2-wrap { padding: clamp(50px, 8vw, 110px) var(--gut); border-top: 1px solid var(--rule); }
+.st2-title { margin-bottom: 30px; }
+.st2-grid { display: grid; gap: 40px 28px; }
+@media (min-width: 700px) { .st2-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1100px) { .st2-grid { grid-template-columns: repeat(3, 1fr); } }
+.st2 { scroll-margin-top: 80px; }
+.st2 figure { margin: 0 0 14px; }
+.st2 img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block; }
+.st2-h { font: 400 1.6rem/1 var(--display); text-transform: uppercase; margin: 0 0 8px; }
+.st2 p { color: var(--ink-2); }
+.st2 .sr-btns { margin-top: 14px; }

@@ -32,6 +32,7 @@ def load(name):
 
 
 SITE, STORIES, PAGES, LINKS, FORM = load("site"), load("stories"), load("pages"), load("links"), load("form")
+SERIES = load("series")
 IMAGES = {i["id"]: i for i in load("images")}
 LINK = {l["id"]: l for l in LINKS}
 P = {"base": "", "url": "", "prod": False, "bake_after": False, "versions": {}}
@@ -297,35 +298,32 @@ def build_home():
 <p><a class="btn" href="{esc(WATCH)}">{esc(h["heroButton"])}</a></p>
 </div></section>'''
 
-    rows = [("film-site", "Official site"), ("film-press", "Press kit"), ("film-youtube", "YouTube channel"), ("film-imdb", "IMDb")]
-    links = "".join(f'<li><a href="{esc(LINK[i]["url"])}">{esc(l)}<span aria-hidden="true">&rarr;</span></a></li>' for i, l in rows if lnk(i))
-    doco = f'''<section class="sec doco2" id="doco" aria-labelledby="doco-h"><div class="wrap doco2-in">
-<figure class="doco2-poster rv">{img("igwt-poster", sizes="(min-width: 900px) 34vw, 100vw")}</figure>
+    doco = f'''<section class="sec doco2" id="doco" aria-labelledby="doco-h"><div class="doco2-in">
+<figure class="doco2-poster rv">{img("igwt-poster", sizes="(min-width: 900px) 50vw, 100vw")}</figure>
 <div class="doco2-info rv">
 <p class="kicker">Our feature documentary</p>
 <h2 class="sec-h" id="doco-h">In Guns We Trust</h2>
 <p class="doco2-syn">{esc(h["docoSyn"])}</p>
+<p class="doco2-now">{esc(h["docoNow"])}</p>
 <div class="doco2-btns"><a class="btn" href="{esc(WATCH)}">Watch on YouTube</a><a class="btn btn--ghost" href="{esc(LINK["film-site"]["url"])}">About the doco</a></div>
-<ul class="doco2-links">{links}</ul>
-<p class="small doco2-note">{esc(f["contentNoteShort"])}</p>
 </div></div></section>'''
 
-    S = {s["slug"]: s for s in STORIES}
-    ra = S["jackett-ranch"]
-    v1 = ra["videos"][0]
-    ranch = f'''<section class="sec ranch2" id="ranch" aria-labelledby="ranch-h"><div class="wrap ranch2-in">
-<div class="ranch2-info rv">
-<p class="kicker">What I'm working on</p>
-<h2 class="sec-h" id="ranch-h">{esc(ra["title"])}</h2>
-<p>{esc(h["ranchLine"])}</p>
-<div class="doco2-btns"><a class="btn btn--ghost" href="https://www.youtube.com/watch?v={esc(v1["id"])}">Watch Part 1</a></div>
-</div>
-<figure class="ranch2-pic rv">{img(ra["homeTile"], sizes="(min-width: 900px) 34vw, 100vw")}</figure>
-</div></section>'''
+    cards = []
+    for s in SERIES["series"] + [t for t in SERIES["tests"] if t["slug"] in SERIES.get("homeExtra", [])]:
+        cards.append(f'''<li class="cf-card{" cf-card--sq" if s.get("square") else ""}"><a href="{esc(url("/series/"))}#{esc(s["slug"])}">
+<span class="cf-cover">{img(s["cover"], sizes="(min-width: 900px) 420px, 78vw", focal=False)}</span>
+<span class="cf-t">{esc(s["title"])}</span></a></li>''')
+    lately = f'''<section class="sec lately" id="lately" aria-labelledby="lately-h">
+<div class="wrap lately-head rv"><div><p class="kicker">{esc(h["latelyKicker"])}</p><h2 class="sec-h" id="lately-h">Series</h2><p class="lately-line">{esc(h["latelyLine"])}</p></div>
+<div class="cf-nav"><button class="cf-btn" type="button" data-cf="prev" aria-label="Previous series">&larr;</button><button class="cf-btn" type="button" data-cf="next" aria-label="Next series">&rarr;</button></div></div>
+<div class="cf" data-coverflow><ul class="cf-track">{"".join(cards)}</ul></div>
+<div class="wrap lately-foot rv"><a class="btn btn--ghost" href="{esc(url("/series/"))}">See all the series</a></div>
+</section>'''
 
-    about = f'''<section class="sec about2" id="about" aria-labelledby="about-h"><div class="wrap about2-in rv">
-<h2 class="sec-h" id="about-h">About</h2>
-<p class="about2-t">{esc(h["aboutText"])} <a class="link" href="https://www.vidpod.com.au">{esc(h["aboutVidpod"])}</a>.</p>
+    about = f'''<section class="sec about2" id="about" aria-labelledby="about-h"><div class="wrap about2-in">
+<figure class="about2-pic rv">{img("tommy-portrait-close", sizes="(min-width: 900px) 40vw, 100vw")}</figure>
+<div class="rv"><h2 class="sec-h" id="about-h">About</h2>
+<p class="about2-t">{esc(h["aboutText"])} <a class="link" href="https://www.vidpod.com.au">{esc(h["aboutVidpod"])}</a>.</p></div>
 </div></section>'''
 
     contact = f'''<section class="sec contact2" id="contact" aria-labelledby="contact-h"><div class="wrap contact2-in">
@@ -334,10 +332,47 @@ def build_home():
 </div></section>'''
 
     ld = [website_ld(), person_ld(), vidpod_ld(), movie_ld()]
-    add("/", SITE["home"]["title"], SITE["home"]["description"], "\n".join([hero, doco, ranch, about, contact]),
+    add("/", SITE["home"]["title"], SITE["home"]["description"], "\n".join([hero, doco, lately, about, contact]),
         og="salt-flats-tommy-wide", og_alt="Tommy Jackett standing alone on the Bonneville Salt Flats at dusk", ld=ld,
         cls="home", preload=["salt-flats-tommy-wide", "salt-flats-tommy-cutout"], film_credit=False, cur="")
 
+
+
+# ---------------------------------------------------------------- SERIES
+def build_series():
+    ld_videos = []
+
+    def vlinks(s):
+        if s.get("external"):
+            return f'<div class="sr-btns"><a class="btn" href="{esc(s["external"]["url"])}">{esc(s["external"]["label"])}</a></div>'
+        out = []
+        for k, v in enumerate(s["videos"]):
+            label = v["label"] if len(s["videos"]) > 1 else "Watch"
+            cls = "btn" if k == 0 else "btn btn--ghost"
+            out.append(f'<a class="{cls}" href="https://www.youtube.com/watch?v={esc(v["id"])}">{esc(label)}</a>')
+            if v.get("date"):
+                ld_videos.append({"@type": "VideoObject", "name": v["title"], "description": s["line"], "uploadDate": v["date"],
+                                  "contentUrl": "https://www.youtube.com/watch?v=" + v["id"], "embedUrl": "https://www.youtube-nocookie.com/embed/" + v["id"],
+                                  "thumbnailUrl": ["https://i.ytimg.com/vi/" + v["id"] + "/hqdefault.jpg"], "publisher": {"@id": absu("/") + "#person"}})
+        return '<div class="sr-btns">' + "".join(out) + '</div>'
+
+    blocks = []
+    for n, s in enumerate(SERIES["series"]):
+        flip = " sr--flip" if n % 2 else ""
+        sq = " sr-pic--sq" if s.get("square") else ""
+        blocks.append(f'<article class="sr{flip}" id="{esc(s["slug"])}"><figure class="sr-pic rv{sq}">'
+                      + img(s["cover"], sizes="(min-width: 900px) 50vw, 100vw", focal=False)
+                      + f'</figure><div class="sr-info rv"><h2 class="sr-h">{esc(s["title"])}</h2><p>{esc(s["line"])}</p>' + vlinks(s) + '</div></article>')
+    tests = "".join(f'<article class="st2 rv" id="{esc(s["slug"])}"><figure>' + img(s["cover"], sizes="(min-width: 900px) 40vw, 100vw", focal=False)
+                    + f'</figure><h3 class="st2-h">{esc(s["title"])}</h3><p>{esc(s["line"])}</p>' + vlinks(s) + '</article>' for s in SERIES["tests"])
+    content = (f'<div class="wrap sr-top"><p class="kicker">What I\'m up to lately</p><h1 class="sec-h">Series</h1><p class="sr-intro">{esc(SERIES["intro"])}</p></div>'
+               + '<div class="wrap sr-list">' + "".join(blocks) + '</div>')
+               
+    ld = [website_ld(), person_ld(), {"@type": "CollectionPage", "name": "Series by Tommy Jackett", "url": absu("/series/"),
+          "about": {"@id": absu("/") + "#person"}, "hasPart": ld_videos}, breadcrumb_ld([("Series", None)])]
+    add("/series/", "Series by Tommy Jackett: The Jackett Ranch, DJ Daka and more",
+        "The Jackett Ranch, DJ Daka, The Daily Talk Show, and the 7-Eleven and O Bike rabbit holes. The series Tommy Jackett makes on his own channels.",
+        content, og="thumb-ranch-part-1", og_alt="The Jackett Ranch, Part 1", ld=ld, cls="series-pg", cur="/series/")
 
 # ---------------------------------------------------------------- DOCO
 def build_doco():
@@ -704,7 +739,7 @@ def main():
     js = open(os.path.join(ROOT, "src", "js", "site.js"), encoding="utf-8").read()
     P["versions"] = {"css": hashlib.md5(css.encode()).hexdigest()[:8], "js": hashlib.md5(js.encode()).hexdigest()[:8]}
 
-    build_home(); build_404()
+    build_home(); build_series(); build_404()
 
     if os.path.exists(out):
         shutil.rmtree(out)

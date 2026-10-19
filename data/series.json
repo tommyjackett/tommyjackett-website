@@ -1,0 +1,116 @@
+{
+  "intro": "I find something that grabs me, get curious, and go down the rabbit hole. These are the series I've made on my own channels, newest first.",
+  "series": [
+    {
+      "slug": "jackett-ranch",
+      "title": "The Jackett Ranch",
+      "cover": "thumb-ranch-part-1",
+      "line": "My family bought a block of land in America in the '70s. Nobody had been to see it, so I went. Now we're giving it away.",
+      "videos": [
+        {
+          "id": "pL3OKxdFjn0",
+          "title": "My Dad Is Giving Away His Land in America",
+          "label": "Part 2",
+          "date": "2026-10-07",
+          "short": true
+        },
+        {
+          "id": "v-t6ll80OF8",
+          "title": "Driving Across America to Find My Family's Forgotten Land",
+          "label": "Part 1",
+          "date": "2026-10-06"
+        }
+      ]
+    },
+    {
+      "slug": "dj-daka",
+      "title": "DJ Daka",
+      "cover": "yt-mame-epgpuo",
+      "line": "My son wanted to be a DJ, so I backed him. He made a song for his favourite DJ, Will Sparks. Next minute, we're meeting him. Now he's got his own decks and he's playing sets.",
+      "videos": [
+        {
+          "id": "f6r0u_TsxDI",
+          "title": "He FINALLY went to a Will Sparks Concert",
+          "label": "The concert",
+          "date": "2026-05-04",
+          "short": true
+        },
+        {
+          "id": "8XlNCE0Oyhw",
+          "title": "Bodhi's Surprise LIVE on The Today Show!",
+          "label": "The Today Show"
+        },
+        {
+          "id": "maMe-epgpUo",
+          "title": "Will Sparks Surprises Kid DJ Fan!",
+          "label": "Meeting Will Sparks",
+          "date": "2023-09-06"
+        },
+        {
+          "id": "bWfKXkV5vvs",
+          "title": "From Voice Memo to A Spotify Hit!",
+          "label": "Making the song"
+        },
+        {
+          "id": "7Aa3Jxa0SmA",
+          "title": "How My 6-Year-Old Created a Will Sparks-Inspired Banga!",
+          "label": "Where it started"
+        }
+      ]
+    },
+    {
+      "slug": "the-daily-talk-show",
+      "title": "The Daily Talk Show",
+      "cover": "dts-art",
+      "square": true,
+      "line": "More than 1,000 episodes with my best mate, Josh.",
+      "external": {
+        "label": "Watch and listen",
+        "url": "https://www.thedailytalkshow.com"
+      }
+    },
+    {
+      "slug": "7-eleven",
+      "title": "The 7-Eleven Coffee Rabbit Hole",
+      "cover": "thumb-7-eleven-rabbit-hole",
+      "line": "The $3 cup fits inside the $2 cup. So I kept digging.",
+      "videos": [
+        {
+          "id": "WRFVNZgnEEM",
+          "title": "The 7-Eleven Coffee Rabbit Hole",
+          "label": "The rabbit hole",
+          "date": "2018-10-17"
+        },
+        {
+          "id": "AM-oMVi1gZ4",
+          "title": "7-Eleven Coffee Rip-Off",
+          "label": "The cup",
+          "date": "2018-09-18"
+        }
+      ]
+    },
+    {
+      "slug": "obike",
+      "title": "The O Bike Rabbit Hole",
+      "cover": "thumb-obike-rabbit-hole",
+      "line": "Melbourne was full of abandoned oBikes, so I went fishing for them in the Yarra. Then it got bigger.",
+      "videos": [
+        {
+          "id": "j5e-fhUCxmk",
+          "title": "The O Bike Rabbit Hole",
+          "label": "The rabbit hole",
+          "date": "2017-09-27"
+        },
+        {
+          "id": "Xuwl6vKiTLU",
+          "title": "Fishing For O Bikes In The Yarra River",
+          "label": "The fishing trip",
+          "date": "2017-09-23"
+        }
+      ]
+    }
+  ],
+  "tests": [],
+  "testsTitle": "Other rabbit holes",
+  "homeExtra": []
+}

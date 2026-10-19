@@ -97,3 +97,39 @@
     });
   }
 })();
+
+/* Series carousel: cards curve away from the centre as you swipe. Native scroll does the moving. */
+(function () {
+  var cf = document.querySelector('[data-coverflow]');
+  if (!cf) return;
+  var cards = [].slice.call(cf.querySelectorAll('.cf-card'));
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var ticking = false;
+  function update() {
+    ticking = false;
+    if (reduce) return;
+    var box = cf.getBoundingClientRect();
+    var mid = box.left + box.width / 2;
+    cards.forEach(function (c) {
+      var r = c.getBoundingClientRect();
+      var d = (r.left + r.width / 2 - mid) / r.width;
+      var a = Math.max(-2, Math.min(2, d));
+      var abs = Math.abs(a);
+      c.style.transform = 'rotateY(' + (-a * 24) + 'deg) translateZ(' + (-abs * 110) + 'px) scale(' + (1 - Math.min(abs, 1.5) * 0.06) + ')';
+      c.style.opacity = String(1 - Math.min(abs, 2) * 0.28);
+      c.style.zIndex = String(10 - Math.round(abs * 3));
+    });
+  }
+  function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(update); } }
+  cf.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+  function step(dir) {
+    var w = cards[0] ? cards[0].getBoundingClientRect().width + 20 : 300;
+    cf.scrollBy({ left: dir * w, behavior: reduce ? 'auto' : 'smooth' });
+  }
+  [].forEach.call(document.querySelectorAll('[data-cf]'), function (b) {
+    b.addEventListener('click', function () { step(b.getAttribute('data-cf') === 'next' ? 1 : -1); });
+  });
+  cards.forEach(function (c) { c.addEventListener('focusin', function () { c.scrollIntoView({ inline: 'center', block: 'nearest', behavior: 'smooth' }); }); });
+  update();
+})();
