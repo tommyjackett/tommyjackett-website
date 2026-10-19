@@ -328,28 +328,45 @@ def build_home():
 <h2 class="sec-h" id="doco-h">In Guns We Trust</h2>
 <p class="doco3-syn">{esc(h["docoSyn"])}</p>
 <p class="doco3-now">{esc(h["docoNow"])}</p>
+<p class="doco3-credits">Hosted by Tommy Jackett and <a href="https://joshjanssen.com">Josh Janssen</a>. Story by <a href="https://joshjanssen.com">Josh Janssen</a>, Naysan Naraqi and Tommy Jackett. Directed by <a href="https://joshjanssen.com/in-guns-we-trust/">Josh Janssen</a>.</p>
 <div class="doco3-btns"><a class="btn" href="{esc(WATCH)}">Watch on YouTube</a><a class="btn btn--ghost" href="{esc(LINK["film-site"]["url"])}">About the doco</a></div>
 </div></section>'''
 
     ser = SERIES["series"]
-    first, rest = ser[0], ser[1:]
-    rail = "".join(f'<li class="rc"><a href="{esc(url("/series/"))}#{esc(s["slug"])}"><span class="rc-pic{" rc-pic--sq" if s.get("square") else ""}">'
-                   + img(s["cover"], sizes="(min-width: 900px) 40vw, 82vw", focal=False)
-                   + f'</span><span class="rc-t">{esc(s["title"])}</span><span class="rc-l">{esc(s["line"])}</span></a></li>' for s in rest)
-    lately = (f'<section class="sec lately2" id="lately" aria-labelledby="lately-h"><div class="wrap lately2-head rv">'
-              f'<p class="kicker">{esc(h["latelyKicker"])}</p><h2 class="sec-h" id="lately-h">Series</h2><p class="lately-line">{esc(h["latelyLine"])}</p></div>'
-              f'<div class="wrap"><a class="feat rv" href="{esc(url("/series/"))}#{esc(first["slug"])}"><span class="feat-pic">'
-              + img(first["cover"], sizes="(min-width: 1200px) 1296px, 100vw", focal=False)
-              + f'</span><span class="feat-meta"><span class="feat-k">Latest</span><span class="feat-t">{esc(first["title"])}</span><span class="feat-l">{esc(first["line"])}</span></span></a></div>'
-              + f'<div class="rail" data-rail tabindex="0" aria-label="More series, scroll sideways"><ul class="rail-track">{rail}</ul></div>'
-              + f'<div class="wrap rail-foot"><div class="rail-bar" aria-hidden="true"><span data-rail-bar></span></div><a class="go" href="{esc(url("/series/"))}">See all the series</a></div></section>')
 
-    about = f'''<section class="sec about3" id="about" aria-labelledby="about-h"><div class="wrap about3-in">
-<div class="about3-text rv"><p class="kicker">About</p><h2 class="sec-h" id="about-h">Tommy Jackett</h2>
-<p class="about3-t">{esc(h["aboutText"])} <a class="link" href="https://www.vidpod.com.au">{esc(h["aboutVidpod"])}</a>.</p>
-<div class="doco3-btns about3-btns"><a class="btn btn--ghost" href="https://www.vidpod.com.au">Visit VIDPOD</a></div></div>
-<figure class="about3-pic rv">{img("tommy-vidpod-founder", sizes="(min-width: 900px) 34vw, 100vw")}</figure>
-</div></section>'''
+    def watch_url(s):
+        if s.get("external"):
+            return s["external"]["url"]
+        vids = [v for v in s["videos"] if not v.get("short")] or s["videos"]
+        return "https://www.youtube.com/watch?v=" + vids[0]["id"]
+
+    first, rest = ser[0], ser[1:]
+    rows = "".join(f'<li><a class="sl" href="{esc(watch_url(x))}"><span class="sl-pic{" sl-pic--sq" if x.get("square") else ""}">'
+                   + img(x["cover"], sizes="(min-width: 900px) 180px, 34vw", focal=False)
+                   + f'</span><span class="sl-txt"><span class="sl-t">{esc(x["title"])}</span><span class="sl-l">{esc(x["line"])}</span></span>'
+                   + '<span class="sl-go" aria-hidden="true">&rarr;</span></a></li>' for x in rest)
+    lately = (f'<section class="sec series3" id="series" aria-labelledby="series-h"><div class="wrap">'
+              f'<div class="series3-head rv"><p class="kicker">{esc(h["latelyKicker"])}</p><h2 class="sec-h" id="series-h">Series</h2>'
+              f'<p class="series3-line">{esc(h["latelyLine"])}</p></div>'
+              f'<div class="series3-grid">'
+              f'<a class="ft3 rv" href="{esc(watch_url(first))}"><span class="ft3-pic">' + img(first["cover"], sizes="(min-width: 900px) 56vw, 100vw", focal=False)
+              + '<span class="ft3-tag">Latest</span></span>'
+              + f'<span class="ft3-t">{esc(first["title"])}</span><span class="ft3-l">{esc(first["line"])}</span><span class="ft3-go">Watch on YouTube &rarr;</span></a>'
+              + f'<ul class="sl-list rv">{rows}</ul>'
+              + '</div></div></section>')
+
+    career = "".join(f'<li><span class="cr-k">{esc(k)}</span><span class="cr-v">{esc(v)}</span></li>' for k, v in h["career"])
+    cut = url("/img/tommy-founder-cutout-1600.webp")
+    cut_s = url("/img/tommy-founder-cutout-900.webp")
+    about = (f'<section class="sec about4" id="about" aria-labelledby="about-h"><div class="wrap about4-in">'
+             f'<div class="about4-stage rv" aria-hidden="true"><span class="about4-word">About</span>'
+             f'<img class="about4-cut" src="{esc(cut)}" srcset="{esc(cut_s)} 346w, {esc(cut)} 615w" sizes="(min-width: 900px) 300px, 46vw" width="615" height="1600" alt="" loading="lazy"></div>'
+             f'<div class="about4-text rv"><h2 class="sec-h" id="about-h">About Tommy Jackett</h2>'
+             f'<p class="about4-bio">{esc(h["aboutBio"])}</p>'
+             f'<ul class="career">{career}</ul>'
+             f'<div class="about4-vp"><p>{esc(h["aboutVidpodLine"])}</p><a class="btn btn--ghost" href="https://www.vidpod.com.au">Visit VIDPOD</a></div>'
+             f'</div></div></section>')
+    
 
     contact = f'''<section class="sec contact2" id="contact" aria-labelledby="contact-h"><div class="wrap contact2-in">
 <div class="rv"><h2 class="sec-h" id="contact-h">Get in touch</h2><p>{esc(h["contactLine"])}</p></div>
@@ -764,7 +781,7 @@ def main():
     js = open(os.path.join(ROOT, "src", "js", "site.js"), encoding="utf-8").read()
     P["versions"] = {"css": hashlib.md5(css.encode()).hexdigest()[:8], "js": hashlib.md5(js.encode()).hexdigest()[:8]}
 
-    build_home(); build_series(); build_404()
+    build_home(); build_404()
 
     if os.path.exists(out):
         shutil.rmtree(out)
