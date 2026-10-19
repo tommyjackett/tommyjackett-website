@@ -28,7 +28,7 @@
     "docoNow": "Free to watch now on YouTube.",
     "latelyKicker": "What I'm up to lately",
     "latelyLine": "I find something I'm curious about and go down the rabbit hole.",
-    "aboutBio": "I'm a creator who has been immersed in video, podcasts and content production for over 10 years. I started out on breakfast radio in Shepparton, made more than 1,000 episodes of The Daily Talk Show with Josh, and went fishing for oBikes in the Yarra. These days I make my own series, and with Josh, a feature documentary.",
+    "aboutBio": "I'm a creator who has been immersed in video, podcasts and content production for over 10 years. I started out on breakfast radio in Shepparton and made more than 1,000 episodes of The Daily Talk Show with Josh. What drives me is the spark: a story, a person or an idea I can't stop thinking about, and then going all the way down the rabbit hole.",
     "aboutVidpodLine": "I also run VIDPOD, a Melbourne video and podcast production company. We make brand films, social content and podcasts for businesses, including shows for Monash, HubSpot and Carlisle Homes.",
     "career": [
       [
@@ -52,7 +52,8 @@
         "Host, Shepparton"
       ]
     ],
-    "latelyTitle": "What I'm up to lately"
+    "latelyTitle": "What I'm up to lately",
+    "aboutBioDoco": "is the biggest one yet, a feature documentary where Josh and I dove into one of America's most divided topics."
   },
   "doco": {
     "metaTitle": "In Guns We Trust: the doco I made with Josh | Tommy Jackett",

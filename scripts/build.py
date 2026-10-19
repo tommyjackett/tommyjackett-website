@@ -375,7 +375,7 @@ def build_home():
     about = (f'<section class="sec about5" id="about" aria-labelledby="about-h"><div class="wrap wrap--narrow about5-in">'
              f'<figure class="about5-pic rv">' + img("salt-flats-tommy-portrait", sizes="(min-width: 900px) 380px, 100vw") + '</figure>'
              f'<div class="about5-text rv"><h2 class="sec-h" id="about-h">About Tommy Jackett</h2>'
-             f'<p class="about5-bio">{esc(h["aboutBio"])}</p>'
+             f'<p class="about5-bio">{esc(h["aboutBio"])} <a class="link" href="#doco">In Guns We Trust</a> {esc(h["aboutBioDoco"])}</p>'
              f'<p class="about5-vp">{esc(h["aboutVidpodLine"])}</p>'
              f'<a class="btn btn--ghost" href="https://www.vidpod.com.au">Visit VIDPOD</a></div>'
              f'</div></section>')
