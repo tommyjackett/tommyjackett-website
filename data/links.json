@@ -1,0 +1,281 @@
+[
+  {
+    "id": "tj-youtube",
+    "label": "YouTube",
+    "url": "https://www.youtube.com/@TommyJackett",
+    "group": "tommy",
+    "verified": true,
+    "sameAs": true,
+    "note": "Channel loads (checked 19 Oct 2026)."
+  },
+  {
+    "id": "tj-instagram",
+    "label": "Instagram",
+    "url": "https://www.instagram.com/tommyjackett/",
+    "group": "tommy",
+    "verified": true,
+    "sameAs": true,
+    "note": ""
+  },
+  {
+    "id": "tj-tiktok",
+    "label": "TikTok",
+    "url": "https://www.tiktok.com/@tommyjackett",
+    "group": "tommy",
+    "verified": true,
+    "sameAs": true,
+    "note": ""
+  },
+  {
+    "id": "tj-facebook",
+    "label": "Facebook",
+    "url": "https://www.facebook.com/tommyjackett",
+    "group": "tommy",
+    "verified": true,
+    "sameAs": true,
+    "note": "Page; blocks scripted checks (HTTP 400), verified in a browser in the inventory."
+  },
+  {
+    "id": "tj-x",
+    "label": "X",
+    "url": "https://x.com/tommyjackett",
+    "group": "tommy",
+    "verified": true,
+    "sameAs": true,
+    "note": "Dormant since Sep 2023. Tommy to decide whether to keep it."
+  },
+  {
+    "id": "tj-imdb",
+    "label": "IMDb",
+    "url": "https://www.imdb.com/name/nm10830822/",
+    "group": "tommy",
+    "verified": true,
+    "sameAs": true,
+    "note": "Blocks scripted checks (HTTP 202), verified in a browser in the inventory."
+  },
+  {
+    "id": "tj-linkedin",
+    "label": "LinkedIn",
+    "url": "https://www.linkedin.com/in/tommyjackett/",
+    "group": "tommy",
+    "verified": false,
+    "sameAs": false,
+    "note": "UNVERIFIED (sign-in wall). Held out until Tommy confirms."
+  },
+  {
+    "id": "film-site",
+    "label": "The film's site",
+    "url": "https://ingunswetrustfilm.com",
+    "group": "film",
+    "verified": true,
+    "sameAs": false,
+    "note": "Credits, press kit and the story behind it."
+  },
+  {
+    "id": "film-press",
+    "label": "Press kit",
+    "url": "https://ingunswetrustfilm.com/press",
+    "group": "film",
+    "verified": true,
+    "sameAs": false,
+    "note": "Synopsis, credits, poster and key art."
+  },
+  {
+    "id": "film-resources",
+    "label": "Discussion guide and screenings",
+    "url": "https://ingunswetrustfilm.com/resources",
+    "group": "film",
+    "verified": true,
+    "sameAs": false,
+    "note": "Discussion guide and how to host a screening."
+  },
+  {
+    "id": "film-about",
+    "label": "About the film",
+    "url": "https://ingunswetrustfilm.com/film",
+    "group": "film",
+    "verified": true,
+    "sameAs": false,
+    "note": ""
+  },
+  {
+    "id": "film-credits",
+    "label": "Credits",
+    "url": "https://ingunswetrustfilm.com/credits",
+    "group": "film",
+    "verified": true,
+    "sameAs": false,
+    "note": ""
+  },
+  {
+    "id": "film-stills",
+    "label": "Stills",
+    "url": "https://ingunswetrustfilm.com/press/stills",
+    "group": "film",
+    "verified": true,
+    "sameAs": false,
+    "note": "58 captioned frames."
+  },
+  {
+    "id": "film-transcript",
+    "label": "Transcript",
+    "url": "https://ingunswetrustfilm.com/transcript",
+    "group": "film",
+    "verified": true,
+    "sameAs": false,
+    "note": "The full text and subtitles."
+  },
+  {
+    "id": "film-youtube",
+    "label": "Watch on YouTube",
+    "url": "https://www.youtube.com/@InGunsWeTrustFilm",
+    "group": "film",
+    "verified": true,
+    "sameAs": false,
+    "note": "The film's own channel. Swap for the watch URL once the film is uploaded."
+  },
+  {
+    "id": "film-imdb",
+    "label": "IMDb",
+    "url": "https://www.imdb.com/title/tt37673339/",
+    "group": "film",
+    "verified": true,
+    "sameAs": false,
+    "note": ""
+  },
+  {
+    "id": "film-instagram",
+    "label": "Instagram",
+    "url": "https://www.instagram.com/ingunswetrustfilm",
+    "group": "film",
+    "verified": true,
+    "sameAs": false,
+    "note": ""
+  },
+  {
+    "id": "film-tiktok",
+    "label": "TikTok",
+    "url": "https://www.tiktok.com/@ingunswetrustfilm",
+    "group": "film",
+    "verified": true,
+    "sameAs": false,
+    "note": ""
+  },
+  {
+    "id": "film-threads",
+    "label": "Threads",
+    "url": "https://www.threads.com/@ingunswetrustfilm",
+    "group": "film",
+    "verified": true,
+    "sameAs": false,
+    "note": ""
+  },
+  {
+    "id": "film-facebook",
+    "label": "Facebook",
+    "url": "https://www.facebook.com/ingunswetrustfilm",
+    "group": "film",
+    "verified": false,
+    "sameAs": false,
+    "note": "UNVERIFIED. Check live before linking."
+  },
+  {
+    "id": "film-x",
+    "label": "X",
+    "url": "https://x.com/InGunsWeTrust_",
+    "group": "film",
+    "verified": false,
+    "sameAs": false,
+    "note": "UNVERIFIED. X returns a page for any handle; look before linking."
+  },
+  {
+    "id": "josh",
+    "label": "Josh Janssen",
+    "url": "https://joshjanssen.com/",
+    "group": "people",
+    "verified": true,
+    "sameAs": false,
+    "note": ""
+  },
+  {
+    "id": "vidpod",
+    "label": "VIDPOD",
+    "url": "https://www.vidpod.com.au/",
+    "group": "vidpod",
+    "verified": true,
+    "sameAs": false,
+    "note": ""
+  },
+  {
+    "id": "vidpod-story",
+    "label": "The VIDPOD story page",
+    "url": "https://www.vidpod.com.au/story.html",
+    "group": "vidpod",
+    "verified": true,
+    "sameAs": true,
+    "note": ""
+  },
+  {
+    "id": "dts",
+    "label": "The Daily Talk Show",
+    "url": "https://www.thedailytalkshow.com",
+    "group": "dts",
+    "verified": true,
+    "sameAs": false,
+    "note": "Show carries strong language."
+  },
+  {
+    "id": "press-obike-pedestrian",
+    "label": "Pedestrian TV",
+    "url": "https://www.pedestrian.tv/entertainment/watch-melbourne-fella-spends-arvo-fishing-obikes-tossed-in-the-yarra-1/",
+    "group": "press",
+    "verified": true,
+    "sameAs": false,
+    "note": ""
+  },
+  {
+    "id": "press-obike-abc",
+    "label": "ABC Radio Melbourne",
+    "url": "https://www.abc.net.au/listen/programs/melbourne-mornings/o-bike-fishing/8987788",
+    "group": "press",
+    "verified": true,
+    "sameAs": false,
+    "note": ""
+  },
+  {
+    "id": "press-scooters-3aw",
+    "label": "3AW",
+    "url": "https://www.3aw.com.au/melbourne-man-fishes-e-scooters-from-the-yarra-river1/",
+    "group": "press",
+    "verified": true,
+    "sameAs": false,
+    "note": ""
+  },
+  {
+    "id": "press-steps-pedestrian",
+    "label": "Pedestrian TV",
+    "url": "https://www.pedestrian.tv/health/its-all-a-lie-bloke-exposes-vics-1000-steps-as-a-numbers-fraud/",
+    "group": "press",
+    "verified": true,
+    "sameAs": false,
+    "note": ""
+  },
+  {
+    "id": "ranch-reel-1",
+    "label": "Instagram, Part 1",
+    "url": "https://www.instagram.com/reel/DeGuJB5T4Vq/",
+    "group": "social",
+    "verified": true,
+    "sameAs": false,
+    "note": ""
+  },
+  {
+    "id": "ranch-reel-2",
+    "label": "Instagram, Part 2",
+    "url": "https://www.instagram.com/reel/DeMCinSTyAl/",
+    "group": "social",
+    "verified": true,
+    "sameAs": false,
+    "note": ""
+  }
+]

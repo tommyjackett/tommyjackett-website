@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 # Push tommyjackett-website and wait for the GitHub Pages deploy to match the local file.
 # Same pattern as repos/tng-website/scripts/push-live.sh. Token: TOMMY AI/.secrets/github-token-tommyjackett-website.txt
-# Usage: scripts/push-live.sh [file-to-verify]   (default: index.html)
+# Usage: scripts/push-live.sh [file-to-verify]   (path inside public/, default: index.html)
+# Run `python3 scripts/build.py` first and stage public/ plus the sources you changed (explicit paths, never git add -A).
 # SITE is the staging URL until DNS is switched, then change it to https://tommyjackett.com
 set -uo pipefail
 
@@ -15,7 +16,7 @@ cd "$DIR"
 git -c credential.helper= -c credential.helper='!f(){ echo username=tommyjackett; echo "password=$GH_T"; };f' push origin main
 
 live_matches() {
-  diff <(curl -sL "$SITE/$FILE?cb=$(date +%s)") "$DIR/$FILE" >/dev/null 2>&1
+  diff <(curl -sL "$SITE/$FILE?cb=$(date +%s)") "$DIR/public/$FILE" >/dev/null 2>&1
 }
 
 for attempt in 1 2 3 4 5 6; do

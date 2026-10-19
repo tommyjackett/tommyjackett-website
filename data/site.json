@@ -1,0 +1,149 @@
+{
+  "name": "Tommy Jackett",
+  "locale": "en-AU",
+  "ogLocale": "en_AU",
+  "location": "Melbourne",
+  "jobTitle": "Video producer, storyteller and podcast host",
+  "email": "tommy@tommyjackett.com",
+  "formAccessKey": "",
+  "urls": {
+    "production": "https://tommyjackett.com",
+    "staging": "https://tommyjackett.github.io/tommyjackett-website",
+    "stagingBasePath": "/tommyjackett-website"
+  },
+  "entityStatement": "Tommy Jackett is a Melbourne video producer, storyteller and podcast host. He is featured in and co-hosts the 2026 documentary In Guns We Trust, directed by Josh Janssen, and makes video and podcasts for businesses and creators through VIDPOD.",
+  "entityStatementShort": "Tommy Jackett is a Melbourne video producer and storyteller, featured in the documentary In Guns We Trust (2026).",
+  "images": {
+    "person": "tommy-portrait-close",
+    "ogHome": "tommy-bomber-smile",
+    "ogFilm": "igwt-key-art"
+  },
+  "film": {
+    "title": "In Guns We Trust",
+    "year": 2026,
+    "runtimeMinutes": 76,
+    "runtimeISO": "PT1H16M",
+    "director": {
+      "name": "Josh Janssen",
+      "url": "https://joshjanssen.com/"
+    },
+    "productionCompanies": [
+      "2A Film",
+      "Full Stack Films",
+      "Rethink Films"
+    ],
+    "launchISO": "2026-10-22T20:00:00-04:00",
+    "launchDisplayAEDT": "Friday 23 October 2026, 11am AEDT",
+    "watchUrl": "https://www.youtube.com/@InGunsWeTrustFilm",
+    "watchUrlIsChannel": true,
+    "sitePath": "/in-guns-we-trust/",
+    "filmSite": "https://ingunswetrustfilm.com",
+    "whenShort": {
+      "before": "Free on YouTube, worldwide. Thursday 22 October, 8pm ET. That's Friday 23 October, 11am in Melbourne (AEDT).",
+      "after": "Free on YouTube, worldwide, since Thursday 22 October 8pm ET (Friday 23 October, 11am AEDT)."
+    },
+    "whenFull": {
+      "before": "In Guns We Trust is free on YouTube, worldwide, from Thursday 22 October 2026 at 8pm US Eastern, which is Friday 23 October at 11am in Melbourne (AEDT).",
+      "after": "In Guns We Trust is free on YouTube, worldwide, since Thursday 22 October 2026 at 8pm US Eastern, which was Friday 23 October at 11am in Melbourne (AEDT)."
+    },
+    "contentNote": "Includes gunfire and discussion of shootings, suicide and loss. Made for adults and older teenagers watching with support.",
+    "support": "Support: in the US call or text 988. In Australia call Lifeline on 13 11 14. Elsewhere, findahelpline.com.",
+    "supportInline": "If you need someone to talk to: US 988, Australia Lifeline 13 11 14, findahelpline.com.",
+    "timeNote": "ET means US Eastern. AEDT means Melbourne time.",
+    "creditLine": "In Guns We Trust is made by 2A Film, Full Stack Films and Rethink Films. Film images are stills from In Guns We Trust (2026), directed by Josh Janssen. © 2026 2A Film Pty Ltd.",
+    "oneLiner": "A 2026 documentary by Josh Janssen: two unarmed Australians listen to gun owners, survivors and sheriffs across America."
+  },
+  "nav": [
+    {
+      "label": "Film",
+      "path": "/in-guns-we-trust/"
+    },
+    {
+      "label": "Stories",
+      "path": "/stories/"
+    },
+    {
+      "label": "Work",
+      "path": "/work/"
+    },
+    {
+      "label": "Notes",
+      "path": "/notes/"
+    },
+    {
+      "label": "About",
+      "path": "/about/"
+    },
+    {
+      "label": "Contact",
+      "path": "/contact/"
+    }
+  ],
+  "footer": {
+    "line1": "Tommy Jackett. Melbourne.",
+    "line2": "Video, podcasts and stories.",
+    "map": [
+      {
+        "label": "Home",
+        "path": "/"
+      },
+      {
+        "label": "In Guns We Trust",
+        "path": "/in-guns-we-trust/"
+      },
+      {
+        "label": "Stories",
+        "path": "/stories/"
+      },
+      {
+        "label": "Work",
+        "path": "/work/"
+      },
+      {
+        "label": "Notes",
+        "path": "/notes/"
+      },
+      {
+        "label": "About",
+        "path": "/about/"
+      },
+      {
+        "label": "Contact",
+        "path": "/contact/"
+      }
+    ],
+    "socialIds": [
+      "tj-youtube",
+      "tj-instagram",
+      "tj-tiktok",
+      "tj-facebook",
+      "tj-x",
+      "tj-imdb"
+    ],
+    "copyright": "© 2026 Tommy Jackett"
+  },
+  "vidpod": {
+    "name": "VIDPOD",
+    "url": "https://www.vidpod.com.au/",
+    "storyUrl": "https://www.vidpod.com.au/story.html",
+    "sameAs": [
+      "https://www.youtube.com/@vid_pod",
+      "https://instagram.com/vid.pod",
+      "https://www.linkedin.com/company/vidpodproduction"
+    ]
+  },
+  "knowsAbout": [
+    "video production",
+    "podcast production",
+    "documentary",
+    "storytelling",
+    "YouTube"
+  ],
+  "home": {
+    "title": "Tommy Jackett: video producer and storyteller",
+    "description": "Hey, I'm Tommy Jackett. I make video and podcasts in Melbourne, and I'm in the documentary In Guns We Trust, free on YouTube 23 Oct 2026."
+  },
+  "notFound": {
+    "title": "Page not found | Tommy Jackett"
+  }
+}
