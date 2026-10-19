@@ -10,7 +10,7 @@ permissions:
   pages: write
   id-token: write
 
-# Queue deploys instead of overlapping them — overlapping is what caused the
+# Queue deploys instead of overlapping them, overlapping is what caused the
 # cancelled-deploy failure emails under the old branch-based pipeline.
 concurrency:
   group: pages

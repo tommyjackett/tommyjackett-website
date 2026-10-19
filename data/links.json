@@ -40,9 +40,9 @@
     "label": "X",
     "url": "https://x.com/tommyjackett",
     "group": "tommy",
-    "verified": true,
-    "sameAs": true,
-    "note": "Dormant since Sep 2023. Tommy to decide whether to keep it."
+    "verified": false,
+    "sameAs": false,
+    "note": "Dormant. Deliberately not linked anywhere on the site (Tommy, 20 Oct 2026)."
   },
   {
     "id": "tj-imdb",
@@ -175,18 +175,18 @@
     "label": "Facebook",
     "url": "https://www.facebook.com/ingunswetrustfilm",
     "group": "film",
-    "verified": false,
+    "verified": true,
     "sameAs": false,
-    "note": "UNVERIFIED. Check live before linking."
+    "note": "Linked from the film's own site. Shown on the film page only."
   },
   {
     "id": "film-x",
     "label": "X",
     "url": "https://x.com/InGunsWeTrust_",
     "group": "film",
-    "verified": false,
+    "verified": true,
     "sameAs": false,
-    "note": "UNVERIFIED. X returns a page for any handle; look before linking."
+    "note": "Linked from the film's own site. Shown on the film page only."
   },
   {
     "id": "josh",
@@ -277,5 +277,13 @@
     "verified": true,
     "sameAs": false,
     "note": ""
+  },
+  {
+    "id": "tomversation",
+    "group": "tommy",
+    "label": "Tomversation",
+    "url": "https://podcasts.apple.com/au/podcast/tomversation/id1605077976",
+    "verified": true,
+    "sameAs": false
   }
 ]

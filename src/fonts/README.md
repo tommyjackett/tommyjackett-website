@@ -40,3 +40,12 @@ Preload (crossorigin is required for font preloads even when same origin):
 ```
 
 The build copies src/fonts/*.woff2 into public/fonts/, and the preload hrefs must go through the BASE_PATH setting.
+
+## Added 20 Oct 2026
+
+| File | Family | Style | Subset | Source |
+|---|---|---|---|---|
+| instrument-serif-latin.woff2 | Instrument Serif | regular 400 | latin | https://fonts.gstatic.com/s/instrumentserif/v5/jizBRFtNs2ka5fXjeivQ4LroWlx-6zUTjnTLgNs.woff2 |
+| instrument-serif-italic-latin.woff2 | Instrument Serif | italic 400 | latin | https://fonts.gstatic.com/s/instrumentserif/v5/jizHRFtNs2ka5fXjeivQ4LroWlx-6zAjjH7Motmp5g.woff2 |
+
+Instrument Serif is by Rodrigo Fuenzalida and Jordan Egstad (OFL 1.1). Used for the plain spoken lines.

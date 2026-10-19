@@ -1,0 +1,1371 @@
+[
+  {
+    "id": "igwt-key-art",
+    "file": "igwt-key-art",
+    "widths": [
+      640,
+      1280,
+      1920
+    ],
+    "width": 1920,
+    "height": 1080,
+    "alt": "In Guns We Trust key art. Tommy Jackett holds a boom microphone and Josh Janssen has a camera on his shoulder, standing on a map of the United States, with the film title at top left.",
+    "caption": "In Guns We Trust (2026), key art.",
+    "credit": "Key art for In Guns We Trust (2026), directed by Josh Janssen. © 2026 2A Film Pty Ltd.",
+    "kind": "keyArt",
+    "filmAsset": true,
+    "focal": "50% 50%",
+    "mood": "warm, cinematic, map and shadow",
+    "bestFor": [
+      "hero",
+      "film"
+    ],
+    "social": "igwt-key-art-social.jpg"
+  },
+  {
+    "id": "igwt-poster",
+    "file": "igwt-poster",
+    "widths": [
+      640,
+      1280,
+      1920
+    ],
+    "width": 1920,
+    "height": 2744,
+    "alt": "In Guns We Trust poster. Tommy Jackett with a boom microphone and Josh Janssen with a camera, standing on a map of the United States, with the title across the top.",
+    "caption": "In Guns We Trust (2026), poster.",
+    "credit": "Poster for In Guns We Trust (2026), directed by Josh Janssen. © 2026 2A Film Pty Ltd.",
+    "kind": "poster",
+    "filmAsset": true,
+    "focal": "50% 50%",
+    "mood": "warm, cinematic, portrait poster",
+    "bestFor": [
+      "film",
+      "hero"
+    ]
+  },
+  {
+    "id": "igwt-title-white",
+    "file": "igwt-title-white",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1280,
+    "height": 761,
+    "alt": "In Guns We Trust",
+    "caption": "In Guns We Trust, white title treatment.",
+    "credit": "Title treatment for In Guns We Trust (2026). © 2026 2A Film Pty Ltd.",
+    "kind": "titleTreatment",
+    "filmAsset": true,
+    "focal": "50% 50%",
+    "mood": "graphic, distressed, transparent background",
+    "bestFor": [
+      "film",
+      "hero"
+    ]
+  },
+  {
+    "id": "igwt-hosts-ucla-law-library",
+    "file": "igwt-hosts-ucla-law-library",
+    "widths": [
+      640,
+      1280,
+      1920
+    ],
+    "width": 1920,
+    "height": 1080,
+    "alt": "Josh Janssen and Tommy Jackett sitting side by side at a long wooden table in front of shelves of law books at UCLA.",
+    "caption": "Josh Janssen and Tommy Jackett, the two Australians behind In Guns We Trust, in a law library at UCLA, Los Angeles.",
+    "captionTitle": "The hosts",
+    "place": "UCLA, Los Angeles",
+    "credit": "Still from In Guns We Trust (2026), directed by Josh Janssen. © 2026 2A Film Pty Ltd.",
+    "kind": "filmStill",
+    "filmAsset": true,
+    "focal": "50% 40%",
+    "mood": "calm, direct, two hosts",
+    "bestFor": [
+      "hero",
+      "film",
+      "about"
+    ]
+  },
+  {
+    "id": "igwt-tommy-josh-under-flag",
+    "file": "igwt-tommy-josh-under-flag",
+    "widths": [
+      640,
+      1280,
+      1920
+    ],
+    "width": 1920,
+    "height": 1080,
+    "alt": "Tommy Jackett and Josh Janssen looking off to the side beneath an American flag in Washington, DC.",
+    "caption": "Tommy and Josh beneath an American flag in Washington, DC.",
+    "captionTitle": "Under the flag",
+    "place": "Washington, DC",
+    "credit": "Still from In Guns We Trust (2026), directed by Josh Janssen. © 2026 2A Film Pty Ltd.",
+    "kind": "filmStill",
+    "filmAsset": true,
+    "focal": "50% 40%",
+    "mood": "warm, golden, opening",
+    "bestFor": [
+      "film",
+      "hero",
+      "about"
+    ]
+  },
+  {
+    "id": "igwt-adam-winkler-ucla",
+    "file": "igwt-adam-winkler-ucla",
+    "widths": [
+      640,
+      1280,
+      1920
+    ],
+    "width": 1920,
+    "height": 1080,
+    "alt": "Adam Winkler, a UCLA law professor, sitting with his hands clasped at a wooden table in front of law books.",
+    "caption": "Adam Winkler, a UCLA law professor and author of Gunfight, a history of the battle over the right to bear arms in America.",
+    "captionTitle": "Adam Winkler",
+    "place": "UCLA, Los Angeles",
+    "credit": "Still from In Guns We Trust (2026), directed by Josh Janssen. © 2026 2A Film Pty Ltd.",
+    "kind": "filmStill",
+    "filmAsset": true,
+    "focal": "50% 40%",
+    "mood": "considered, warm",
+    "bestFor": [
+      "film",
+      "stories"
+    ]
+  },
+  {
+    "id": "igwt-santa-monica-pier-sunset",
+    "file": "igwt-santa-monica-pier-sunset",
+    "widths": [
+      640,
+      1280,
+      1920
+    ],
+    "width": 1920,
+    "height": 1080,
+    "alt": "The Santa Monica Pier ferris wheel and roller coaster silhouetted against an orange sunset.",
+    "caption": "The Santa Monica Pier at sunset, where the journey begins in Los Angeles.",
+    "captionTitle": "Santa Monica",
+    "place": "Santa Monica, California",
+    "credit": "Still from In Guns We Trust (2026), directed by Josh Janssen. © 2026 2A Film Pty Ltd.",
+    "kind": "filmStill",
+    "filmAsset": true,
+    "focal": "50% 50%",
+    "mood": "golden, landscape, start of journey",
+    "bestFor": [
+      "hero",
+      "film",
+      "stories"
+    ]
+  },
+  {
+    "id": "igwt-plane-over-ram-lax",
+    "file": "igwt-plane-over-ram-lax",
+    "widths": [
+      640,
+      1280,
+      1920
+    ],
+    "width": 1920,
+    "height": 1080,
+    "alt": "A jet coming in low over the filmmakers' silver Ram pickup on a street near Los Angeles airport.",
+    "caption": "A jet comes in low over the filmmakers' pickup near LAX, on their first drive in America.",
+    "captionTitle": "Welcome to Los Angeles",
+    "place": "Near LAX, Los Angeles",
+    "credit": "Still from In Guns We Trust (2026), directed by Josh Janssen. © 2026 2A Film Pty Ltd.",
+    "kind": "filmStill",
+    "filmAsset": true,
+    "focal": "50% 50%",
+    "mood": "bright, scale, first day",
+    "bestFor": [
+      "film",
+      "hero",
+      "stories"
+    ]
+  },
+  {
+    "id": "igwt-road-into-colorado",
+    "file": "igwt-road-into-colorado",
+    "widths": [
+      640,
+      1280,
+      1920
+    ],
+    "width": 1920,
+    "height": 1080,
+    "alt": "The filmmakers' pickup driving a long empty highway toward mesas.",
+    "caption": "On the road into road, part of a journey that runs from Los Angeles to Washington, DC.",
+    "captionTitle": "The road into Colorado",
+    "place": "Colorado",
+    "credit": "Still from In Guns We Trust (2026), directed by Josh Janssen. © 2026 2A Film Pty Ltd.",
+    "kind": "filmStill",
+    "filmAsset": true,
+    "focal": "30% 50%",
+    "mood": "open, road, wide",
+    "bestFor": [
+      "film",
+      "stories",
+      "hero"
+    ]
+  },
+  {
+    "id": "igwt-sheriff-mcnamara-waco-diner",
+    "file": "igwt-sheriff-mcnamara-waco-diner",
+    "widths": [
+      640,
+      1280,
+      1920
+    ],
+    "width": 1920,
+    "height": 1080,
+    "alt": "Sheriff Parnell McNamara in a white cowboy hat, seated in a diner in Waco, Texas.",
+    "caption": "Sheriff Parnell McNamara of McLennan County, Texas, in Kim’s diner in Waco.",
+    "captionTitle": "Sheriff Parnell McNamara",
+    "place": "Waco, Texas",
+    "credit": "Still from In Guns We Trust (2026), directed by Josh Janssen. © 2026 2A Film Pty Ltd.",
+    "kind": "filmStill",
+    "filmAsset": true,
+    "focal": "75% 40%",
+    "mood": "character, warm",
+    "bestFor": [
+      "film",
+      "stories"
+    ]
+  },
+  {
+    "id": "igwt-mike-sodini-desert",
+    "file": "igwt-mike-sodini-desert",
+    "widths": [
+      640,
+      1280,
+      1920
+    ],
+    "width": 1920,
+    "height": 1080,
+    "alt": "Mike Sodini speaking to the filmmakers in the Nevada desert.",
+    "caption": "Mike Sodini, whose family ran one of the largest gun importers in the US, founded Walk the Talk America to bring mental-health awareness into gun shops.",
+    "captionTitle": "Mike Sodini",
+    "place": "Near Las Vegas, Nevada",
+    "credit": "Still from In Guns We Trust (2026), directed by Josh Janssen. © 2026 2A Film Pty Ltd.",
+    "kind": "filmStill",
+    "filmAsset": true,
+    "focal": "50% 40%",
+    "mood": "earnest, golden hour",
+    "bestFor": [
+      "film"
+    ]
+  },
+  {
+    "id": "igwt-katherine-schweit-interview",
+    "file": "igwt-katherine-schweit-interview",
+    "widths": [
+      640,
+      1280,
+      1920
+    ],
+    "width": 1920,
+    "height": 1080,
+    "alt": "Katherine Schweit, a former FBI special agent, in an interview at a home.",
+    "caption": "Katherine Schweit, a former FBI special agent who created the Bureau's active-shooter program after Sandy Hook.",
+    "captionTitle": "Katherine Schweit",
+    "place": "Interview",
+    "credit": "Still from In Guns We Trust (2026), directed by Josh Janssen. © 2026 2A Film Pty Ltd.",
+    "kind": "filmStill",
+    "filmAsset": true,
+    "focal": "60% 35%",
+    "mood": "quiet, serious",
+    "bestFor": [
+      "film"
+    ]
+  },
+  {
+    "id": "igwt-autumn-bignami-las-vegas",
+    "file": "igwt-autumn-bignami-las-vegas",
+    "widths": [
+      640,
+      1280,
+      1920
+    ],
+    "width": 1920,
+    "height": 1080,
+    "alt": "Autumn Bignami sitting outdoors in Las Vegas, talking with Tommy Jackett and Josh Janssen.",
+    "caption": "Autumn Bignami, a history teacher and mother who survived the 2017 Route 91 Harvest festival shooting in Las Vegas, talks with Tommy Jackett and Josh Janssen.",
+    "captionTitle": "Autumn Bignami",
+    "place": "Las Vegas, Nevada",
+    "credit": "Still from In Guns We Trust (2026), directed by Josh Janssen. © 2026 2A Film Pty Ltd.",
+    "kind": "filmStill",
+    "filmAsset": true,
+    "focal": "60% 40%",
+    "mood": "quiet, human",
+    "bestFor": [
+      "film",
+      "stories"
+    ]
+  },
+  {
+    "id": "igwt-kevin-dixie-atlanta",
+    "file": "igwt-kevin-dixie-atlanta",
+    "widths": [
+      640,
+      1280,
+      1920
+    ],
+    "width": 1920,
+    "height": 1080,
+    "alt": "Kevin Dixie standing under a pop-up tent at his range in Atlanta, looking off to the side.",
+    "caption": "Kevin Dixie, a youth mentor and firearms instructor, at his range in Atlanta, Georgia.",
+    "captionTitle": "Kevin Dixie",
+    "place": "Atlanta, Georgia",
+    "credit": "Still from In Guns We Trust (2026), directed by Josh Janssen. © 2026 2A Film Pty Ltd.",
+    "kind": "filmStill",
+    "filmAsset": true,
+    "focal": "60% 40%",
+    "mood": "calm, direct",
+    "bestFor": [
+      "film"
+    ]
+  },
+  {
+    "id": "igwt-sunset-national-mall",
+    "file": "igwt-sunset-national-mall",
+    "widths": [
+      640,
+      1280,
+      1920
+    ],
+    "width": 1920,
+    "height": 1080,
+    "alt": "Two silhouetted figures sitting on a wall watching the sun set over the National Mall in Washington, DC.",
+    "caption": "Josh and Tommy watch the sun set over the National Mall in Washington, DC.",
+    "captionTitle": "Sunset, Washington, DC",
+    "place": "Washington, DC",
+    "credit": "Still from In Guns We Trust (2026), directed by Josh Janssen. © 2026 2A Film Pty Ltd.",
+    "kind": "filmStill",
+    "filmAsset": true,
+    "focal": "50% 50%",
+    "mood": "quiet, end of journey",
+    "bestFor": [
+      "film",
+      "hero",
+      "about"
+    ]
+  },
+  {
+    "id": "igwt-tommy-supermarket-trolley",
+    "file": "igwt-tommy-supermarket-trolley",
+    "widths": [
+      640,
+      1280,
+      1920
+    ],
+    "width": 1920,
+    "height": 1080,
+    "alt": "Tommy Jackett sitting in a shopping trolley in a supermarket aisle in Alabama.",
+    "caption": "Tommy rides in a shopping trolley as Josh pushes him down a supermarket aisle in Alabama.",
+    "captionTitle": "Supermarket, Alabama",
+    "place": "Alabama",
+    "credit": "Still from In Guns We Trust (2026), directed by Josh Janssen. © 2026 2A Film Pty Ltd.",
+    "kind": "filmStill",
+    "filmAsset": true,
+    "focal": "50% 40%",
+    "mood": "playful, human",
+    "bestFor": [
+      "about",
+      "film",
+      "stories"
+    ]
+  },
+  {
+    "id": "igwt-barbecue-texas",
+    "file": "igwt-barbecue-texas",
+    "widths": [
+      640,
+      1280,
+      1920
+    ],
+    "width": 1920,
+    "height": 1080,
+    "alt": "Tommy Jackett and Josh Janssen across a wooden table at a barbecue place in Texas, with strings of lights overhead.",
+    "caption": "Tommy and Josh over barbecue in Texas, asking each other whether they have become desensitised to guns.",
+    "captionTitle": "Barbecue, Texas",
+    "place": "Texas",
+    "credit": "Still from In Guns We Trust (2026), directed by Josh Janssen. © 2026 2A Film Pty Ltd.",
+    "kind": "filmStill",
+    "filmAsset": true,
+    "focal": "50% 50%",
+    "mood": "relaxed, conversation",
+    "bestFor": [
+      "about",
+      "film"
+    ]
+  },
+  {
+    "id": "igwt-watching-planes-lax",
+    "file": "igwt-watching-planes-lax",
+    "widths": [
+      640,
+      1280,
+      1920
+    ],
+    "width": 1920,
+    "height": 1080,
+    "alt": "Josh Janssen and Tommy Jackett leaning on a chain-link fence at dusk, watching a jet land near Los Angeles airport.",
+    "caption": "Josh and Tommy lean on the airport fence near LAX to watch a jet come in to land.",
+    "captionTitle": "Watching the planes",
+    "place": "Near LAX, Los Angeles",
+    "credit": "Still from In Guns We Trust (2026), directed by Josh Janssen. © 2026 2A Film Pty Ltd.",
+    "kind": "filmStill",
+    "filmAsset": true,
+    "focal": "50% 50%",
+    "mood": "quiet, dusk, two friends",
+    "bestFor": [
+      "film",
+      "about",
+      "stories"
+    ]
+  },
+  {
+    "id": "salt-flats-tommy-portrait",
+    "file": "salt-flats-tommy-portrait",
+    "widths": [
+      640,
+      1184
+    ],
+    "width": 1184,
+    "height": 1776,
+    "alt": "Tommy Jackett in a dark jumper smiling at the camera, standing in shallow water on the Bonneville Salt Flats at sunset.",
+    "caption": "Tommy on the salt flats, 2023.",
+    "credit": "Tommy Jackett, USA trip 2023",
+    "kind": "saltFlats",
+    "filmAsset": false,
+    "focal": "40% 30%",
+    "mood": "golden, personal, reflected sky",
+    "bestFor": [
+      "hero",
+      "about",
+      "stories"
+    ],
+    "social": "about-social.jpg"
+  },
+  {
+    "id": "salt-flats-tommy-wide",
+    "file": "salt-flats-tommy-wide",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1280,
+    "height": 1600,
+    "alt": "Tommy Jackett standing alone on the Bonneville Salt Flats at dusk, with wet salt stretching to the horizon.",
+    "caption": "Dusk on the salt flats, 2023.",
+    "credit": "Tommy Jackett, USA trip 2023",
+    "kind": "saltFlats",
+    "filmAsset": false,
+    "focal": "50% 55%",
+    "mood": "vast, quiet, minimal",
+    "bestFor": [
+      "hero",
+      "about",
+      "stories"
+    ],
+    "social": "salt-flats-social.jpg"
+  },
+  {
+    "id": "salt-flats-tommy-chair",
+    "file": "salt-flats-tommy-chair",
+    "widths": [
+      640,
+      1184
+    ],
+    "width": 1184,
+    "height": 1776,
+    "alt": "Tommy Jackett barefoot in a folding chair in a shallow sheet of water on the salt flats, mountains and his reflection behind him.",
+    "caption": "Barefoot on the salt flats, 2023.",
+    "credit": "Tommy Jackett, USA trip 2023",
+    "kind": "saltFlats",
+    "filmAsset": false,
+    "focal": "50% 45%",
+    "mood": "still, symmetrical, reflective",
+    "bestFor": [
+      "hero",
+      "about",
+      "stories"
+    ]
+  },
+  {
+    "id": "tommy-portrait-close",
+    "file": "tommy-portrait-close",
+    "widths": [
+      640,
+      1280,
+      1920
+    ],
+    "width": 1920,
+    "height": 1280,
+    "alt": "Close portrait of Tommy Jackett with short dark hair and stubble, a calm half smile, in a black crew-neck jumper.",
+    "caption": "Tommy Jackett.",
+    "credit": "Photo: Tommy Jackett",
+    "kind": "portrait",
+    "filmAsset": false,
+    "focal": "50% 25%",
+    "mood": "calm, direct, soft light",
+    "bestFor": [
+      "about",
+      "work"
+    ]
+  },
+  {
+    "id": "tommy-camera-harbour",
+    "file": "tommy-camera-harbour",
+    "widths": [
+      640,
+      1280,
+      1920
+    ],
+    "width": 1920,
+    "height": 1280,
+    "alt": "Tommy Jackett smiling beside a cinema camera with a long lens, with a harbour and moored boats behind him.",
+    "caption": "Tommy on a shoot by the harbour.",
+    "credit": "Photo: Tommy Jackett",
+    "kind": "portrait",
+    "filmAsset": false,
+    "focal": "75% 30%",
+    "mood": "warm, working, outdoors",
+    "bestFor": [
+      "work",
+      "about"
+    ]
+  },
+  {
+    "id": "tommy-portrait-mono",
+    "file": "tommy-portrait-mono",
+    "widths": [
+      640,
+      1280,
+      1920
+    ],
+    "width": 1920,
+    "height": 1280,
+    "alt": "Black and white close portrait of Tommy Jackett with stubble and a steady, slightly amused look.",
+    "caption": "Tommy Jackett, black and white.",
+    "credit": "Photo: Tommy Jackett",
+    "kind": "portrait",
+    "filmAsset": false,
+    "focal": "50% 25%",
+    "mood": "serious, editorial",
+    "bestFor": [
+      "about",
+      "stories"
+    ]
+  },
+  {
+    "id": "tommy-bomber-smile",
+    "file": "tommy-bomber-smile",
+    "widths": [
+      640,
+      1280,
+      1920
+    ],
+    "width": 1920,
+    "height": 1440,
+    "alt": "Tommy Jackett smiling in a black quilted bomber jacket and white T-shirt against a pale grey studio backdrop.",
+    "caption": "Tommy Jackett.",
+    "credit": "Photo: Full Stack Films",
+    "kind": "press",
+    "filmAsset": false,
+    "focal": "50% 20%",
+    "mood": "bright, open",
+    "bestFor": [
+      "about",
+      "work"
+    ],
+    "social": "tommy-bomber-smile-social.jpg"
+  },
+  {
+    "id": "tommy-bomber-head-tilt",
+    "file": "tommy-bomber-head-tilt",
+    "widths": [
+      640,
+      1280,
+      1920
+    ],
+    "width": 1920,
+    "height": 1440,
+    "alt": "Tommy Jackett laughing with his head tilted, one hand in the pocket of a black bomber jacket.",
+    "caption": "Tommy Jackett.",
+    "credit": "Photo: Full Stack Films",
+    "kind": "press",
+    "filmAsset": false,
+    "focal": "50% 15%",
+    "mood": "playful",
+    "bestFor": [
+      "about",
+      "work"
+    ]
+  },
+  {
+    "id": "tommy-bomber-calm",
+    "file": "tommy-bomber-calm",
+    "widths": [
+      640,
+      1280,
+      1920
+    ],
+    "width": 1920,
+    "height": 1440,
+    "alt": "Tommy Jackett in a black bomber jacket and white T-shirt with a relaxed, slightly wry look, hands in pockets.",
+    "caption": "Tommy Jackett.",
+    "credit": "Photo: Full Stack Films",
+    "kind": "press",
+    "filmAsset": false,
+    "focal": "50% 20%",
+    "mood": "calm, confident",
+    "bestFor": [
+      "about",
+      "work"
+    ]
+  },
+  {
+    "id": "tommy-and-josh-studio-standing",
+    "file": "tommy-and-josh-studio-standing",
+    "widths": [
+      640,
+      1280,
+      1920
+    ],
+    "width": 1920,
+    "height": 1440,
+    "alt": "Tommy Jackett in a beige T-shirt and Josh Janssen in a black one, standing side by side in a pale studio.",
+    "caption": "Tommy Jackett and Josh Janssen.",
+    "credit": "Photo: Full Stack Films",
+    "kind": "press",
+    "filmAsset": false,
+    "focal": "50% 40%",
+    "mood": "relaxed, two friends",
+    "bestFor": [
+      "film",
+      "about"
+    ]
+  },
+  {
+    "id": "tommy-boom-josh-camera",
+    "file": "tommy-boom-josh-camera",
+    "widths": [
+      640,
+      1280,
+      1920
+    ],
+    "width": 1920,
+    "height": 1440,
+    "alt": "Tommy Jackett holding a boom microphone and Josh Janssen with a cinema camera, both looking up and laughing in a white studio.",
+    "caption": "Tommy Jackett and Josh Janssen with the boom and camera.",
+    "credit": "Photo: Full Stack Films",
+    "kind": "press",
+    "filmAsset": false,
+    "focal": "50% 35%",
+    "mood": "playful, filmmaking",
+    "bestFor": [
+      "film",
+      "work",
+      "about"
+    ]
+  },
+  {
+    "id": "tommy-and-josh-laughing",
+    "file": "tommy-and-josh-laughing",
+    "widths": [
+      640,
+      1280,
+      1920
+    ],
+    "width": 1920,
+    "height": 1440,
+    "alt": "Tommy Jackett and Josh Janssen laughing and shoving each other in a white studio.",
+    "caption": "Tommy Jackett and Josh Janssen.",
+    "credit": "Photo: Full Stack Films",
+    "kind": "press",
+    "filmAsset": false,
+    "focal": "50% 40%",
+    "mood": "fun, energetic",
+    "bestFor": [
+      "about",
+      "film"
+    ]
+  },
+  {
+    "id": "thumb-obike-fishing",
+    "file": "thumb-obike-fishing",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1280,
+    "height": 720,
+    "alt": "Thumbnail for the video Fishing For O Bikes In The Yarra River: a man jumping on a path by the Yarra with the words O BIKE FISHING.",
+    "caption": "Fishing For O Bikes In The Yarra River",
+    "credit": "Thumbnail from the video on Tommy Jackett's YouTube channel.",
+    "kind": "videoThumb",
+    "filmAsset": false,
+    "focal": "50% 50%",
+    "mood": "video thumbnail",
+    "bestFor": [
+      "stories"
+    ],
+    "social": "thumb-obike-fishing-social.jpg"
+  },
+  {
+    "id": "thumb-obike-rabbit-hole",
+    "file": "thumb-obike-rabbit-hole",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1280,
+    "height": 720,
+    "alt": "Thumbnail for the video The O Bike Rabbit Hole: Tommy Jackett crouching and giving a thumbs up beside a yellow oBike.",
+    "caption": "The O Bike Rabbit Hole",
+    "credit": "Thumbnail from the video on Tommy Jackett's YouTube channel.",
+    "kind": "videoThumb",
+    "filmAsset": false,
+    "focal": "50% 50%",
+    "mood": "video thumbnail",
+    "bestFor": [
+      "stories"
+    ]
+  },
+  {
+    "id": "thumb-obike-1520",
+    "file": "thumb-obike-1520",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1280,
+    "height": 720,
+    "alt": "Thumbnail for the video How I Made $1520 From oBike: an overhead shot of yellow oBikes laid out on the ground.",
+    "caption": "How I Made $1520 From oBike",
+    "credit": "Thumbnail from the video on Tommy Jackett's YouTube channel.",
+    "kind": "videoThumb",
+    "filmAsset": false,
+    "focal": "50% 50%",
+    "mood": "video thumbnail",
+    "bestFor": [
+      "stories"
+    ]
+  },
+  {
+    "id": "thumb-lime-scooters",
+    "file": "thumb-lime-scooters",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1280,
+    "height": 720,
+    "alt": "Thumbnail for the video Fishing For Lime Scooters In The Yarra River: Tommy Jackett crouching beside a green Lime scooter with the Melbourne skyline behind.",
+    "caption": "Fishing For Lime Scooters In The Yarra River",
+    "credit": "Thumbnail from the video on Tommy Jackett's YouTube channel.",
+    "kind": "videoThumb",
+    "filmAsset": false,
+    "focal": "50% 50%",
+    "mood": "video thumbnail",
+    "bestFor": [
+      "stories"
+    ]
+  },
+  {
+    "id": "thumb-7-eleven-rip-off",
+    "file": "thumb-7-eleven-rip-off",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1280,
+    "height": 720,
+    "alt": "Thumbnail for the video 7-Eleven Coffee Rip-Off: two men laughing over a 7-Eleven coffee cup at a table.",
+    "caption": "7-Eleven Coffee Rip-Off",
+    "credit": "Thumbnail from the video on Tommy Jackett's YouTube channel.",
+    "kind": "videoThumb",
+    "filmAsset": false,
+    "focal": "50% 50%",
+    "mood": "video thumbnail",
+    "bestFor": [
+      "stories"
+    ],
+    "social": "thumb-7-eleven-rip-off-social.jpg"
+  },
+  {
+    "id": "thumb-7-eleven-rabbit-hole",
+    "file": "thumb-7-eleven-rabbit-hole",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1280,
+    "height": 720,
+    "alt": "Thumbnail for the video The 7-Eleven Coffee Rabbit Hole: Tommy Jackett holding a bag of 7-Eleven coffee.",
+    "caption": "The 7-Eleven Coffee Rabbit Hole",
+    "credit": "Thumbnail from the video on Tommy Jackett's YouTube channel.",
+    "kind": "videoThumb",
+    "filmAsset": false,
+    "focal": "50% 50%",
+    "mood": "video thumbnail",
+    "bestFor": [
+      "stories"
+    ]
+  },
+  {
+    "id": "thumb-dominos-pepperoni",
+    "file": "thumb-dominos-pepperoni",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1280,
+    "height": 720,
+    "alt": "Thumbnail for the video about Domino's pepperoni: Tommy Jackett looking shocked beside a Domino's box and a grid of pepperoni slices.",
+    "caption": "Domino's Promise 100 Pieces Of Pepperoni, So I Counted Them!",
+    "credit": "Thumbnail from the video on Tommy Jackett's YouTube channel.",
+    "kind": "videoThumb",
+    "filmAsset": false,
+    "focal": "50% 50%",
+    "mood": "video thumbnail",
+    "bestFor": [
+      "stories"
+    ],
+    "social": "thumb-dominos-pepperoni-social.jpg"
+  },
+  {
+    "id": "thumb-1000-steps",
+    "file": "thumb-1000-steps",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1280,
+    "height": 720,
+    "alt": "Thumbnail for the video The REAL Number Of Steps At The 1000 Steps: a sign warning of uneven slippery steps.",
+    "caption": "The REAL Number Of Steps At The 1000 Steps",
+    "credit": "Thumbnail from the video on Tommy Jackett's YouTube channel.",
+    "kind": "videoThumb",
+    "filmAsset": false,
+    "focal": "50% 50%",
+    "mood": "video thumbnail",
+    "bestFor": [
+      "stories"
+    ]
+  },
+  {
+    "id": "thumb-have-a-crack",
+    "file": "thumb-have-a-crack",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1280,
+    "height": 720,
+    "alt": "Thumbnail for the video Why Having a Crack is the Best Decision You'll Ever Make: a blurred film set at night with the words finding success one crack at a time.",
+    "caption": "Why Having a Crack is the Best Decision You'll Ever Make",
+    "credit": "Thumbnail from the video on Tommy Jackett's YouTube channel.",
+    "kind": "videoThumb",
+    "filmAsset": false,
+    "focal": "50% 50%",
+    "mood": "video thumbnail",
+    "bestFor": [
+      "stories"
+    ],
+    "social": "thumb-have-a-crack-social.jpg"
+  },
+  {
+    "id": "thumb-caravan",
+    "file": "thumb-caravan",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1280,
+    "height": 720,
+    "alt": "Thumbnail for the video The Modern Day Man Living In A Caravan!: a man sitting outside a vintage caravan with an awning.",
+    "caption": "The Modern Day Man Living In A Caravan!",
+    "credit": "Thumbnail from the video on Tommy Jackett's YouTube channel.",
+    "kind": "videoThumb",
+    "filmAsset": false,
+    "focal": "50% 50%",
+    "mood": "video thumbnail",
+    "bestFor": [
+      "stories"
+    ]
+  },
+  {
+    "id": "thumb-sydney-harbour",
+    "file": "thumb-sydney-harbour",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1280,
+    "height": 720,
+    "alt": "Thumbnail for the video Surfing In The Sydney Harbour: a surfer riding a wave beside rocks.",
+    "caption": "SURFING IN THE SYDNEY HARBOUR",
+    "credit": "Thumbnail from the video on Tommy Jackett's YouTube channel.",
+    "kind": "videoThumb",
+    "filmAsset": false,
+    "focal": "50% 50%",
+    "mood": "video thumbnail",
+    "bestFor": [
+      "stories"
+    ]
+  },
+  {
+    "id": "thumb-tribe-influencer",
+    "file": "thumb-tribe-influencer",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1280,
+    "height": 720,
+    "alt": "Thumbnail for the video How to make money as a TRIBE Influencer!: a hand holding a phone showing the TRIBE logo.",
+    "caption": "How to make money as a TRIBE Influencer!",
+    "credit": "Thumbnail from the video on Tommy Jackett's YouTube channel.",
+    "kind": "videoThumb",
+    "filmAsset": false,
+    "focal": "50% 50%",
+    "mood": "video thumbnail",
+    "bestFor": [
+      "stories"
+    ]
+  },
+  {
+    "id": "thumb-cinque-terre",
+    "file": "thumb-cinque-terre",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1280,
+    "height": 720,
+    "alt": "Thumbnail for the video Cinque Terra Cliff Jumping: Tommy Jackett shirtless in green water below rocky cliffs.",
+    "caption": "Cinque Terra Cliff Jumping",
+    "credit": "Thumbnail from the video on Tommy Jackett's YouTube channel.",
+    "kind": "videoThumb",
+    "filmAsset": false,
+    "focal": "50% 50%",
+    "mood": "video thumbnail",
+    "bestFor": [
+      "stories"
+    ]
+  },
+  {
+    "id": "thumb-ranch-part-1",
+    "file": "thumb-ranch-part-1",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1280,
+    "height": 720,
+    "alt": "Thumbnail for The Jackett Ranch, Part 1: Tommy Jackett sitting in a folding chair in shallow water on the salt flats, with the words I'm giving away my dad's land in America.",
+    "caption": "The Jackett Ranch, Part 1",
+    "credit": "Thumbnail from the video on Tommy Jackett's YouTube channel.",
+    "kind": "videoThumb",
+    "filmAsset": false,
+    "focal": "50% 50%",
+    "mood": "video thumbnail",
+    "bestFor": [
+      "stories"
+    ],
+    "social": "thumb-ranch-part-1-social.jpg"
+  },
+  {
+    "id": "tommy-fsf-cap",
+    "file": "tommy-fsf-cap",
+    "widths": [
+      640,
+      1280,
+      1920
+    ],
+    "width": 1920,
+    "height": 1440,
+    "alt": "Tommy Jackett smiling in a cap and cream t-shirt, hands in his pockets",
+    "caption": "",
+    "credit": "Photo: Full Stack Films",
+    "focal": "58% 40%",
+    "kind": "press",
+    "filmAsset": false,
+    "mood": "",
+    "bestFor": ""
+  },
+  {
+    "id": "tommy-cutout-standing",
+    "file": "tommy-cutout-standing",
+    "widths": [
+      640,
+      1100
+    ],
+    "width": 1100,
+    "height": 2300,
+    "alt": "Tommy Jackett standing, smiling, hands in his pockets",
+    "caption": "",
+    "credit": "Photo: Full Stack Films",
+    "focal": "50% 20%",
+    "kind": "press",
+    "filmAsset": false,
+    "mood": "",
+    "bestFor": ""
+  },
+  {
+    "id": "thumb-ranch-part-2-short",
+    "file": "thumb-ranch-part-2-short",
+    "widths": [
+      400
+    ],
+    "width": 400,
+    "height": 720,
+    "alt": "The Jackett Ranch sign at the gate, with Tommy and his dad in cowboy hats in front of it",
+    "caption": "",
+    "credit": "Tommy Jackett",
+    "kind": "thumb",
+    "filmAsset": false,
+    "focal": "50% 50%",
+    "mood": "",
+    "bestFor": ""
+  },
+  {
+    "id": "trip-sunset-camera",
+    "file": "trip-sunset-camera",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1280,
+    "height": 1706,
+    "alt": "A crew member on the sand at Santa Monica at sunset, a cinema camera in one hand, the Ferris wheel and pier behind.",
+    "credit": "Photo: Tommy Jackett, IGWT trip 2024",
+    "kind": "photo",
+    "focal": "50% 40%"
+  },
+  {
+    "id": "trip-tank",
+    "file": "trip-tank",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1280,
+    "height": 1706,
+    "alt": "Tommy Jackett and Josh Janssen standing on a tank in the sun, both laughing, under a deep blue sky.",
+    "credit": "Photo: Tommy Jackett, IGWT trip 2024",
+    "kind": "photo",
+    "focal": "50% 55%"
+  },
+  {
+    "id": "trip-sheriff-lawn",
+    "file": "trip-sheriff-lawn",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1280,
+    "height": 1602,
+    "alt": "Tommy Jackett in a cowboy hat, sunglasses and a pale blue shirt, a bubble gun in one hand, standing on a suburban back lawn.",
+    "credit": "Photo: Tommy Jackett, IGWT trip 2024",
+    "kind": "photo",
+    "focal": "50% 45%"
+  },
+  {
+    "id": "trip-heli-monitor",
+    "file": "trip-heli-monitor",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1280,
+    "height": 1706,
+    "alt": "A cinema camera and its monitor in the foreground, a small white helicopter on the tarmac behind it.",
+    "credit": "Photo: Tommy Jackett, IGWT trip 2024",
+    "kind": "photo",
+    "focal": "50% 55%"
+  },
+  {
+    "id": "vidpod-set",
+    "file": "vidpod-set",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1280,
+    "height": 1706,
+    "alt": "A lit interview set with softboxes and several cameras on tripods, ready to shoot.",
+    "credit": "Photo: VIDPOD",
+    "kind": "photo",
+    "focal": "50% 50%",
+    "social": "vidpod-set-social.jpg"
+  },
+  {
+    "id": "vidpod-logo-white",
+    "file": "vidpod-logo-white",
+    "widths": [
+      1117
+    ],
+    "width": 1117,
+    "height": 400,
+    "alt": "VIDPOD",
+    "credit": "VIDPOD logo",
+    "kind": "logo",
+    "focal": "50% 50%"
+  },
+  {
+    "id": "dts-art",
+    "file": "dts-art",
+    "widths": [
+      640
+    ],
+    "width": 640,
+    "height": 640,
+    "alt": "The Daily Talk Show artwork: two smiling hosts in teal, the show title in the middle.",
+    "credit": "The Daily Talk Show / Big Media Company",
+    "kind": "photo",
+    "focal": "50% 50%"
+  },
+  {
+    "id": "yt-7aa3jxa0sma",
+    "file": "yt-7aa3jxa0sma",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1280,
+    "height": 720,
+    "alt": "Thumbnail: Bodhi pulling a face in a Will Sparks cap, with Will Sparks on stage behind him. Text reads Will Sparks' Biggest Fan.",
+    "credit": "Thumbnail from the video on Tommy Jackett's YouTube channel",
+    "kind": "photo",
+    "focal": "50% 50%"
+  },
+  {
+    "id": "yt-mame-epgpuo",
+    "file": "yt-mame-epgpuo",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1280,
+    "height": 720,
+    "alt": "Thumbnail: Will Sparks lifting Bodhi into the air. Text reads Bodhi's Dreams Come True.",
+    "credit": "Thumbnail from the video on Tommy Jackett's YouTube channel",
+    "kind": "photo",
+    "focal": "50% 50%",
+    "social": "dj-bodhi-social.jpg"
+  },
+  {
+    "id": "yt-bwfkxkv5vvs",
+    "file": "yt-bwfkxkv5vvs",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1280,
+    "height": 720,
+    "alt": "Thumbnail: a young boy in headphones smiling at a DJ controller. Text reads The Story of DJ Daka.",
+    "credit": "Thumbnail from the video on Tommy Jackett's YouTube channel",
+    "kind": "photo",
+    "focal": "50% 50%"
+  },
+  {
+    "id": "yt-8xlnce0oyhw",
+    "file": "yt-8xlnce0oyhw",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1280,
+    "height": 720,
+    "alt": "Thumbnail: Bodhi with Will Sparks, Tommy and a Today Show host beside the Yarra. Text reads DJ Daka's Live TV Debut.",
+    "credit": "Thumbnail from the video on Tommy Jackett's YouTube channel",
+    "kind": "photo",
+    "focal": "50% 50%"
+  },
+  {
+    "id": "yt-ukgksg-d1t4",
+    "file": "yt-ukgksg-d1t4",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1280,
+    "height": 720,
+    "alt": "Thumbnail: two boys with a microphone on a city street. Text reads Life Questions With Bodhi.",
+    "credit": "Thumbnail from the video on Tommy Jackett's YouTube channel",
+    "kind": "photo",
+    "focal": "50% 50%"
+  },
+  {
+    "id": "salt-flats-tommy-cutout",
+    "file": "salt-flats-tommy-cutout",
+    "width": 1280,
+    "height": 1600,
+    "widths": [
+      640,
+      1280
+    ],
+    "alt": "",
+    "credit": "Tommy Jackett, USA trip 2023",
+    "focal": "50% 50%"
+  },
+  {
+    "id": "bts-santa-monica-crew",
+    "file": "bts-santa-monica-crew",
+    "widths": [
+      480,
+      960
+    ],
+    "width": 960,
+    "height": 1280,
+    "alt": "A camera crew on the sand at Santa Monica, a boom microphone held up beside a cinema camera.",
+    "caption": "On the sand at Santa Monica.",
+    "credit": "From Tommy Jackett's trip album",
+    "kind": "photo",
+    "focal": "50% 50%"
+  },
+  {
+    "id": "bts-mural-crew",
+    "file": "bts-mural-crew",
+    "widths": [
+      480,
+      960
+    ],
+    "width": 960,
+    "height": 1280,
+    "alt": "The crew posed in front of a colourful street mural beside a silver pickup, cameras and a boom pole in hand.",
+    "caption": "The crew and the silver Ram, in front of a mural.",
+    "credit": "From Tommy Jackett's trip album",
+    "kind": "photo",
+    "focal": "50% 60%"
+  },
+  {
+    "id": "bts-reflecting-pool-camera",
+    "file": "bts-reflecting-pool-camera",
+    "widths": [
+      480,
+      960
+    ],
+    "width": 960,
+    "height": 1280,
+    "alt": "A cinema camera on a rig beside the Reflecting Pool in Washington DC, the Washington Monument in the distance.",
+    "caption": "Washington DC, by the Reflecting Pool.",
+    "credit": "From Tommy Jackett's trip album",
+    "kind": "photo",
+    "focal": "50% 50%"
+  },
+  {
+    "id": "bts-fair-ride-camera",
+    "file": "bts-fair-ride-camera",
+    "widths": [
+      480,
+      960
+    ],
+    "width": 960,
+    "height": 1280,
+    "alt": "A camera operator filming from inside a fairground ride, coloured lights outside the window.",
+    "caption": "Filming from inside a ride at the fair.",
+    "credit": "From Tommy Jackett's trip album",
+    "kind": "photo",
+    "focal": "50% 50%"
+  },
+  {
+    "id": "bts-beach-camera",
+    "file": "bts-beach-camera",
+    "widths": [
+      480,
+      960
+    ],
+    "width": 960,
+    "height": 1280,
+    "alt": "A camera operator in a puffy jacket filming on a beach with the sun behind clouds and tyre tracks in the sand.",
+    "caption": "A camera, a beach and a low sun.",
+    "credit": "From Tommy Jackett's trip album",
+    "kind": "photo",
+    "focal": "50% 50%"
+  },
+  {
+    "id": "bts-desert-shoot",
+    "file": "bts-desert-shoot",
+    "widths": [
+      480,
+      960
+    ],
+    "width": 960,
+    "height": 1280,
+    "alt": "Three people on a rocky desert slope, one filming with a camera, under a clear blue sky.",
+    "caption": "Out in the desert.",
+    "credit": "From Tommy Jackett's trip album",
+    "kind": "photo",
+    "focal": "50% 55%"
+  },
+  {
+    "id": "bts-big-tex",
+    "file": "bts-big-tex",
+    "widths": [
+      480,
+      960
+    ],
+    "width": 960,
+    "height": 1280,
+    "alt": "Three men posing in front of the Big Tex statue at a state fair.",
+    "caption": "Big Tex, at the Texas State Fair.",
+    "credit": "From Tommy Jackett's trip album",
+    "kind": "photo",
+    "focal": "50% 40%"
+  },
+  {
+    "id": "bts-cloud-gate",
+    "file": "bts-cloud-gate",
+    "widths": [
+      480,
+      960
+    ],
+    "width": 960,
+    "height": 1280,
+    "alt": "The mirrored Cloud Gate sculpture in Chicago with skyscrapers behind and people walking past.",
+    "caption": "Cloud Gate, Chicago.",
+    "credit": "From Tommy Jackett's trip album",
+    "kind": "photo",
+    "focal": "50% 50%"
+  },
+  {
+    "id": "bts-beignets",
+    "file": "bts-beignets",
+    "widths": [
+      480,
+      960
+    ],
+    "width": 960,
+    "height": 1280,
+    "alt": "A hand holding up a paper bag from Cafe du Monde outside the cafe.",
+    "caption": "Beignets at Cafe du Monde.",
+    "credit": "From Tommy Jackett's trip album",
+    "kind": "photo",
+    "focal": "50% 50%"
+  },
+  {
+    "id": "bts-aerial-tractor",
+    "file": "bts-aerial-tractor",
+    "widths": [
+      480,
+      960
+    ],
+    "width": 960,
+    "height": 1280,
+    "alt": "A tractor working rows of crops in a field, seen from above.",
+    "caption": "A tractor in a field, seen from the air.",
+    "credit": "From Tommy Jackett's trip album",
+    "kind": "photo",
+    "focal": "50% 50%"
+  }
+]

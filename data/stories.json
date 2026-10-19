@@ -1,417 +1,392 @@
 [
   {
-    "slug": "in-guns-we-trust",
-    "href": "/in-guns-we-trust/",
-    "title": "In Guns We Trust",
-    "listTitle": "In Guns We Trust",
-    "year": "2026",
-    "order": 1,
-    "homeOrder": null,
-    "image": "igwt-key-art",
-    "indexLine": "The biggest one, and the first feature I've been part of. Josh Janssen directed it, I'm in it with him.",
-    "homeLine": "",
-    "readLabel": "About the film",
-    "body": [],
-    "videos": [],
-    "press": [],
-    "pressLine": "",
-    "watch": [],
-    "needsTommy": [],
-    "status": "live",
-    "isFilm": true
-  },
-  {
     "slug": "jackett-ranch",
     "title": "The Jackett Ranch",
-    "listTitle": "The Jackett Ranch",
-    "year": "2026",
-    "order": 2,
-    "homeOrder": 1,
-    "image": "thumb-ranch-part-1",
-    "indexLine": "My dad bought a block of land in Colorado in the '70s and has never seen it. I went to look.",
-    "homeLine": "My dad bought a block of land in Colorado in the '70s and has never seen it. I went to look, then told the internet he's giving it away.",
-    "readLabel": "Read the story",
-    "metaTitle": "The Jackett Ranch, Colorado | Tommy Jackett",
-    "metaDescription": "How my dad bought a block of land in Colorado for $5,000, never saw it, and why I told the internet he's giving it away.",
+    "tile": "thumb-ranch-part-1",
+    "status": "Ongoing",
+    "indexLine": "My family bought a block of land in America. I went to look.",
+    "lede": "In the '70s my family bought 8.5 acres in America for $5,000. Nobody had been to see it. So I went to have a look.",
+    "metaTitle": "The Jackett Ranch | Tommy Jackett",
+    "metaDescription": "My family bought 8.5 acres in America for $5,000 in the 70s and nobody had been to see it. I went to look, then offered it up for free.",
     "published": "2026-10-06",
-    "updated": "2026-10-19",
-    "body": [
-      "Imagine if you could buy a block of land. 8.5 acres, $5,000, no deposit, $50 a week.",
-      "That's exactly what my dad did in the '70s. A block in Colorado, paid off over 10 years, and the deed turned up in 1985. He has never seen it.",
-      "So I found a mate who was down for a road trip. A 15-hour flight from Melbourne to San Francisco, 2,500 kilometres of driving, all to see if my family was sitting on a gold mine. The local real estate agent took us out in his Jeep, because our hire car wouldn't have made it.",
-      "It was a steep hill. No water, no electricity, and it snows about half the year.",
-      "The block was one of nearly 8,000 cut from a huge ranch. Thousands of people bought them, and most are still empty. As I say in the film, the Forbes family are up $175 million and the Jacketts are down $5K, plus the taxes each year.",
-      "Dad's cutting his losses. He didn't think anyone would want it, so I put it on the internet and let the internet do what it does best. At the end of Part 1 I offered it up for free.",
-      "More soon."
-    ],
     "videos": [
       {
         "id": "v-t6ll80OF8",
         "title": "Driving Across America to Find My Family's Forgotten Land",
         "label": "Part 1",
-        "duration": "PT5M18S",
-        "uploadDate": "2026-10-06",
         "thumb": "thumb-ranch-part-1",
-        "short": false,
-        "description": "Tommy Jackett drives across America to see a block of land in Colorado that his dad bought in the 1970s and has never seen."
+        "date": "2026-10-06",
+        "duration": "PT5M18S",
+        "desc": "Tommy Jackett drives across America to see a block of land his family bought in the 1970s and nobody had visited."
       },
       {
         "id": "pL3OKxdFjn0",
         "title": "My Dad Is Giving Away His Land in America",
-        "label": "Part 2",
-        "duration": null,
-        "uploadDate": "2026-10-07",
-        "thumb": null,
+        "label": "Part 2, a Short",
+        "thumb": "thumb-ranch-part-2-short",
+        "date": "2026-10-07",
         "short": true,
-        "description": "Part 2 of the Jackett Ranch story, a YouTube Short: Tommy Jackett's dad is giving away his land in America."
+        "desc": "Part 2 of the Jackett Ranch story, a YouTube Short: the family is giving away its land in America."
       }
     ],
-    "press": [],
-    "pressLine": "",
-    "watch": [
+    "thread": [
       {
-        "label": "Watch Part 1 on YouTube",
-        "url": "https://www.youtube.com/watch?v=v-t6ll80OF8"
+        "date": "2026-10-06",
+        "text": "Part 1. I drove across America to see it. Steep hill, no water, no power. As I say in the video, the Jacketts are down $5K, plus the taxes. At the end I offered the land up for free.",
+        "video": "v-t6ll80OF8"
       },
       {
-        "label": "Watch Part 2 on YouTube",
-        "url": "https://www.youtube.com/shorts/pL3OKxdFjn0"
+        "date": "2026-10-07",
+        "text": "Part 2, a Short. The family's cutting its losses, so I put the land on the internet.",
+        "video": "pL3OKxdFjn0"
       },
       {
-        "label": "Also on Instagram: Part 1",
-        "url": "https://www.instagram.com/reel/DeGuJB5T4Vq/"
-      },
-      {
-        "label": "Also on Instagram: Part 2",
-        "url": "https://www.instagram.com/reel/DeMCinSTyAl/"
+        "date": null,
+        "label": "Next",
+        "text": "More soon."
       }
     ],
-    "needsTommy": [
-      "Which Part 1 title won the split test (live YouTube title read on 19 Oct 2026 is the one stored; confirm).",
-      "Ranch page has no image: use the final published thumbnail only once Tommy confirms which one it is (not the A/B/C test files, and not a film still).",
-      "'More soon' hints at Part 3: keep or cut.",
-      "'At the end of Part 1 I offered it up for free' is past tense on purpose: is the offer still open?",
-      "Dad's line about considering an offer is not used (private individual)."
+    "links": [
+      "ranch-reel-1",
+      "ranch-reel-2"
     ],
-    "status": "live",
-    "layout": "ranch",
-    "related": [
-      "have-a-crack",
-      "in-guns-we-trust"
-    ]
+    "next": "making-in-guns-we-trust",
+    "homeTile": "salt-flats-tommy-chair",
+    "heroPhoto": "salt-flats-tommy-chair",
+    "tileStatus": "More soon."
   },
   {
-    "slug": "have-a-crack",
-    "title": "Have A Crack",
-    "listTitle": "Have A Crack",
-    "year": "2023",
-    "order": 3,
-    "homeOrder": 5,
-    "image": "thumb-have-a-crack",
-    "indexLine": "Why I think giving things a go beats waiting until you're ready.",
-    "homeLine": "The video where I say what I actually believe about giving things a go.",
-    "readLabel": "Read the story",
-    "metaTitle": "Have A Crack: why giving it a go matters | Tommy Jackett",
-    "metaDescription": "Why having a crack is the best decision you'll ever make. The 2023 video where I say what I believe about giving things a go.",
-    "published": "2023-03-29",
-    "updated": "2026-10-19",
-    "body": [
-      "I've been having a crack for years.",
-      "In 2023 I made a video about it. The idea is simple. \"It doesn't always unfold as you may have hoped, but the success is found in the action of giving it a crack.\"",
-      "Here's my proof. If I'd never had a crack at making a web series in America, I don't think I ever would have found my love for filmmaking. I've hosted breakfast radio in Shepparton. I've fished bikes out of the Yarra. Some of it worked, plenty of it didn't, and every bit of it led to the next thing.",
-      "It's all about finding success one crack at a time, and it really sums up my approach. If you're feeling unsure or stuck or don't know where to start, just get out there and have a crack."
-    ],
-    "videos": [
+    "slug": "making-in-guns-we-trust",
+    "title": "Making In Guns We Trust",
+    "tile": "bts-santa-monica-crew",
+    "homeTile": "bts-santa-monica-crew",
+    "heroPhoto": "bts-santa-monica-crew",
+    "status": "Ongoing",
+    "indexLine": "The road, the crew and the cameras. My own photos from making the doco.",
+    "lede": "Josh and I took a crew across America to make In Guns We Trust. These are my own photos from the road.",
+    "metaTitle": "Making In Guns We Trust: photos from the road | Tommy Jackett",
+    "metaDescription": "Behind the scenes of In Guns We Trust, in Tommy Jackett's own photos: the crew, the cameras and the places they went.",
+    "published": "2026-10-20",
+    "videos": [],
+    "thread": [
       {
-        "id": "e5zuDN_oNRE",
-        "title": "Why Having a Crack is the Best Decision You'll Ever Make",
-        "label": "",
-        "duration": "PT2M23S",
-        "uploadDate": "2023-03-29",
-        "thumb": "thumb-have-a-crack",
-        "short": false,
-        "description": "Tommy Jackett on why giving things a go beats waiting until you're ready."
+        "date": "2026-10-20",
+        "text": "Josh and I made a feature documentary across America. Here is some of what it looked like from behind the camera.",
+        "photos": [
+          "bts-mural-crew",
+          "bts-beach-camera",
+          "bts-reflecting-pool-camera"
+        ]
+      },
+      {
+        "date": "2026-10-20",
+        "text": "The photos come from all over. A fair in Texas, Chicago, Washington DC, New Orleans.",
+        "photos": [
+          "bts-fair-ride-camera",
+          "bts-big-tex",
+          "bts-cloud-gate",
+          "bts-beignets",
+          "bts-desert-shoot",
+          "bts-aerial-tractor"
+        ]
+      },
+      {
+        "date": null,
+        "label": "Next",
+        "text": "More photos and stories from the road soon."
       }
     ],
-    "press": [],
-    "pressLine": "",
-    "watch": [
-      {
-        "label": "Watch: Why Having a Crack is the Best Decision You'll Ever Make",
-        "url": "https://www.youtube.com/watch?v=e5zuDN_oNRE"
-      }
+    "links": [
+      "film-site",
+      "film-youtube"
     ],
-    "needsTommy": [
-      "Quotes are from auto-captions: listen once before go-live.",
-      "Deck had the video id as e5zuDN_oNE (typo); the working id e5zuDN_oNRE is used here and was confirmed live via oEmbed.",
-      "The series he is starting is held, not published."
-    ],
-    "status": "live",
-    "layout": "quote",
-    "related": [
-      "obike",
-      "jackett-ranch"
-    ],
-    "pullQuote": "It doesn't always unfold as you may have hoped, but the success is found in the action of giving it a crack."
+    "next": "dj-bodhi",
+    "tileStatus": "Ongoing."
   },
   {
-    "slug": "dominos-pepperoni",
-    "title": "Domino's promised 100 slices of pepperoni",
-    "listTitle": "Domino's pepperoni",
-    "year": "2023",
-    "order": 4,
-    "homeOrder": 4,
-    "image": "thumb-dominos-pepperoni",
-    "indexLine": "They promised 100 slices. I counted.",
-    "homeLine": "They promised 100 slices. I counted 53.",
-    "readLabel": "Read the story",
-    "metaTitle": "Domino's pepperoni count, 53 slices | Tommy Jackett",
-    "metaDescription": "Domino's promised 100 slices of pepperoni on its Pepperoni Deluxe. I counted them on camera and got 53. Here's the video.",
-    "published": "2023-03-16",
-    "updated": "2026-10-19",
-    "body": [
-      "Domino's said its Pepperoni Deluxe was topped right to the edge with 100 slices of pepperoni. So I counted them.",
-      "I counted them on camera. The total was 53. \"That's all 53 slices of pepperoni on the pepperoni Deluxe at Domino's where they promise 100 slices of pepperoni. Case closed.\"",
-      "It's not the first time I've counted something to check a claim. In 2016 I counted the steps at the 1000 Steps in Victoria. My count was 776, and Pedestrian TV ran the story.",
-      "I posted the pepperoni video in March 2023. It's a minute and a half."
-    ],
+    "slug": "dj-bodhi",
+    "title": "DJ Bodhi",
+    "tile": "yt-mame-epgpuo",
+    "status": "Ongoing",
+    "indexLine": "He wanted to be a DJ. I backed him.",
+    "lede": "His creativity is electric. I just put a magnifying glass on it.",
+    "metaTitle": "DJ Bodhi, Will Sparks and The Today Show | Tommy Jackett",
+    "metaDescription": "A voice memo, a song, a Will Sparks surprise and a spot on The Today Show. The DJ Bodhi videos, in the order they happened.",
+    "published": "2023-03-07",
     "videos": [
       {
-        "id": "933kvR6miMI",
-        "title": "Domino's Promise 100 Pieces Of Pepperoni, So I Counted Them!",
-        "label": "",
-        "duration": "PT1M27S",
-        "uploadDate": "2023-03-16",
-        "thumb": "thumb-dominos-pepperoni",
-        "short": false,
-        "description": "Tommy Jackett counts the pepperoni on a Domino's Pepperoni Deluxe after the chain promised 100 slices."
+        "id": "bWfKXkV5vvs",
+        "title": "From Voice Memo to A Spotify Hit!",
+        "thumb": "yt-bwfkxkv5vvs",
+        "date": "2023-03-07",
+        "duration": "PT3M3S",
+        "desc": "A voice memo that became a song, made with a music producer found on Fiverr."
       },
       {
-        "id": "srm2qRimaPc",
-        "title": "The REAL Number Of Steps At The 1000 Steps",
-        "label": "",
-        "duration": "PT2M27S",
-        "uploadDate": "2016-02-11",
-        "thumb": "thumb-1000-steps",
-        "short": false,
-        "description": "Tommy Jackett counts the steps at the 1000 Steps in Victoria and gets 776."
-      }
-    ],
-    "press": [
-      {
-        "outlet": "Pedestrian TV",
-        "url": "https://www.pedestrian.tv/health/its-all-a-lie-bloke-exposes-vics-1000-steps-as-a-numbers-fraud/",
-        "date": "2016-03-22",
-        "about": "the 1000 Steps count"
-      }
-    ],
-    "pressLine": "In the press: Pedestrian TV (the 1000 Steps).",
-    "watch": [
-      {
-        "label": "Watch: Domino's Promise 100 Pieces Of Pepperoni, So I Counted Them!",
-        "url": "https://www.youtube.com/watch?v=933kvR6miMI"
+        "id": "7Aa3Jxa0SmA",
+        "title": "How My 6-Year-Old Created a Will Sparks-Inspired Banga!",
+        "thumb": "yt-7aa3jxa0sma",
+        "date": "2023-09-04",
+        "duration": "PT1M21S",
+        "desc": "A young DJ discovers Will Sparks and records a voice message to send him."
       },
       {
-        "label": "Watch: The REAL Number Of Steps At The 1000 Steps",
-        "url": "https://www.youtube.com/watch?v=srm2qRimaPc"
-      }
-    ],
-    "needsTommy": [
-      "The count of 53 comes from auto-captions: confirm by ear.",
-      "Page does not say the pizza was wrong or that Domino's lied."
-    ],
-    "status": "live",
-    "layout": "count",
-    "related": [
-      "7-eleven-cup",
-      "obike"
-    ],
-    "pullQuote": "That's all 53 slices of pepperoni on the pepperoni Deluxe at Domino's where they promise 100 slices of pepperoni. Case closed."
-  },
-  {
-    "slug": "7-eleven-cup",
-    "title": "The 7-Eleven coffee cup",
-    "listTitle": "The 7-Eleven cup",
-    "year": "2018",
-    "order": 5,
-    "homeOrder": 3,
-    "image": "thumb-7-eleven-rip-off",
-    "indexLine": "A $3 coffee, a $2 cup, and one question.",
-    "homeLine": "I tipped a $3 coffee into a $2 cup to see if it would fit.",
-    "readLabel": "Read the story",
-    "metaTitle": "The 7-Eleven coffee cup test | Tommy Jackett",
-    "metaDescription": "I tipped a $3 7-Eleven coffee into a $2 cup to see if it would fit. Here's the video, and what came next.",
-    "published": "2018-09-18",
-    "updated": "2026-10-19",
-    "body": [
-      "So we've got a $2 coffee cup, and we're going to tip the $3 into the two and find out once and for all.",
-      "That's how the video starts, and it's pretty much the whole idea. [[NEEDS TOMMY: the result, in one plain sentence, from the video itself]] I put it in the title as a rip-off, so you can guess which way it went.",
-      "It's old footage, so they may have fixed this problem. I posted it in September 2018, and a month later I made a longer one, The 7-Eleven Coffee Rabbit Hole, going further into how the cup sizes work. A couple of money blogs picked it up the next day.",
-      "The two videos have been watched more than 20,000 times between them."
-    ],
-    "videos": [
-      {
-        "id": "AM-oMVi1gZ4",
-        "title": "7-Eleven Coffee Rip-Off",
-        "label": "",
-        "duration": "PT2M2S",
-        "uploadDate": "2018-09-18",
-        "thumb": "thumb-7-eleven-rip-off",
-        "short": false,
-        "description": "Tommy Jackett tips a $3 7-Eleven coffee into a $2 cup to see if it fits."
+        "id": "maMe-epgpUo",
+        "title": "Will Sparks Surprises Kid DJ Fan!",
+        "thumb": "yt-mame-epgpuo",
+        "date": "2023-09-07",
+        "duration": "PT3M43S",
+        "desc": "DJ Will Sparks makes a young fan's dream come true."
       },
       {
-        "id": "WRFVNZgnEEM",
-        "title": "The 7-Eleven Coffee Rabbit Hole",
-        "label": "",
-        "duration": "PT10M56S",
-        "uploadDate": "2018-10-17",
-        "thumb": "thumb-7-eleven-rabbit-hole",
-        "short": false,
-        "description": "A longer follow-up from Tommy Jackett on the 7-Eleven coffee cup sizes."
-      }
-    ],
-    "press": [],
-    "pressLine": "",
-    "watch": [
-      {
-        "label": "Watch: 7-Eleven Coffee Rip-Off",
-        "url": "https://www.youtube.com/watch?v=AM-oMVi1gZ4"
+        "id": "8XlNCE0Oyhw",
+        "title": "Bodhi's Surprise LIVE on The Today Show!",
+        "thumb": "yt-8xlnce0oyhw",
+        "date": "2023-10-05",
+        "duration": "PT4M13S",
+        "desc": "The Today Show saw the video and invited Bodhi to Crown Casino in Melbourne."
       },
       {
-        "label": "Watch: The 7-Eleven Coffee Rabbit Hole",
-        "url": "https://www.youtube.com/watch?v=WRFVNZgnEEM"
+        "id": "f6r0u_TsxDI",
+        "title": "He FINALLY went to a Will Sparks Concert!",
+        "date": "2026-05-05",
+        "short": true,
+        "duration": "PT1M29S",
+        "desc": "A young fan finally gets to a Will Sparks concert."
       }
     ],
-    "needsTommy": [
-      "Result sentence is an open gap.",
-      "One-line summary of the Rabbit Hole video wanted (the page guesses from the title).",
-      "Opening lines are from auto-captions: check by ear.",
-      "Add 7-Eleven's published reply? One blog says the sizes follow industry standard cups."
+    "thread": [
+      {
+        "date": "2023-03-07",
+        "text": "It started with a voice memo on my phone. We found a producer on Fiverr and turned it into his first song.",
+        "video": "bWfKXkV5vvs"
+      },
+      {
+        "date": "2023-09-04",
+        "text": "Then he found Will Sparks and couldn't get enough. He asked if he could record a voice message to send him.",
+        "video": "7Aa3Jxa0SmA"
+      },
+      {
+        "date": "2023-09-07",
+        "text": "Will Sparks surprised him. His new song, Action Fear by DJ Daka, was out everywhere. DJ Daka is Bodhi.",
+        "video": "maMe-epgpUo"
+      },
+      {
+        "date": "2023-10-05",
+        "text": "The Today Show saw the video and called. We went to Crown Casino for his live TV debut.",
+        "video": "8XlNCE0Oyhw"
+      },
+      {
+        "date": "2026-05-05",
+        "text": "Nearly three years on, he finally got to a Will Sparks concert. He's still obsessed.",
+        "video": "f6r0u_TsxDI"
+      }
     ],
-    "status": "live",
-    "layout": "stack",
-    "related": [
-      "obike",
-      "dominos-pepperoni"
+    "links": [],
+    "next": "obike",
+    "strip": [
+      "yt-bwfkxkv5vvs",
+      "yt-mame-epgpuo",
+      "yt-8xlnce0oyhw"
     ]
   },
   {
     "slug": "obike",
-    "title": "Fishing for oBikes in the Yarra",
-    "listTitle": "oBike",
-    "year": "2017",
-    "order": 6,
-    "homeOrder": 2,
-    "image": "thumb-obike-fishing",
-    "indexLine": "I went fishing for abandoned bikes in the Yarra and a company noticed.",
-    "homeLine": "I went fishing for abandoned oBikes in the Yarra. Within days the company had contractors out on the river.",
-    "readLabel": "Read the story",
+    "title": "oBike",
+    "tile": "thumb-obike-fishing",
+    "status": "Out now",
+    "indexLine": "I went fishing for oBikes in the Yarra. Then ABC Radio rang.",
+    "lede": "In September 2017 oBikes were everywhere in Melbourne, including the bottom of the Yarra. So I grabbed a hook.",
     "metaTitle": "oBike fishing in the Yarra | Tommy Jackett",
-    "metaDescription": "In September 2017 I went fishing for abandoned oBikes in the Yarra. Within days the company had contractors out on the river.",
-    "published": "2017-09-23",
-    "updated": "2026-10-19",
-    "body": [
-      "In September 2017 oBikes were everywhere in Melbourne, including the bottom of the Yarra.",
-      "I got a bit obsessed. Not with the bikes. With how everyone reacted to them. So I grabbed a hook and went fishing. I pulled out seven and put the video up.",
-      "Pedestrian TV ran it. ABC Radio Melbourne had me on Melbourne Mornings to talk about it. Within days oBike had contractors out on the river, and they pulled out more than 40 bikes.",
-      "Then it got a bit silly. I got some t-shirts printed and [[NEEDS TOMMY: the Sunrise detail, who got in touch and whether you wore one on air]]. The shirts made $1,520 [[NEEDS TOMMY: where the money went]].",
-      "In the last video I thank oBike for having bikes absolutely everywhere, and ask them to go clean them up.",
-      "In 2022 I did it again, with e-scooters. Five out of the Yarra in under two hours, and 3AW had me on with Neil Mitchell.",
-      "The first two videos have been watched more than 100,000 times between them."
-    ],
+    "metaDescription": "In 2017 I went fishing for dumped oBikes in the Yarra River. Pedestrian TV ran it and ABC Radio Melbourne had me on.",
+    "published": "2017-09-24",
     "videos": [
       {
         "id": "Xuwl6vKiTLU",
         "title": "Fishing For O Bikes In The Yarra River",
-        "label": "",
-        "duration": "PT3M31S",
-        "uploadDate": "2017-09-23",
         "thumb": "thumb-obike-fishing",
-        "short": false,
-        "description": "Tommy Jackett fishes abandoned oBikes out of the Yarra in Melbourne."
+        "date": "2017-09-24",
+        "duration": "PT3M31S",
+        "desc": "Tommy Jackett goes fishing for dumped oBikes in the Yarra River in Melbourne."
       },
       {
         "id": "j5e-fhUCxmk",
         "title": "The O Bike Rabbit Hole",
-        "label": "",
-        "duration": "PT6M14S",
-        "uploadDate": "2017-09-27",
         "thumb": "thumb-obike-rabbit-hole",
-        "short": false,
-        "description": "A follow-up from Tommy Jackett on the oBike story."
-      },
-      {
-        "id": "pBNH2ZdII7s",
-        "title": "How I Made $1520 From oBike",
-        "label": "",
-        "duration": null,
-        "uploadDate": "2017-12-03",
-        "thumb": "thumb-obike-1520",
-        "short": false,
-        "description": "Tommy Jackett on the t-shirts that made $1,520 from the oBike videos."
+        "date": "2017-09-28",
+        "duration": "PT6M14S",
+        "desc": "Tommy Jackett goes further down the oBike rabbit hole."
       },
       {
         "id": "nCeRyqBdGWs",
         "title": "Fishing For Lime Scooters In The Yarra River",
-        "label": "",
-        "duration": "PT2M40S",
-        "uploadDate": "2022-02-13",
         "thumb": "thumb-lime-scooters",
-        "short": false,
-        "description": "Tommy Jackett fishes five Lime e-scooters out of the Yarra in under two hours."
-      }
-    ],
-    "press": [
-      {
-        "outlet": "Pedestrian TV",
-        "url": "https://www.pedestrian.tv/entertainment/watch-melbourne-fella-spends-arvo-fishing-obikes-tossed-in-the-yarra-1/",
-        "date": "2017-09-25",
-        "about": "oBike"
-      },
-      {
-        "outlet": "ABC Radio Melbourne",
-        "url": "https://www.abc.net.au/listen/programs/melbourne-mornings/o-bike-fishing/8987788",
-        "date": "2017-09-26",
-        "about": "oBike, Melbourne Mornings"
-      },
-      {
-        "outlet": "3AW",
-        "url": "https://www.3aw.com.au/melbourne-man-fishes-e-scooters-from-the-yarra-river1/",
         "date": "2022-02-14",
-        "about": "the e-scooters"
+        "duration": "PT2M40S",
+        "desc": "Tommy Jackett fishes e-scooters out of the Yarra River."
       }
     ],
-    "pressLine": "In the press: Pedestrian TV, ABC Radio Melbourne (oBike); 3AW (the e-scooters).",
-    "watch": [
+    "thread": [
       {
-        "label": "Watch: Fishing For O Bikes In The Yarra River",
-        "url": "https://www.youtube.com/watch?v=Xuwl6vKiTLU"
+        "date": "2017-09-24",
+        "text": "Fishing for oBikes. I went down to the Yarra with a hook and an afternoon.",
+        "video": "Xuwl6vKiTLU"
       },
       {
-        "label": "Watch: The O Bike Rabbit Hole",
-        "url": "https://www.youtube.com/watch?v=j5e-fhUCxmk"
+        "date": "2017-09-25",
+        "text": "Pedestrian TV ran it.",
+        "press": "press-obike-pedestrian"
       },
       {
-        "label": "Watch: How I Made $1520 From oBike",
-        "url": "https://www.youtube.com/watch?v=pBNH2ZdII7s"
+        "date": "2017-09-26",
+        "text": "ABC Radio Melbourne had me on Melbourne Mornings.",
+        "press": "press-obike-abc"
       },
       {
-        "label": "Watch: Fishing For Lime Scooters In The Yarra River",
-        "url": "https://www.youtube.com/watch?v=nCeRyqBdGWs"
+        "date": "2017-09-28",
+        "text": "The Rabbit Hole. Six minutes further down.",
+        "video": "j5e-fhUCxmk"
+      },
+      {
+        "date": "2022-02-14",
+        "text": "Did it again with e-scooters. Five out of the Yarra in under two hours, and 3AW rang.",
+        "video": "nCeRyqBdGWs",
+        "press": "press-scooters-3aw"
       }
     ],
-    "needsTommy": [
-      "Sunrise detail and on-air t-shirt gap, where the $1,520 went.",
-      "Press names only Pedestrian TV, ABC Radio Melbourne and 3AW (Seabreeze and road.cc could not be opened).",
-      "Does not say the video caused the clean-up."
+    "links": [],
+    "next": "7-eleven-cup"
+  },
+  {
+    "slug": "7-eleven-cup",
+    "title": "The 7-Eleven cup",
+    "tile": "thumb-7-eleven-rip-off",
+    "status": "Out now",
+    "indexLine": "The $3 cup fits inside the $2 cup.",
+    "lede": "A bloke named Josh showed in 2016 that a $3 coffee fits in a $2 cup. My mate and I checked if it still did in 2018. It's old footage, so they may have fixed it.",
+    "metaTitle": "The 7-Eleven coffee cup test | Tommy Jackett",
+    "metaDescription": "A bloke showed in 2016 that a $3 coffee fits in a $2 cup. My mate and I checked if it still did in 2018. Two videos.",
+    "published": "2018-09-19",
+    "videos": [
+      {
+        "id": "AM-oMVi1gZ4",
+        "title": "7-Eleven Coffee Rip-Off",
+        "thumb": "thumb-7-eleven-rip-off",
+        "date": "2018-09-19",
+        "duration": "PT2M2S",
+        "desc": "Tommy Jackett tests whether a $3 7-Eleven coffee fits in the $2 cup."
+      },
+      {
+        "id": "WRFVNZgnEEM",
+        "title": "The 7-Eleven Coffee Rabbit Hole",
+        "thumb": "thumb-7-eleven-rabbit-hole",
+        "date": "2018-10-18",
+        "duration": "PT10M56S",
+        "desc": "Tommy Jackett goes further into how 7-Eleven cup sizes work."
+      }
     ],
-    "status": "live",
-    "layout": "ledger",
-    "related": [
-      "7-eleven-cup",
-      "dominos-pepperoni",
-      "have-a-crack"
-    ]
+    "thread": [
+      {
+        "date": "2018-09-19",
+        "text": "Coffee Rip-Off. Two minutes, two cups.",
+        "video": "AM-oMVi1gZ4"
+      },
+      {
+        "date": "2018-10-18",
+        "text": "The Rabbit Hole. Eleven minutes further down.",
+        "video": "WRFVNZgnEEM"
+      }
+    ],
+    "links": [],
+    "next": "dominos-pepperoni"
+  },
+  {
+    "slug": "dominos-pepperoni",
+    "title": "Domino's pepperoni",
+    "tile": "thumb-dominos-pepperoni",
+    "status": "Out now",
+    "indexLine": "They promised 100 pieces of pepperoni. I counted.",
+    "lede": "Domino's promised 100 pieces of pepperoni. I ordered one and counted every piece.",
+    "metaTitle": "Domino's 100 pieces of pepperoni | Tommy Jackett",
+    "metaDescription": "Domino's promised 100 pieces of pepperoni. I ordered one and counted every piece, the way I counted the steps at the 1000 Steps.",
+    "published": "2023-03-17",
+    "videos": [
+      {
+        "id": "933kvR6miMI",
+        "title": "Domino's Promise 100 Pieces Of Pepperoni, So I Counted Them!",
+        "thumb": "thumb-dominos-pepperoni",
+        "date": "2023-03-17",
+        "duration": "PT1M27S",
+        "desc": "Tommy Jackett counts the pieces of pepperoni on a Domino's pizza that promises 100."
+      },
+      {
+        "id": "srm2qRimaPc",
+        "title": "The REAL Number Of Steps At The 1000 Steps",
+        "thumb": "thumb-1000-steps",
+        "date": "2016-02-12",
+        "duration": "PT2M27S",
+        "desc": "Tommy Jackett counts the steps at the 1000 Steps in Victoria."
+      }
+    ],
+    "thread": [
+      {
+        "date": "2016-02-12",
+        "text": "Before the pizza, the stairs. I counted the steps at the 1000 Steps and got 776. Pedestrian TV ran it.",
+        "video": "srm2qRimaPc",
+        "press": "press-steps-pedestrian"
+      },
+      {
+        "date": "2023-03-17",
+        "text": "Then I ordered a Domino's pizza that promised 100 pieces of pepperoni, and counted them.",
+        "video": "933kvR6miMI"
+      }
+    ],
+    "links": [],
+    "next": "have-a-crack"
+  },
+  {
+    "slug": "have-a-crack",
+    "title": "Have A Crack",
+    "tile": "thumb-have-a-crack",
+    "status": "Just an idea",
+    "indexLine": "A series about people having a go. Just getting started.",
+    "lede": "I've been having a crack at all sorts of things for years, from a personal training business to radio to TV presenting.",
+    "metaTitle": "Have A Crack: a series about people having a go | Tommy Jackett",
+    "metaDescription": "Why having a crack beats waiting until you're ready. The video I made in 2023, and the series I'm starting.",
+    "published": "2023-03-30",
+    "videos": [
+      {
+        "id": "e5zuDN_oNRE",
+        "title": "Why Having a Crack is the Best Decision You'll Ever Make",
+        "thumb": "thumb-have-a-crack",
+        "date": "2023-03-30",
+        "duration": "PT2M23S",
+        "desc": "Tommy Jackett on why giving things a go beats waiting until you're ready."
+      }
+    ],
+    "thread": [
+      {
+        "date": "2023-03-30",
+        "text": "I made a video on why giving it a go beats waiting until you're ready.",
+        "video": "e5zuDN_oNRE"
+      },
+      {
+        "date": null,
+        "label": "Next",
+        "text": "An idea I'm working on."
+      }
+    ],
+    "links": [],
+    "next": "jackett-ranch"
+  },
+  {
+    "slug": "the-daily-talk-show",
+    "title": "The Daily Talk Show",
+    "tile": "dts-art",
+    "external": "link:dts",
+    "status": "Finished",
+    "indexLine": "More than 1,000 episodes with Josh.",
+    "metaTitle": "The Daily Talk Show | Tommy Jackett",
+    "metaDescription": "More than 1,000 episodes with Josh Janssen."
   }
 ]

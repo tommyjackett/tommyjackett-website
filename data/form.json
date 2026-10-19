@@ -1,49 +1,12 @@
 {
   "service": "Web3Forms (https://web3forms.com)",
-  "source_checked": "Live HTML of https://www.vidpod.com.au/ on 19 Oct 2026. The form sits on the home page (id contactForm, anchor #contact). https://www.vidpod.com.au/contact.html returns a GitHub Pages 404, so there is no separate contact page to lift from.",
   "endpoint": "https://api.web3forms.com/submit",
-  "method": "POST",
-  "enctype": "application/x-www-form-urlencoded (a plain HTML form post). The VIDPOD page has no JavaScript handler; the browser posts the form and lands on Web3Forms' hosted thank-you page.",
-  "fields": [
-    { "name": "access_key", "type": "hidden", "required": true, "note": "Web3Forms access key. It is designed to sit in public HTML, but it routes mail to ONE inbox. VIDPOD's key sends to VIDPOD's inbox, so it is deliberately NOT recorded here. Tommy needs his own key (see notes). Build reads it from site.json as formAccessKey." },
-    { "name": "subject", "type": "hidden", "value": "New enquiry from tommyjackett.com" },
-    { "name": "from_name", "type": "hidden", "value": "tommyjackett.com", "note": "Optional Web3Forms field that sets the sender label in the notification email." },
-    { "name": "botcheck", "type": "checkbox", "hidden": true, "note": "Web3Forms' own honeypot. Hidden, tabindex -1, autocomplete off. Submissions where it is ticked are discarded. VIDPOD uses this exact name." },
-    { "name": "name", "type": "text", "required": true, "label": "Your name", "autocomplete": "name" },
-    { "name": "email", "type": "email", "required": true, "label": "Email", "autocomplete": "email" },
-    { "name": "company", "type": "text", "required": false, "label": "Company or project", "autocomplete": "organization" },
-    { "name": "project_type", "type": "select", "required": false, "label": "What is it about?", "options_on_vidpod": ["Video production", "Podcast production", "Both", "Creative Workshop", "Not sure yet"], "suggested_for_tommyjackett": ["Video or podcast production", "Hosting a screening of In Guns We Trust", "Press or interview", "Speaking or a collab", "Just saying hi"] },
-    { "name": "message", "type": "textarea", "required": true, "label": "Message" }
-  ],
-  "optional_web3forms_fields": {
-    "redirect": "Absolute URL to send the visitor to after a successful post, for example https://tommyjackett.com/contact/thanks/ . Only honoured on the plain-form post path. Set it so the visitor lands back on the site instead of Web3Forms' page.",
-    "replyto": "Not needed. Web3Forms uses the field named email as reply-to automatically."
-  },
-  "honeypot_suggestion": {
-    "primary": "Keep Web3Forms' native checkbox honeypot named botcheck, exactly as VIDPOD does (hidden with an off-screen class rather than only display:none so simple bots still see it, plus tabindex=-1, aria-hidden=true, autocomplete=off).",
-    "secondary": "Add one extra plain text honeypot named website_url inside a visually hidden wrapper (position:absolute; left:-9999px). In the optional JS enhancement, if website_url has any value, silently fake success and do not post.",
-    "tertiary": "Optional: a hidden field filled by 2 lines of JS with a timestamp on load; if the form is submitted in under 2 seconds, treat as a bot. Skip if it adds fragility."
-  },
-  "will_it_work_from_tommyjackett_com": {
-    "short_answer": "The endpoint is public and the mechanism will work, but not with VIDPOD's key.",
-    "detail": [
-      "Web3Forms access keys are public by design and are bound to the email address they were created for. Using VIDPOD's key would deliver Tommy's personal-site enquiries into the VIDPOD inbox, and would mix two brands. Do not reuse it.",
-      "A free Web3Forms key takes under a minute: enter an email at https://web3forms.com , the key arrives by email. No account or card is needed. This is a step for Tommy, not for an agent (it needs access to his inbox).",
-      "Free-plan keys accept browser posts from any origin, so staging on tommyjackett.github.io and the live tommyjackett.com both work. A domain allowlist is a paid (Pro) feature and is not required.",
-      "Server-side posting (for example from a Python script) is blocked on the free plan: Web3Forms returns 'This method is not allowed. Use our API in client side' (observed in a test post with no key on 19 Oct 2026). The site is static and posts from the visitor's browser, so this does not matter.",
-      "Free plan limits (verify at web3forms.com/pricing before launch, they change): a monthly submission cap and no file uploads. Plenty for a personal site."
-    ]
-  },
-  "recommended_setup": {
-    "primary": "Plain HTML form posting to https://api.web3forms.com/submit with Tommy's own access key, native botcheck honeypot, extra website_url honeypot, a redirect to /contact/thanks/ (or the same page with a #sent anchor), and a tiny optional JS enhancement: intercept submit, POST via fetch with Accept: application/json, show an inline 'Sent. I will get back to you.' message. If JS is off, the plain post still works.",
-    "fallback": "A visible mailto link directly under the form: mailto:tommy@vidpod.com.au (the address on file for Tommy; confirm which address he wants public before go-live, and consider an obfuscated build such as assembling the address from data attributes in JS with a plain 'email me' link as the no-JS fallback to reduce scraping). If fetch fails or returns success:false, the JS reveals the mailto fallback inline with the message pre-filled in the mailto body.",
-    "until_key_exists": "Until Tommy supplies a key, render only the mailto fallback and the socials and omit the form, so staging never shows a form that silently goes nowhere. The build should do this automatically when formAccessKey is empty."
-  },
-  "notes": [
-    "No secret is stored in this file. The VIDPOD access key was seen in public page source and deliberately left out.",
-    "The VIDPOD form has no consent checkbox or privacy note. Add one short line under the button: 'I only use your details to reply to you.' No pre-ticked boxes, no marketing opt-in.",
-    "Accessibility: every field gets a real label element, errors announced via aria-live, button text states the action ('Send it through').",
-    "Spam from the extra honeypot should be silently dropped, never shown an error.",
-    "Web3Forms posts also accept a JSON body (Content-Type: application/json) at the same endpoint, which is what the fetch enhancement should use."
-  ]
+  "accessKey": "PASTE_WEB3FORMS_KEY_HERE",
+  "placeholder": "PASTE_WEB3FORMS_KEY_HERE",
+  "howTo": "Create a NEW Web3Forms form for tommyjackett.com (not VIDPOD's), paste its access key into accessKey above, then rebuild. While the placeholder is in place the form renders on staging, a send shows a friendly failure, and the root-domain build (python3 scripts/build.py --root) refuses to run.",
+  "messages": {
+    "ok": "Got it, thanks. I'll get back to you.",
+    "err": "That didn't go through. Try again, or find me on Instagram.",
+    "notLive": "My contact form isn't switched on yet. Find me on Instagram or YouTube for now."
+  }
 }

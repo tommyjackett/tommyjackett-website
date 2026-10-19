@@ -1,0 +1,150 @@
+{
+  "home": {
+    "heroLine1": "I'm Tommy. I'm a filmmaker and storyteller.",
+    "heroLine2": "Check out our brand new documentary below.",
+    "heroButton": "Watch In Guns We Trust",
+    "docoWay": "Two unarmed Australians.",
+    "docoText": "In a nation where the right to bear arms is sacred, two unarmed Australian mates, Josh and Tommy, travel across America to uncover the stories, contradictions, and convictions behind its love affair with guns.",
+    "docoMore": "About the doco",
+    "comingUp": [
+      {
+        "title": "Have A Crack",
+        "text": "An idea I'm working on.",
+        "href": "/stories/have-a-crack/"
+      }
+    ],
+    "aboutLine": "Breakfast radio, a bit of TV, YouTube, more than 1,000 podcast episodes with Josh. Now my own stories.",
+    "aboutLink": "My story",
+    "vidpodLine": "I run VIDPOD, a video production company. If you need video, say hi.",
+    "vidpodLink": "Work",
+    "aboutMore": "The full story",
+    "docoNote": "Official site:",
+    "docoBts": "Making In Guns We Trust"
+  },
+  "doco": {
+    "metaTitle": "In Guns We Trust: the doco I made with Josh | Tommy Jackett",
+    "metaDescription": "In Guns We Trust is our 76 minute feature documentary, free on YouTube. Two unarmed Australians, Josh and Tommy, cross America to listen. Tommy Jackett co-hosts.",
+    "way": "Two unarmed Australians.",
+    "synopsis": "In a nation where the right to bear arms is sacred, two unarmed Australian mates, Josh and Tommy, travel across America to uncover the stories, contradictions, and convictions behind its love affair with guns, finding that empathy, not arguments, may be the only way to bridge the divide.",
+    "facts": "76 minutes.",
+    "credit": "Directed by Josh Janssen. Made by 2A Film, Full Stack Films and Rethink Films.",
+    "film": "Screenings and press go to the film's own team.",
+    "h1": "In Guns We Trust, the doco I made with Josh",
+    "filmLinksLine": "Official site:"
+  },
+  "stories": {
+    "metaTitle": "Stories | Tommy Jackett",
+    "metaDescription": "The stories I've told: The Jackett Ranch, DJ Bodhi, oBikes in the Yarra, a 7-Eleven coffee cup, Domino's pepperoni and a series called Have A Crack.",
+    "h1": "Stories"
+  },
+  "about": {
+    "metaTitle": "About Tommy Jackett | Filmmaker and storyteller",
+    "metaDescription": "Tommy Jackett is a Melbourne filmmaker and storyteller. Radio, TV, YouTube, more than 1,000 podcast episodes, and now a feature documentary.",
+    "h1": "Hey, I'm Tommy.",
+    "body": [
+      "I started on breakfast radio in Shepparton. Then I had a go at TV presenting, and ended up on The Project on Network 10.",
+      "Then YouTube. My favourite videos were always something small that everyone had noticed. Why are there oBikes at the bottom of the Yarra? Does a $3 coffee fit in a $2 cup? So I went and checked.",
+      "Josh Janssen and I made a podcast every day for three and a half years. The Daily Talk Show, more than 1,000 episodes.",
+      "Now I'm making my own stories. The Jackett Ranch, DJ Bodhi, and a feature documentary, In Guns We Trust, which Josh and I made across America with one rule: no side, no agenda, just conversations. I still run VIDPOD, a video production company, and I'm a dad."
+    ],
+    "timeline": [
+      {
+        "year": "2013",
+        "text": "Breakfast radio in Shepparton. Two years."
+      },
+      {
+        "year": "2015",
+        "text": "Made videos about people, a man who lives in a caravan so he can help others, and a surfer in Sydney Harbour."
+      },
+      {
+        "year": "2016",
+        "text": "I counted the steps at the 1000 Steps. Pedestrian TV ran it."
+      },
+      {
+        "year": "2017",
+        "text": "oBikes in the Yarra. ABC Radio Melbourne had me on.",
+        "thumb": "thumb-obike-fishing"
+      },
+      {
+        "year": "2018",
+        "text": "The Daily Talk Show starts. Then a 7-Eleven coffee cup.",
+        "thumb": "thumb-7-eleven-rip-off"
+      },
+      {
+        "year": "2021",
+        "text": "The Daily Talk Show wraps up, more than 1,000 episodes in."
+      },
+      {
+        "year": "2022",
+        "text": "Tomversation, a podcast of conversations. The e-scooters, and 3AW."
+      },
+      {
+        "year": "2023",
+        "text": "Counted Domino's pepperoni. Made Have A Crack. Backed Bodhi's DJ dream and met Will Sparks.",
+        "thumb": "yt-mame-epgpuo"
+      },
+      {
+        "year": "2024",
+        "text": "Josh and I cross America with a camera crew."
+      },
+      {
+        "year": "2026",
+        "text": "In Guns We Trust, free on YouTube. The Jackett Ranch.",
+        "thumb": "igwt-hosts-ucla-law-library"
+      }
+    ],
+    "pressLine": "Covered by",
+    "press": [
+      "press-obike-abc",
+      "press-obike-pedestrian",
+      "press-scooters-3aw"
+    ],
+    "goLinks": [
+      {
+        "label": "The stories",
+        "target": "/stories/"
+      },
+      {
+        "label": "The doco",
+        "target": "/in-guns-we-trust/"
+      },
+      {
+        "label": "Work",
+        "target": "/work/"
+      },
+      {
+        "label": "Say hi",
+        "target": "/contact/"
+      }
+    ],
+    "h1Hidden": "Tommy Jackett, filmmaker and storyteller"
+  },
+  "work": {
+    "metaTitle": "Work with Tommy Jackett | VIDPOD video production",
+    "metaDescription": "Tommy Jackett runs VIDPOD, a video production company in Melbourne. If you need video, get in touch.",
+    "h1": "Work with Tommy Jackett: VIDPOD video production",
+    "lead": "I run VIDPOD, a video production company in Melbourne.",
+    "text": "We make video and podcasts for businesses and creators. Got a project? Say hi.",
+    "buttonA": "Get in touch",
+    "buttonB": "vidpod.com.au"
+  },
+  "contact": {
+    "metaTitle": "Contact Tommy Jackett",
+    "metaDescription": "Got an idea or a project? Send Tommy Jackett a message about video production, press, a collaboration or just to say hi. He's a Melbourne filmmaker and storyteller.",
+    "h1": "Say hi.",
+    "lead": "Got an idea or a project? Tell me.",
+    "findLine": "Or find me on",
+    "options": [
+      "Video production",
+      "Press or an interview",
+      "A collab",
+      "Just saying hi"
+    ],
+    "send": "Send it",
+    "fine": "I only use your details to reply."
+  },
+  "notFound": {
+    "h1": "Not here.",
+    "text": "That page doesn't exist. Try the home page, or the doco."
+  }
+}

@@ -1,10 +1,10 @@
-/* tommyjackett.com. Nav toggle, scroll reveal, solid header after the hero, optional form enhancement. */
+/* tommyjackett.com. Menu, header, soft reveals, click-to-play videos, contact form. */
 (function () {
   "use strict";
-  var doc = document, root = doc.documentElement, body = doc.body;
+  var doc = document, body = doc.body;
   var reduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  /* Menu */
+  /* menu */
   var btn = doc.querySelector(".menu-btn"), menu = doc.getElementById("menu");
   if (btn && menu) {
     var setMenu = function (open) {
@@ -12,62 +12,88 @@
       body.classList.toggle("menu-open", open);
       btn.setAttribute("aria-expanded", open ? "true" : "false");
       btn.textContent = open ? "Close" : "Menu";
-      menu.setAttribute("aria-hidden", open ? "false" : "true");
     };
-    menu.setAttribute("aria-hidden", "true");
     btn.addEventListener("click", function () { setMenu(!menu.classList.contains("open")); });
     menu.addEventListener("click", function (e) { if (e.target.closest("a")) setMenu(false); });
     doc.addEventListener("keydown", function (e) { if (e.key === "Escape" && menu.classList.contains("open")) { setMenu(false); btn.focus(); } });
     window.matchMedia("(min-width: 900px)").addEventListener("change", function (e) { if (e.matches) setMenu(false); });
   }
 
-  /* Header turns solid once the hero has gone (home) or straight away (inner pages). */
-  var header = doc.querySelector(".site-header"), hero = doc.querySelector("[data-hero]");
-  if (header) {
-    if (hero && "IntersectionObserver" in window) {
-      var hio = new IntersectionObserver(function (en) {
-        header.classList.toggle("is-solid", !en[0].isIntersecting);
-      }, { rootMargin: "-70px 0px 0px 0px", threshold: 0 });
-      hio.observe(hero);
-    } else {
-      header.classList.add("is-solid");
-    }
+  /* header goes solid once you scroll */
+  var hd = doc.getElementById("hd");
+  if (hd) {
+    var onScroll = function () { hd.classList.toggle("solid", window.scrollY > 40); };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
   }
 
-  /* Reveal */
-  var items = [].slice.call(doc.querySelectorAll(".reveal"));
+  /* hero parallax: the photo and the cutout move together, the name moves a touch against them. Transform only. */
+  var hero = doc.querySelector(".hero");
+  if (hero && !reduced) {
+    var ticking = false;
+    var par = function () {
+      ticking = false;
+      var y = Math.min(window.scrollY, window.innerHeight);
+      hero.style.setProperty("--py", (y * 0.07).toFixed(1));
+    };
+    window.addEventListener("scroll", function () { if (!ticking) { ticking = true; window.requestAnimationFrame(par); } }, { passive: true });
+  }
+
+  /* soft fades */
+  var items = [].slice.call(doc.querySelectorAll(".rv, .tl li"));
   if (items.length) {
     if (reduced || !("IntersectionObserver" in window)) {
       items.forEach(function (el) { el.classList.add("in"); });
     } else {
       var io = new IntersectionObserver(function (entries) {
-        entries.forEach(function (en) {
-          if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); }
-        });
-      }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
+        entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); } });
+      }, { rootMargin: "0px 0px -8% 0px", threshold: 0.06 });
       items.forEach(function (el) { io.observe(el); });
     }
   }
 
-  /* Contact form: post as JSON, show the message inline, fall back to mailto. Works without JS as a plain post. */
-  var form = doc.querySelector("form[data-enhance]");
-  if (form && window.fetch) {
-    var msg = form.querySelector(".form-msg");
-    form.addEventListener("submit", function (e) {
-      var hp = form.querySelector('[name="website_url"]');
-      if (hp && hp.value) { e.preventDefault(); show(form.getAttribute("data-ok")); return; }
+  /* launch wording: the HTML carries the before text; switch at the launch moment */
+  [].slice.call(doc.querySelectorAll("[data-launch]")).forEach(function (el) {
+    var at = Date.parse(el.getAttribute("data-launch"));
+    if (at && Date.now() >= at) { el.textContent = el.getAttribute("data-after"); }
+  });
+
+  /* click to play. The link goes to YouTube if scripts are off. */
+  [].slice.call(doc.querySelectorAll("a.vid-play[data-yt]")).forEach(function (a) {
+    a.addEventListener("click", function (e) {
       e.preventDefault();
-      var missing = [].slice.call(form.querySelectorAll("[required]")).filter(function (f) { return !f.value.trim(); })[0];
-      if (missing) { show("Add your " + (missing.getAttribute("data-label") || missing.name) + " and try again."); missing.focus(); return; }
+      var box = a.parentNode, f = doc.createElement("iframe");
+      f.src = "https://www.youtube-nocookie.com/embed/" + a.getAttribute("data-yt") + "?autoplay=1&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&color=white";
+      f.title = a.getAttribute("data-title") || "Video";
+      f.allow = "autoplay; encrypted-media; picture-in-picture; fullscreen";
+      f.setAttribute("allowfullscreen", "");
+      f.setAttribute("referrerpolicy", "strict-origin-when-cross-origin");
+      box.replaceChild(f, a);
+      f.focus();
+    });
+  });
+
+  /* contact form */
+  var form = doc.querySelector("form[data-form]");
+  if (form) {
+    var msg = form.querySelector(".form-msg");
+    var show = function (t) { msg.textContent = t; msg.hidden = false; };
+    if (/[?&]sent=1/.test(location.search)) { show(form.getAttribute("data-ok")); }
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var hp = form.querySelector('[name="website_url"]');
+      if (hp && hp.value) { show(form.getAttribute("data-ok")); return; }
+      var bad = [].slice.call(form.querySelectorAll("[required]")).filter(function (f) { return !f.value.trim(); })[0];
+      if (bad) { show("Add your " + bad.getAttribute("data-label") + " and try again."); bad.focus(); return; }
       var em = form.querySelector('[type="email"]');
-      if (em && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em.value)) { show("That email doesn't look right. Check it and try again."); em.focus(); return; }
+      if (em && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em.value)) { show("That email doesn't look right."); em.focus(); return; }
+      if (form.getAttribute("data-live") !== "1") { show(form.getAttribute("data-notlive")); return; }
       show("Sending.");
       var data = {}; new FormData(form).forEach(function (v, k) { data[k] = v; });
-      fetch(form.action, { method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" }, body: JSON.stringify(data) })
+      fetch(form.getAttribute("data-endpoint"), { method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" }, body: JSON.stringify(data) })
         .then(function (r) { return r.json(); })
-        .then(function (j) { if (j && j.success) { form.reset(); show(form.getAttribute("data-ok")); } else { throw new Error("fail"); } })
-        .catch(function () { show(form.getAttribute("data-err")); var fb = doc.querySelector("[data-mailto-fallback]"); if (fb) fb.hidden = false; });
+        .then(function (j) { if (j && j.success) { form.reset(); show(form.getAttribute("data-ok")); } else { throw new Error("no"); } })
+        .catch(function () { show(form.getAttribute("data-err")); });
     });
-    function show(t) { if (msg) { msg.textContent = t; msg.hidden = false; } }
   }
 })();
