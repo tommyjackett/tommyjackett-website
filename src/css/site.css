@@ -461,3 +461,54 @@ h0 clamp(1.3rem, 1.05rem + 1.1vw, 1.9rem)/1.2 var(--serif); color: var(--ink); m
 /* 404 */
 .nf { min-height: 100svh; display: grid; align-content: center; gap: 28px; padding-top: var(--hh); }
 .nf h1 { font: 400 clamp(5rem, 1rem + 24vw, 22rem)/.9 var(--display); text-transform: uppercase; color: var(--ink); }
+
+/* ---------- single page (20 Oct): stacked logo, sections, sensible sizes ---------- */
+.hd-name { font: 400 1.05rem/.86 var(--display); letter-spacing: .01em; text-transform: uppercase; flex-direction: column; align-items: flex-start; justify-content: center; }
+.hd-name span { display: block; }
+.hero-when { display: none; }
+
+/* desktop hero back to the earlier stacked layout: name left, photo right */
+@media (min-width: 900px) {
+  .hero { --fs: min(16.5vw, 28svh, 17rem); }
+  .hero-name { top: clamp(96px, 13svh, 150px); white-space: normal; line-height: .93; }
+  .hn { display: block; }
+  .hn2 { margin-left: 0; }
+}
+
+.sec { padding: clamp(64px, 11vw, 140px) 0; border-top: 1px solid var(--rule); scroll-margin-top: 64px; }
+.kicker { font: 600 .75rem/1.2 var(--body); letter-spacing: .16em; text-transform: uppercase; color: var(--ink-3); margin: 0 0 14px; }
+.sec-h { font: 400 clamp(2.2rem, 1.6rem + 3vw, 4rem)/.92 var(--display); text-transform: uppercase; letter-spacing: .005em; color: var(--ink); margin: 0 0 22px; }
+.sec p { max-width: 36rem; font-size: 1.0625rem; line-height: 1.6; color: var(--ink-2); }
+
+/* doco: poster left, info right on desktop */
+.doco2-in { display: grid; gap: 32px; }
+.doco2-poster { margin: 0; }
+.doco2-poster img { width: 100%; height: auto; display: block; }
+.doco2-syn { color: var(--ink) !important; }
+.doco2-btns { display: flex; flex-direction: column; align-items: stretch; gap: 12px; margin-top: 28px; max-width: 22rem; }
+.doco2-btns .btn { margin: 0; text-align: center; justify-content: center; }
+.btn--ghost { background: transparent !important; color: var(--ink) !important; box-shadow: inset 0 0 0 1px var(--ink-3); }
+.btn--ghost:hover { box-shadow: inset 0 0 0 1px var(--ink); }
+.doco2-links { list-style: none; padding: 0; margin: 32px 0 0; max-width: 22rem; border-top: 1px solid var(--rule); }
+.doco2-links li { border-bottom: 1px solid var(--rule); }
+.doco2-links a { display: flex; justify-content: space-between; align-items: center; min-height: 48px; font: 500 .95rem/1.2 var(--body); color: var(--ink); text-decoration: none; }
+.doco2-links a:hover { color: var(--accent); }
+.doco2-note { margin-top: 20px; font-size: .8125rem !important; color: var(--ink-3) !important; }
+@media (min-width: 900px) {
+  .doco2-in { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 6vw; align-items: center; }
+  .doco2-poster { max-width: 520px; }
+}
+
+/* ranch: info left, picture right on desktop (alternates with the doco) */
+.ranch2-in { display: grid; gap: 32px; }
+.ranch2-pic { margin: 0; }
+.ranch2-pic img { width: 100%; height: auto; display: block; aspect-ratio: 4 / 5; object-fit: cover; }
+@media (min-width: 900px) {
+  .ranch2-in { grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: 6vw; align-items: center; }
+  .ranch2-pic { max-width: 480px; justify-self: end; width: 100%; }
+}
+
+.about2-t { color: var(--ink) !important; font-size: clamp(1.1rem, 1rem + .5vw, 1.35rem) !important; line-height: 1.5 !important; max-width: 40rem !important; }
+
+.contact2-in { display: grid; gap: 32px; }
+@media (min-width: 900px) { .contact2-in { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 6vw; } }

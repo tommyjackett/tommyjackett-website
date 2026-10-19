@@ -61,23 +61,19 @@
   "nav": [
     {
       "label": "Doco",
-      "path": "/in-guns-we-trust/"
+      "path": "/#doco"
     },
     {
-      "label": "Stories",
-      "path": "/stories/"
+      "label": "Ranch",
+      "path": "/#ranch"
     },
     {
       "label": "About",
-      "path": "/about/"
-    },
-    {
-      "label": "Work",
-      "path": "/work/"
+      "path": "/#about"
     },
     {
       "label": "Contact",
-      "path": "/contact/"
+      "path": "/#contact"
     }
   ],
   "footer": {

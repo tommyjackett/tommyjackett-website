@@ -169,10 +169,10 @@ def find_links(ids, cls=""):
 # ---------------------------------------------------------------- header, footer
 def header(cur, home=False):
     def items(c):
-        return "".join(f'<li><a href="{esc(url(n["path"]))}"{" aria-current=page" if cur.startswith(n["path"]) else ""}>{esc(n["label"])}</a></li>' for n in SITE["nav"])
+        return "".join(f'<li><a href="{esc(url(n["path"]))}">{esc(n["label"])}</a></li>' for n in SITE["nav"])
     watch_link = f'<a class="hd-watch" href="{esc(WATCH)}">Watch</a>' if cur == SITE["film"]["sitePath"] else ""
     return f'''<header class="hd" id="hd"><div class="wrap hd-in">
-<a class="hd-name" href="{esc(url("/"))}">{esc(SITE["name"])}</a>
+<a class="hd-name" href="{esc(url("/"))}#top" aria-label="Tommy Jackett, back to top"><span>Tommy</span><span>Jackett</span></a>
 <nav class="hd-nav" aria-label="Main"><ul>{items(cur)}</ul></nav>
 {watch_link}<button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
 </div></header>
@@ -188,7 +188,6 @@ def footer(film_credit):
 <div class="ft-row"><ul class="ft-nav">{nav}</ul><a class="go ft-top" href="#top" style="--x:0">Back to top</a></div>
 <ul class="ft-find">{find}</ul>
 <div class="ft-fine">{credit}<p class="small">{esc(SITE["footer"]["copyright"])}</p></div>
-<div class="ft-name" aria-hidden="true"><a href="#top" tabindex="-1">Tommy Jackett</a></div>
 </div></footer>'''
 
 
@@ -266,7 +265,25 @@ def film_links(cls):
     return f'<p class="{cls}">{lk}</p>'
 
 
-# ---------------------------------------------------------------- HOME
+
+def form_html():
+    d = PAGES["contact"]
+    key = FORM["accessKey"]
+    live = key and key != FORM["placeholder"]
+    opts = "".join(f"<option>{esc(o)}</option>" for o in d["options"])
+    m = FORM["messages"]
+    return f'''<form class="form" method="post" action="{esc(FORM["endpoint"])}" novalidate data-form data-live="{1 if live else 0}" data-endpoint="{esc(FORM["endpoint"])}"
+ data-ok="{esc(m["ok"])}" data-err="{esc(m["err"])}" data-notlive="{esc(m["notLive"])}">
+<input type="hidden" name="access_key" value="{esc(key)}"><input type="hidden" name="subject" value="New message from tommyjackett.com"><input type="hidden" name="from_name" value="tommyjackett.com">
+<div class="hp" aria-hidden="true"><label>Leave this empty <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off"></label><label>Leave this empty <input type="text" name="website_url" tabindex="-1" autocomplete="off"></label></div>
+<div class="field"><label for="f-name">Your name</label><input id="f-name" name="name" type="text" autocomplete="name" required data-label="name"></div>
+<div class="field"><label for="f-email">Your email</label><input id="f-email" name="email" type="email" autocomplete="email" required data-label="email"></div>
+<div class="field"><label for="f-msg">Message</label><textarea id="f-msg" name="message" required data-label="message"></textarea></div>
+<div class="form-go"><button class="btn" type="submit">{esc(d["send"])}</button></div>
+<p class="form-msg" role="status" aria-live="polite" hidden></p></form>'''
+
+
+# ---------------------------------------------------------------- HOME (single page)
 def build_home():
     h = PAGES["home"]
     f = SITE["film"]
@@ -278,59 +295,48 @@ def build_home():
 <p class="hero-l1">{esc(h["heroLine1"])}</p>
 <p class="hero-l2">{esc(h["heroLine2"])}</p>
 <p><a class="btn" href="{esc(WATCH)}">{esc(h["heroButton"])}</a></p>
-<p class="hero-when">{when("short")}</p>
 </div></section>'''
 
-    doco = f'''<section class="doco" aria-labelledby="doco-h">
-<h2 class="vh" id="doco-h">In Guns We Trust</h2>
-<figure class="bleed art rv">{keyart()}</figure>
-<div class="wrap doco-body">
-<p class="syn rv">{esc(h["docoText"])}</p>
-<div class="doco-side">
-<div class="acts rv"{rv(.15)}><a class="btn" href="{esc(WATCH)}">Watch on YouTube</a>{go(h["docoMore"], f["sitePath"])}{go(h["docoBts"], "/stories/making-in-guns-we-trust/")}</div>
-{film_links("doco-links rv")}
-<p class="doco-fine small rv"{rv(.2)}>{esc(f["contentNoteShort"])}</p>
-</div></div>
-</section>'''
+    rows = [("film-site", "Official site"), ("film-press", "Press kit"), ("film-youtube", "YouTube channel"), ("film-imdb", "IMDb")]
+    links = "".join(f'<li><a href="{esc(LINK[i]["url"])}">{esc(l)}<span aria-hidden="true">&rarr;</span></a></li>' for i, l in rows if lnk(i))
+    doco = f'''<section class="sec doco2" id="doco" aria-labelledby="doco-h"><div class="wrap doco2-in">
+<figure class="doco2-poster rv">{img("igwt-poster", sizes="(min-width: 900px) 34vw, 100vw")}</figure>
+<div class="doco2-info rv">
+<p class="kicker">Our feature documentary</p>
+<h2 class="sec-h" id="doco-h">In Guns We Trust</h2>
+<p class="doco2-syn">{esc(h["docoSyn"])}</p>
+<div class="doco2-btns"><a class="btn" href="{esc(WATCH)}">Watch on YouTube</a><a class="btn btn--ghost" href="{esc(LINK["film-site"]["url"])}">About the doco</a></div>
+<ul class="doco2-links">{links}</ul>
+<p class="small doco2-note">{esc(f["contentNoteShort"])}</p>
+</div></div></section>'''
 
     S = {s["slug"]: s for s in STORIES}
-    ra, bo = S["jackett-ranch"], S["dj-bodhi"]
-    ranch = f'''<a class="rt rv" href="{esc(url("/stories/jackett-ranch/"))}"><figure class="rt-fig">{img(ra["homeTile"], sizes="(min-width: 900px) 58vw, 100vw")}</figure>
-<h3 class="rt-h">{esc(ra["title"])}</h3>
-<div class="rt-l"><p class="st-l">{esc(ra["indexLine"])}</p><p class="st-s">{esc(ra["tileStatus"])}</p></div></a>'''
-    strip = "".join(f'<figure>{img(pid, sizes="(min-width: 900px) 32vw, 50vw")}</figure>' for pid in bo["strip"])
-    bodhi = f'''<a class="bd rv" href="{esc(url("/stories/dj-bodhi/"))}"><div class="bd-strip">{strip}</div>
-<h3 class="bd-h">{esc(bo["title"])}</h3><p class="st-l">{esc(bo["indexLine"])}</p></a>'''
-    trio = []
-    for i, slug in enumerate(["obike", "7-eleven-cup", "dominos-pepperoni"]):
-        st = S[slug]
-        trio.append(f'''<a class="tr-i rv" href="{esc(url("/stories/" + slug + "/"))}"{rv(i * .1)}><figure>{img(st["tile"], sizes="(min-width: 900px) 33vw, 88vw")}</figure>
-<h3 class="tr-h">{esc(st["title"])}</h3><p class="st-l">{esc(st["indexLine"])}</p></a>''')
-    stories = f'''<section class="wrap sts" aria-label="Stories">
-{ranch}
-{bodhi}
-<div class="trio">{"".join(trio)}</div>
-<p class="more rv">{go("All stories", "/stories/")}</p>
-</section>'''
+    ra = S["jackett-ranch"]
+    v1 = ra["videos"][0]
+    ranch = f'''<section class="sec ranch2" id="ranch" aria-labelledby="ranch-h"><div class="wrap ranch2-in">
+<div class="ranch2-info rv">
+<p class="kicker">What I'm working on</p>
+<h2 class="sec-h" id="ranch-h">{esc(ra["title"])}</h2>
+<p>{esc(h["ranchLine"])}</p>
+<div class="doco2-btns"><a class="btn btn--ghost" href="https://www.youtube.com/watch?v={esc(v1["id"])}">Watch Part 1</a></div>
+</div>
+<figure class="ranch2-pic rv">{img(ra["homeTile"], sizes="(min-width: 900px) 34vw, 100vw")}</figure>
+</div></section>'''
 
-    dts = S["the-daily-talk-show"]
-    cu = h["comingUp"][0]
-    bands = f'''<section class="wrap bands" aria-label="Coming up and the podcast">
-<a class="band rv" href="{esc(url(cu["href"]))}"><span class="band-k">Coming up</span><span class="band-t">{esc(cu["title"])}</span><span class="band-l ser">{esc(cu["text"])}</span></a>
-<a class="band band--dts rv" href="{esc(resolve(dts["external"]))}"><span class="band-art">{img("dts-art", sizes="120px")}</span><span class="band-t">{esc(dts["title"])}</span><span class="band-l ser">{esc(dts["indexLine"])}</span></a>
-</section>'''
+    about = f'''<section class="sec about2" id="about" aria-labelledby="about-h"><div class="wrap about2-in rv">
+<h2 class="sec-h" id="about-h">About</h2>
+<p class="about2-t">{esc(h["aboutText"])} <a class="link" href="https://www.vidpod.com.au">{esc(h["aboutVidpod"])}</a>.</p>
+</div></section>'''
 
-    me = f'''<section class="wrap me" aria-label="About">
-<figure class="rv">{img("tommy-camera-harbour", sizes="(min-width: 900px) 40vw, 100vw")}</figure>
-<a class="me-word rv" href="{esc(url("/about/"))}"{rv(.1)}>{esc(h["aboutLink"])}</a>
-<div class="me-text rv"{rv(.15)}><p class="me-line ser">{esc(h["aboutLine"])}</p><p class="me-more">{go(h["aboutMore"], "/about/")}</p></div>
-</section>'''
-    vp = f'<section class="wrap vp"><p class="rv">{esc(h["vidpodLine"])}</p><p class="vp-go rv">{go(h["vidpodLink"], "/work/")}</p></section>'
+    contact = f'''<section class="sec contact2" id="contact" aria-labelledby="contact-h"><div class="wrap contact2-in">
+<div class="rv"><h2 class="sec-h" id="contact-h">Get in touch</h2><p>{esc(h["contactLine"])}</p></div>
+<div class="rv">{form_html()}</div>
+</div></section>'''
 
     ld = [website_ld(), person_ld(), vidpod_ld(), movie_ld()]
-    add("/", SITE["home"]["title"], SITE["home"]["description"], "\n".join([hero, doco, stories, bands, me, vp]),
+    add("/", SITE["home"]["title"], SITE["home"]["description"], "\n".join([hero, doco, ranch, about, contact]),
         og="salt-flats-tommy-wide", og_alt="Tommy Jackett standing alone on the Bonneville Salt Flats at dusk", ld=ld,
-        cls="home", preload=["salt-flats-tommy-wide", "salt-flats-tommy-cutout"], film_credit=True, cur="")
+        cls="home", preload=["salt-flats-tommy-wide", "salt-flats-tommy-cutout"], film_credit=False, cur="")
 
 
 # ---------------------------------------------------------------- DOCO
@@ -495,7 +501,7 @@ def build_contact():
 
 def build_404():
     d = PAGES["notFound"]
-    content = f'<div class="wrap nf"><h1>{esc(d["h1"])}</h1><p class="lead">{esc(d["text"])}</p><div class="acts">{go("Home", "/")}{go("The doco", SITE["film"]["sitePath"])}</div></div>'
+    content = f'<div class="wrap nf"><h1>{esc(d["h1"])}</h1><p class="lead">{esc(d["text"])}</p><div class="acts">{go("Home", "/")}{go("The doco", "/#doco")}</div></div>'
     add("/404.html", "Page not found | Tommy Jackett", "", content, og="salt-flats-tommy-wide", cls="nf-pg", noindex=True)
 
 
@@ -698,11 +704,7 @@ def main():
     js = open(os.path.join(ROOT, "src", "js", "site.js"), encoding="utf-8").read()
     P["versions"] = {"css": hashlib.md5(css.encode()).hexdigest()[:8], "js": hashlib.md5(js.encode()).hexdigest()[:8]}
 
-    build_home(); build_doco(); build_stories_index()
-    for st in STORIES:
-        if not st.get("external"):
-            build_story(st)
-    build_about(); build_work(); build_contact(); build_404()
+    build_home(); build_404()
 
     if os.path.exists(out):
         shutil.rmtree(out)
