@@ -1367,5 +1367,19 @@
     "credit": "From Tommy Jackett's trip album",
     "kind": "photo",
     "focal": "50% 50%"
+  },
+  {
+    "id": "tommy-vidpod-founder",
+    "file": "tommy-vidpod-founder",
+    "widths": [
+      640,
+      1280
+    ],
+    "width": 1280,
+    "height": 1600,
+    "alt": "Tommy Jackett smiling, hands in pockets, in a beige t-shirt and black pants in a white studio.",
+    "kind": "portrait",
+    "filmAsset": false,
+    "focal": "50% 40%"
   }
 ]

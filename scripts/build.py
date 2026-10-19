@@ -187,7 +187,7 @@ def footer(film_credit):
     credit = f'<p class="small">{esc(SITE["film"]["creditLine"])}</p>' if film_credit else ""
     return f'''<footer class="ft"><div class="wrap">
 <div class="ft-row"><ul class="ft-nav">{nav}</ul><a class="go ft-top" href="#top" style="--x:0">Back to top</a></div>
-<ul class="ft-find">{find}</ul>
+{social_icons("soc ft-soc")}
 <div class="ft-fine">{credit}<p class="small">{esc(SITE["footer"]["copyright"])}</p></div>
 </div></footer>'''
 
@@ -258,6 +258,28 @@ def add(path, title, desc, content, og, og_alt="", ld=None, cls="", preload=None
                           preload=preload or [], film_credit=film_credit, lastmod=lastmod, cur=cur if cur is not None else path, noindex=noindex))
 
 
+SOCIAL_ICONS = {
+    "tj-instagram": ('Instagram', '<rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".9" fill="currentColor" stroke="none"/>'),
+    "tj-youtube": ('YouTube', '<rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="M10.2 9.4v5.2l4.4-2.6z" fill="currentColor" stroke="none"/>'),
+    "tj-tiktok": ('TikTok', '<path d="M13.6 3.5v11.2a3.4 3.4 0 1 1-3.4-3.4"/><path d="M13.6 3.5c.4 2.5 2.2 4.3 4.9 4.6"/>'),
+    "tj-linkedin": ('LinkedIn', '<rect x="3.5" y="3.5" width="17" height="17" rx="3"/><path d="M8.2 10.6v5.9"/><circle cx="8.2" cy="7.7" r=".55" fill="currentColor"/><path d="M11.8 16.5v-5.9"/><path d="M11.8 13.1c0-1.5 1-2.6 2.4-2.6s2.2 1 2.2 2.6v3.4"/>'),
+    "tj-facebook": ('Facebook', '<path d="M13.9 20.5v-7.3h2.6l.4-3h-3V8.4c0-.9.3-1.5 1.5-1.5h1.6V4.2c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 3.9v2.2H8.3v3h2.6v7.3"/>'),
+    "tj-imdb": ('IMDb', '<rect x="2.5" y="6.5" width="19" height="11" rx="2.5"/><text x="12" y="14.4" text-anchor="middle" font-size="6.6" font-weight="700" font-family="Inter, Arial, sans-serif" fill="currentColor" stroke="none">IMDb</text>'),
+}
+SOCIAL_ORDER = ["tj-instagram", "tj-youtube", "tj-tiktok", "tj-linkedin", "tj-facebook", "tj-imdb"]
+
+
+def social_icons(cls="soc"):
+    items = []
+    for i in SOCIAL_ORDER:
+        if i not in LINK:
+            continue
+        name, svg = SOCIAL_ICONS[i]
+        items.append(f'<li><a href="{esc(LINK[i]["url"])}" rel="me" aria-label="Tommy Jackett on {name}" title="{name}">'
+                     f'<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{svg}</svg></a></li>')
+    return f'<ul class="{cls}">' + "".join(items) + '</ul>'
+
+
 def film_links(cls):
     """Followed links out to the film's own properties. Descriptive anchor text, same tab, no nofollow."""
     rows = [("film-site", "In Guns We Trust, the official site"), ("film-press", "In Guns We Trust press kit"),
@@ -293,37 +315,40 @@ def build_home():
 <h1 class="hero-name" aria-label="Tommy Jackett"><span class="hn hn1" aria-hidden="true">Tommy</span> <span class="hn hn2" aria-hidden="true">Jackett</span></h1>
 <div class="hero-pic hero-cut" aria-hidden="true">{img("salt-flats-tommy-cutout", sizes="(min-width: 900px) 56vw, 150vw", priority=True, alt="", focal=False)}</div>
 <div class="hero-copy">
+{social_icons("soc hero-soc")}
 <p class="hero-l1">{esc(h["heroLine1"])}</p>
 <p class="hero-l2">{esc(h["heroLine2"])}</p>
 <p><a class="btn" href="{esc(WATCH)}">{esc(h["heroButton"])}</a></p>
 </div></section>'''
 
-    doco = f'''<section class="sec doco2" id="doco" aria-labelledby="doco-h"><div class="doco2-in">
-<figure class="doco2-poster rv">{img("igwt-poster", sizes="(min-width: 900px) 50vw, 100vw")}</figure>
-<div class="doco2-info rv">
+    doco = f'''<section class="doco3" id="doco" aria-labelledby="doco-h">
+<figure class="doco3-art rv">{keyart()}</figure>
+<div class="wrap doco3-info rv">
 <p class="kicker">Our feature documentary</p>
 <h2 class="sec-h" id="doco-h">In Guns We Trust</h2>
-<p class="doco2-syn">{esc(h["docoSyn"])}</p>
-<p class="doco2-now">{esc(h["docoNow"])}</p>
-<div class="doco2-btns"><a class="btn" href="{esc(WATCH)}">Watch on YouTube</a><a class="btn btn--ghost" href="{esc(LINK["film-site"]["url"])}">About the doco</a></div>
-</div></div></section>'''
+<p class="doco3-syn">{esc(h["docoSyn"])}</p>
+<p class="doco3-now">{esc(h["docoNow"])}</p>
+<div class="doco3-btns"><a class="btn" href="{esc(WATCH)}">Watch on YouTube</a><a class="btn btn--ghost" href="{esc(LINK["film-site"]["url"])}">About the doco</a></div>
+</div></section>'''
 
-    cards = []
-    for s in SERIES["series"] + [t for t in SERIES["tests"] if t["slug"] in SERIES.get("homeExtra", [])]:
-        cards.append(f'''<li class="cf-card{" cf-card--sq" if s.get("square") else ""}"><a href="{esc(url("/series/"))}#{esc(s["slug"])}">
-<span class="cf-cover">{img(s["cover"], sizes="(min-width: 900px) 420px, 78vw", focal=False)}</span>
-<span class="cf-t">{esc(s["title"])}</span></a></li>''')
-    lately = f'''<section class="sec lately" id="lately" aria-labelledby="lately-h">
-<div class="wrap lately-head rv"><div><p class="kicker">{esc(h["latelyKicker"])}</p><h2 class="sec-h" id="lately-h">Series</h2><p class="lately-line">{esc(h["latelyLine"])}</p></div>
-<div class="cf-nav"><button class="cf-btn" type="button" data-cf="prev" aria-label="Previous series">&larr;</button><button class="cf-btn" type="button" data-cf="next" aria-label="Next series">&rarr;</button></div></div>
-<div class="cf" data-coverflow><ul class="cf-track">{"".join(cards)}</ul></div>
-<div class="wrap lately-foot rv"><a class="btn btn--ghost" href="{esc(url("/series/"))}">See all the series</a></div>
-</section>'''
+    ser = SERIES["series"]
+    first, rest = ser[0], ser[1:]
+    rail = "".join(f'<li class="rc"><a href="{esc(url("/series/"))}#{esc(s["slug"])}"><span class="rc-pic{" rc-pic--sq" if s.get("square") else ""}">'
+                   + img(s["cover"], sizes="(min-width: 900px) 40vw, 82vw", focal=False)
+                   + f'</span><span class="rc-t">{esc(s["title"])}</span><span class="rc-l">{esc(s["line"])}</span></a></li>' for s in rest)
+    lately = (f'<section class="sec lately2" id="lately" aria-labelledby="lately-h"><div class="wrap lately2-head rv">'
+              f'<p class="kicker">{esc(h["latelyKicker"])}</p><h2 class="sec-h" id="lately-h">Series</h2><p class="lately-line">{esc(h["latelyLine"])}</p></div>'
+              f'<div class="wrap"><a class="feat rv" href="{esc(url("/series/"))}#{esc(first["slug"])}"><span class="feat-pic">'
+              + img(first["cover"], sizes="(min-width: 1200px) 1296px, 100vw", focal=False)
+              + f'</span><span class="feat-meta"><span class="feat-k">Latest</span><span class="feat-t">{esc(first["title"])}</span><span class="feat-l">{esc(first["line"])}</span></span></a></div>'
+              + f'<div class="rail" data-rail tabindex="0" aria-label="More series, scroll sideways"><ul class="rail-track">{rail}</ul></div>'
+              + f'<div class="wrap rail-foot"><div class="rail-bar" aria-hidden="true"><span data-rail-bar></span></div><a class="go" href="{esc(url("/series/"))}">See all the series</a></div></section>')
 
-    about = f'''<section class="sec about2" id="about" aria-labelledby="about-h"><div class="wrap about2-in">
-<figure class="about2-pic rv">{img("tommy-portrait-close", sizes="(min-width: 900px) 40vw, 100vw")}</figure>
-<div class="rv"><h2 class="sec-h" id="about-h">About</h2>
-<p class="about2-t">{esc(h["aboutText"])} <a class="link" href="https://www.vidpod.com.au">{esc(h["aboutVidpod"])}</a>.</p></div>
+    about = f'''<section class="sec about3" id="about" aria-labelledby="about-h"><div class="wrap about3-in">
+<div class="about3-text rv"><p class="kicker">About</p><h2 class="sec-h" id="about-h">Tommy Jackett</h2>
+<p class="about3-t">{esc(h["aboutText"])} <a class="link" href="https://www.vidpod.com.au">{esc(h["aboutVidpod"])}</a>.</p>
+<div class="doco3-btns about3-btns"><a class="btn btn--ghost" href="https://www.vidpod.com.au">Visit VIDPOD</a></div></div>
+<figure class="about3-pic rv">{img("tommy-vidpod-founder", sizes="(min-width: 900px) 34vw, 100vw")}</figure>
 </div></section>'''
 
     contact = f'''<section class="sec contact2" id="contact" aria-labelledby="contact-h"><div class="wrap contact2-in">
@@ -346,7 +371,7 @@ def build_series():
         if s.get("external"):
             return f'<div class="sr-btns"><a class="btn" href="{esc(s["external"]["url"])}">{esc(s["external"]["label"])}</a></div>'
         out = []
-        for k, v in enumerate(s["videos"]):
+        for k, v in enumerate(s["videos"][:3]):
             label = v["label"] if len(s["videos"]) > 1 else "Watch"
             cls = "btn" if k == 0 else "btn btn--ghost"
             out.append(f'<a class="{cls}" href="https://www.youtube.com/watch?v={esc(v["id"])}">{esc(label)}</a>')

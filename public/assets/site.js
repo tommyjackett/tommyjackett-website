@@ -133,3 +133,43 @@
   cards.forEach(function (c) { c.addEventListener('focusin', function () { c.scrollIntoView({ inline: 'center', block: 'nearest', behavior: 'smooth' }); }); });
   update();
 })();
+
+/* Series rail: swipe on touch, drag with a mouse, progress line underneath. */
+(function () {
+  var rail = document.querySelector('[data-rail]');
+  if (!rail) return;
+  var bar = document.querySelector('[data-rail-bar]');
+  function progress() {
+    if (!bar) return;
+    var max = rail.scrollWidth - rail.clientWidth;
+    var vis = rail.clientWidth / rail.scrollWidth;
+    bar.style.width = Math.max(12, vis * 100) + '%';
+    var p = max > 0 ? rail.scrollLeft / max : 0;
+    bar.style.transform = 'translateX(' + (p * (100 / Math.max(.12, vis) - 100)) + '%)';
+  }
+  rail.addEventListener('scroll', function () { requestAnimationFrame(progress); }, { passive: true });
+  window.addEventListener('resize', progress);
+  progress();
+  var down = false, startX = 0, startL = 0, moved = false;
+  rail.addEventListener('pointerdown', function (e) {
+    if (e.pointerType !== 'mouse') return;
+    down = true; moved = false; startX = e.clientX; startL = rail.scrollLeft;
+  });
+  window.addEventListener('pointermove', function (e) {
+    if (!down) return;
+    var dx = e.clientX - startX;
+    if (Math.abs(dx) > 4) { moved = true; rail.classList.add('drag'); }
+    rail.scrollLeft = startL - dx;
+  });
+  window.addEventListener('pointerup', function () {
+    if (!down) return;
+    down = false;
+    setTimeout(function () { rail.classList.remove('drag'); }, 0);
+  });
+  rail.addEventListener('click', function (e) { if (moved) { e.preventDefault(); moved = false; } }, true);
+  rail.addEventListener('keydown', function (e) {
+    var w = rail.querySelector('.rc') ? rail.querySelector('.rc').getBoundingClientRect().width + 24 : 300;
+    if (e.key === 'ArrowRight') { rail.scrollBy({ left: w, behavior: 'smooth' }); e.preventDefault(); }
+    if (e.key === 'ArrowLeft') { rail.scrollBy({ left: -w, behavior: 'smooth' }); e.preventDefault(); }
+  });
+})();
