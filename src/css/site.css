@@ -731,3 +731,32 @@ h0 clamp(1.3rem, 1.05rem + 1.1vw, 1.9rem)/1.2 var(--serif); color: var(--ink); m
 .doco3-info .sec-h { margin-bottom: 14px; }
 .player { padding: 60px 0 0; overflow: visible; }
 .player-x { top: -56px; background: rgba(13,13,14,.6); }
+
+/* ---------- v6 (20 Oct): About as a bleed scene, Got a story? finale ---------- */
+.about6 { position: relative; display: grid; border-top: 1px solid var(--rule); scroll-margin-top: 0; }
+.about6-pic { margin: 0; }
+.about6-pic img { width: 100%; height: auto; display: block; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 28%; }
+.about6-body { position: relative; z-index: 2; padding: 0 var(--gut) clamp(64px, 9vw, 110px); }
+.about6-h { margin: -0.62em 0 26px; font: 400 clamp(3.2rem, 2rem + 7vw, 8.5rem)/.86 var(--display); text-transform: uppercase; color: var(--ink); letter-spacing: .005em; }
+.about6-h span { display: block; }
+.about6-text { max-width: 36rem; }
+.about6-text .btn { margin-top: 22px; }
+@media (min-width: 900px) {
+  .about6 { grid-template-columns: minmax(0, 46vw) minmax(0, 1fr); align-items: center; min-height: min(100svh, 980px); }
+  .about6-pic { align-self: stretch; }
+  .about6-pic img { height: 100%; aspect-ratio: auto; min-height: min(100svh, 980px); }
+  .about6-body { padding: clamp(60px, 7vw, 110px) var(--gut) clamp(60px, 7vw, 110px) 0; }
+  .about6-h { margin: 0 0 30px -9vw; font-size: clamp(4rem, 2rem + 5.4vw, 8.5rem); text-shadow: 0 2px 30px rgba(0,0,0,.25); }
+}
+
+.contact6 { border-top: 1px solid var(--rule); }
+.contact6-in { display: grid; gap: 40px; }
+.contact6-h { margin: 0; font: 400 clamp(3.4rem, 2.2rem + 6vw, 8rem)/.86 var(--display); text-transform: uppercase; color: var(--ink); }
+.contact6-line { margin-top: 18px; max-width: 26rem; color: var(--ink-2); font-size: 1.0625rem; line-height: 1.6; }
+.contact6-soc { margin: 22px 0 0 -11px; }
+.contact6-form { border: 1px solid var(--rule); padding: clamp(22px, 3vw, 36px); background: var(--bg-2); }
+@media (min-width: 900px) { .contact6-in { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 5vw; align-items: center; } }
+@media (min-width: 900px) {
+  .about6-body { padding-left: 5vw; }
+  .about6-h { margin-left: -13vw; }
+}

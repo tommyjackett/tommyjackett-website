@@ -381,18 +381,19 @@ def build_home():
               f'<div class="player-frame" data-frame></div></div></dialog>'
               f'</section>')
 
-    about = (f'<section class="sec about5" id="about" aria-labelledby="about-h"><div class="wrap wrap--narrow about5-in">'
-             f'<figure class="about5-pic rv">' + img("salt-flats-tommy-portrait", sizes="(min-width: 900px) 380px, 100vw") + '</figure>'
-             f'<div class="about5-text rv"><h2 class="sec-h" id="about-h">About Tommy Jackett</h2>'
-             f'<p class="about5-bio">{linked(h["aboutBio"])} <a class="link" href="#doco">In Guns We Trust</a> {linked(h["aboutBioDoco"])}</p>'
+    about = (f'<section class="about6" id="about" aria-labelledby="about-h">'
+             f'<figure class="about6-pic">' + img("salt-flats-tommy-portrait", sizes="(min-width: 900px) 46vw, 100vw") + '</figure>'
+             f'<div class="about6-body"><h2 class="about6-h rv" id="about-h"><span>About</span> <span>Tommy Jackett</span></h2>'
+             f'<div class="about6-text rv"><p class="about5-bio">{linked(h["aboutBio"])} <a class="link" href="#doco">In Guns We Trust</a> {linked(h["aboutBioDoco"])}</p>'
              f'<p class="about5-vp">{linked(h["aboutVidpodLine"])}</p>'
-             f'<a class="btn btn--ghost" href="https://www.vidpod.com.au">Visit VIDPOD</a></div>'
-             f'</div></section>')
+             f'<a class="btn btn--ghost" href="https://www.vidpod.com.au">Visit VIDPOD</a></div></div>'
+             f'</section>')
 
-    contact = f'''<section class="sec contact2" id="contact" aria-labelledby="contact-h"><div class="wrap contact2-in">
-<div class="rv"><h2 class="sec-h" id="contact-h">Get in touch</h2><p>{esc(h["contactLine"])}</p></div>
-<div class="rv">{form_html()}</div>
-</div></section>'''
+    contact = (f'<section class="sec contact6" id="contact" aria-labelledby="contact-h"><div class="wrap wrap--narrow contact6-in">'
+               f'<div class="contact6-l rv"><h2 class="contact6-h" id="contact-h">{esc(h["contactTitle"])}</h2><p class="contact6-line">{esc(h["contactLine"])}</p>'
+               + social_icons("soc contact6-soc") + '</div>'
+               f'<div class="contact6-form rv">{form_html()}</div>'
+               f'</div></section>')
 
     ld = [website_ld(), person_ld(), vidpod_ld(), movie_ld()]
     add("/", SITE["home"]["title"], SITE["home"]["description"], "\n".join([hero, doco, lately, about, contact]),
