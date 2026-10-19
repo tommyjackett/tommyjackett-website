@@ -280,6 +280,15 @@ def social_icons(cls="soc"):
     return f'<ul class="{cls}">' + "".join(items) + '</ul>'
 
 
+def linked(text):
+    """Escape copy, then turn [[dts]], [[vidpod]] and [[josh:Label]] markers into links. Tommy: always link The Daily Talk Show and Josh."""
+    out = esc(text)
+    out = out.replace("[[dts]]", '<a class="link" href="https://www.thedailytalkshow.com">The Daily Talk Show</a>')
+    out = out.replace("[[vidpod]]", '<a class="link" href="https://www.vidpod.com.au">VIDPOD</a>')
+    out = re.sub(r"\[\[josh:([^\]]+)\]\]", lambda m: f'<a class="link" href="https://joshjanssen.com">{m.group(1)}</a>', out)
+    return out
+
+
 def film_links(cls):
     """Followed links out to the film's own properties. Descriptive anchor text, same tab, no nofollow."""
     rows = [("film-site", "In Guns We Trust, the official site"), ("film-press", "In Guns We Trust press kit"),
@@ -326,7 +335,7 @@ def build_home():
 <div class="wrap doco3-info rv">
 <p class="kicker">Our feature documentary</p>
 <h2 class="sec-h" id="doco-h">In Guns We Trust</h2>
-<p class="doco3-syn">{esc(h["docoSyn"])}</p>
+<p class="doco3-syn">{linked(h["docoSyn"])}</p>
 <p class="doco3-now">{esc(h["docoNow"])}</p>
 <p class="doco3-credits">Hosted by Tommy Jackett and <a href="https://joshjanssen.com">Josh Janssen</a>. Story by <a href="https://joshjanssen.com">Josh Janssen</a>, Naysan Naraqi and Tommy Jackett. Directed by <a href="https://joshjanssen.com/in-guns-we-trust/">Josh Janssen</a>.</p>
 <div class="doco3-btns"><a class="btn" href="{esc(WATCH)}">Watch on YouTube</a><a class="btn btn--ghost" href="{esc(LINK["film-site"]["url"])}">About the doco</a></div>
@@ -375,8 +384,8 @@ def build_home():
     about = (f'<section class="sec about5" id="about" aria-labelledby="about-h"><div class="wrap wrap--narrow about5-in">'
              f'<figure class="about5-pic rv">' + img("salt-flats-tommy-portrait", sizes="(min-width: 900px) 380px, 100vw") + '</figure>'
              f'<div class="about5-text rv"><h2 class="sec-h" id="about-h">About Tommy Jackett</h2>'
-             f'<p class="about5-bio">{esc(h["aboutBio"])} <a class="link" href="#doco">In Guns We Trust</a> {esc(h["aboutBioDoco"])}</p>'
-             f'<p class="about5-vp">{esc(h["aboutVidpodLine"])}</p>'
+             f'<p class="about5-bio">{linked(h["aboutBio"])} <a class="link" href="#doco">In Guns We Trust</a> {linked(h["aboutBioDoco"])}</p>'
+             f'<p class="about5-vp">{linked(h["aboutVidpodLine"])}</p>'
              f'<a class="btn btn--ghost" href="https://www.vidpod.com.au">Visit VIDPOD</a></div>'
              f'</div></section>')
 

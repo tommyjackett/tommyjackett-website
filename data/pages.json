@@ -20,7 +20,7 @@
     "aboutMore": "The full story",
     "docoNote": "Official site:",
     "docoBts": "Making In Guns We Trust",
-    "docoSyn": "In a nation where the right to bear arms is sacred, two unarmed Aussie mates, Josh Janssen and Tommy Jackett, travel across America to uncover the stories, contradictions, and convictions behind its love affair with guns.",
+    "docoSyn": "In a nation where the right to bear arms is sacred, two unarmed Aussie mates, [[josh:Josh Janssen]] and Tommy Jackett, travel across America to uncover the stories, contradictions, and convictions behind its love affair with guns.",
     "ranchLine": "My family bought a block of land in America in the '70s. Nobody had been to see it, so I went. Now we're giving it away.",
     "aboutText": "I'm a creator who has been immersed in video, podcasts and content production for over 10 years. I make videos for brands and businesses through",
     "aboutVidpod": "VIDPOD",
@@ -28,8 +28,8 @@
     "docoNow": "Free to watch now on YouTube.",
     "latelyKicker": "What I'm up to lately",
     "latelyLine": "I find something I'm curious about and go down the rabbit hole.",
-    "aboutBio": "I'm a creator who has been immersed in video, podcasts and content production for over 10 years. I started out on breakfast radio in Shepparton and made more than 1,000 episodes of The Daily Talk Show with Josh. What drives me is the spark: a story, a person or an idea I can't stop thinking about, and then going all the way down the rabbit hole.",
-    "aboutVidpodLine": "I also run VIDPOD, a Melbourne video and podcast production company. We make brand films, social content and podcasts for businesses, including shows for Monash, HubSpot and Carlisle Homes.",
+    "aboutBio": "I'm a creator who has been immersed in video, podcasts and content production for over 10 years. I started out on breakfast radio in Shepparton and made more than 1,000 episodes of [[dts]] with [[josh:Josh]]. What drives me is the spark: a story, a person or an idea I can't stop thinking about, and then going all the way down the rabbit hole.",
+    "aboutVidpodLine": "I also run [[vidpod]], a Melbourne video and podcast production company. We make brand films, case study videos, social content and podcasts for businesses across Australia.",
     "career": [
       [
         "In Guns We Trust",
@@ -53,7 +53,7 @@
       ]
     ],
     "latelyTitle": "What I'm up to lately",
-    "aboutBioDoco": "is the biggest one yet, a feature documentary where Josh and I dove into one of America's most divided topics."
+    "aboutBioDoco": "is the biggest one yet, a feature documentary where [[josh:Josh]] and I dove into one of America's most divided topics."
   },
   "doco": {
     "metaTitle": "In Guns We Trust: the doco I made with Josh | Tommy Jackett",
