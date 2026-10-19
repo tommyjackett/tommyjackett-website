@@ -283,7 +283,7 @@ def build_home():
 
     doco = f'''<section class="doco" aria-labelledby="doco-h">
 <h2 class="vh" id="doco-h">In Guns We Trust</h2>
-<figure class="bleed art rv">{keyart()}<p class="way art-type">{esc(h["docoWay"])}</p></figure>
+<figure class="bleed art rv">{keyart()}</figure>
 <div class="wrap doco-body">
 <p class="syn rv">{esc(h["docoText"])}</p>
 <div class="doco-side">
@@ -291,10 +291,7 @@ def build_home():
 {film_links("doco-links rv")}
 <p class="doco-fine small rv"{rv(.2)}>{esc(f["contentNoteShort"])}</p>
 </div></div>
-<div class="wrap stills">
-<figure class="rv stills-a">{img("igwt-hosts-ucla-law-library", sizes="(min-width: 900px) 62vw, 100vw", focal=False)}</figure>
-<figure class="rv still stills-b"{rv(.12)}>{img("igwt-watching-planes-lax", sizes="(min-width: 900px) 30vw, 100vw", focal=False)}<p class="still-t">No side.</p></figure>
-</div></section>'''
+</section>'''
 
     S = {s["slug"]: s for s in STORIES}
     ra, bo = S["jackett-ranch"], S["dj-bodhi"]
@@ -340,24 +337,15 @@ def build_home():
 def build_doco():
     d = PAGES["doco"]
     f = SITE["film"]
-    art = f'<h1 class="vh">{esc(d["h1"])}</h1><figure class="dc-art art">{keyart(True)}<p class="way art-type">{esc(d["way"])}</p></figure>'
+    art = f'<h1 class="vh">{esc(d["h1"])}</h1><figure class="dc-art art">{keyart(True)}</figure>'
     cta = f'''<div class="wrap dc-cta"><a class="btn" href="{esc(WATCH)}">Watch on YouTube</a><p class="dc-fact">{esc(d["facts"])} {when("full")}</p></div>'''
     body = f'''<div class="wrap dc-body">
 <p class="dc-lead rv">{when("lead")}</p>
 <p class="syn rv"{rv(.05)}>{esc(d["synopsis"])}</p>
 {film_links("dc-links rv")}
 <p class="small rv">{esc(d["filmLinksLine"])} <a class="link" href="{esc(LINK["film-site"]["url"])}">ingunswetrustfilm.com</a></p></div>'''
-    stills = f'''<div class="wrap dc-stills">
-<figure class="rv still">{img("igwt-watching-planes-lax", sizes="(min-width: 900px) 32vw, 100vw", focal=False)}<p class="still-t">No side.</p></figure>
-<figure class="rv"{rv(.1)}>{img("igwt-hosts-ucla-law-library", sizes="(min-width: 900px) 32vw, 100vw", focal=False)}</figure>
-<figure class="rv still"{rv(.2)}>{img("igwt-sunset-national-mall", sizes="(min-width: 900px) 32vw, 100vw", focal=False)}<p class="still-t">No agenda.</p></figure>
-</div>'''
-    bts = f'''<div class="wrap dc-bts">
-<figure class="rv">{img("bts-santa-monica-crew", sizes="(min-width: 900px) 33vw, 50vw")}</figure>
-<figure class="rv"{rv(.08)}>{img("bts-mural-crew", sizes="(min-width: 900px) 33vw, 50vw")}</figure>
-<figure class="rv"{rv(.16)}>{img("trip-heli-monitor", sizes="(min-width: 900px) 33vw, 50vw")}</figure>
-<p class="dc-bts-go rv">{go("Making In Guns We Trust, in my own photos", "/stories/making-in-guns-we-trust/")}</p>
-</div>'''
+    stills = ''
+    bts = f'''<div class="wrap dc-bts"><p class="dc-bts-go">{go("Making In Guns We Trust, in my own photos", "/stories/making-in-guns-we-trust/")}</p></div>'''
     end = f'''<div class="wrap dc-end rv"><img class="logo" src="{esc(url("/img/igwt-title-white-1280.webp"))}" width="1280" height="761" alt="In Guns We Trust" loading="lazy"><a class="btn" href="{esc(WATCH)}">Watch In Guns We Trust</a></div>
 <div class="wrap dc-note"><p class="small"><strong>{esc(f["contentNote"])}</strong> {esc(f["supportInline"])}</p>
 <p class="small">{esc(d["film"])}</p>
@@ -543,7 +531,6 @@ def render(p):
           f'<link rel="icon" type="image/png" sizes="192x192" href="{url("/icons/icon-192.png")}">',
           f'<link rel="apple-touch-icon" href="{url("/icons/icon-180.png")}">',
           f'<link rel="preload" href="{url("/fonts/anton-400-latin.woff2")}" as="font" type="font/woff2" crossorigin>',
-          f'<link rel="preload" href="{url("/fonts/instrument-serif-italic-latin.woff2")}" as="font" type="font/woff2" crossorigin>',
           f'<link rel="preload" href="{url("/fonts/inter-variable-latin.woff2")}" as="font" type="font/woff2" crossorigin>']
     for pid in p["preload"]:
         i2 = IMAGES[pid]
