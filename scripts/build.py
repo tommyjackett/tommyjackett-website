@@ -285,6 +285,7 @@ def linked(text):
     out = esc(text)
     out = out.replace("[[dts]]", '<a class="link" href="https://www.thedailytalkshow.com">The Daily Talk Show</a>')
     out = out.replace("[[vidpod]]", '<a class="link" href="https://www.vidpod.com.au">VIDPOD</a>')
+    out = re.sub(r"\[\[ig:([^\]]+)\]\]", lambda m: f'<a class="link" href="https://www.instagram.com/tommyjackett/">{m.group(1)}</a>', out)
     out = re.sub(r"\[\[yt:([^\]]+)\]\]", lambda m: f'<a class="link" href="https://www.youtube.com/@TommyJackett">{m.group(1)}</a>', out)
     out = re.sub(r"\[\[josh:([^\]]+)\]\]", lambda m: f'<a class="link" href="https://joshjanssen.com">{m.group(1)}</a>', out)
     return out
