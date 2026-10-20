@@ -760,3 +760,37 @@ h0 clamp(1.3rem, 1.05rem + 1.1vw, 1.9rem)/1.2 var(--serif); color: var(--ink); m
   .about6-body { padding-left: 5vw; }
   .about6-h { margin-left: -13vw; }
 }
+
+/* ---------- v7 (20 Oct): desktop weight balance (phone layout unchanged) ---------- */
+@media (min-width: 900px) {
+  /* doco: contained key art, two-column info underneath */
+  .doco3 { padding-top: clamp(56px, 6vw, 90px); }
+  .doco3-art { max-width: 1180px; margin: 0 auto; padding: 0 var(--gut); }
+  .doco3-info { max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); column-gap: 5vw; text-align: left; align-items: start; padding-top: 40px; padding-bottom: clamp(56px, 6vw, 90px); }
+  .doco3-info .kicker { grid-column: 1; }
+  .doco3-info .sec-h { grid-column: 1; margin: 0; font-size: clamp(2.4rem, 1.6rem + 2.4vw, 3.6rem); }
+  .doco3-info .doco3-syn, .doco3-info .doco3-now, .doco3-info .doco3-credits, .doco3-info .doco3-btns { grid-column: 2; }
+  .doco3-info .doco3-syn { grid-row: 1 / span 2; margin: 0; font-size: 1.08rem; }
+  .doco3-info .doco3-now { margin-top: 14px; }
+  .doco3-info .doco3-btns { justify-content: flex-start; margin-top: 22px; }
+  .doco3-info .doco3-btns .btn { min-width: 190px; }
+
+  /* stories: heading and line on one row, list matches featured height */
+  .series3-head { display: flex; align-items: baseline; justify-content: space-between; gap: 30px; }
+  .series3-head .sec-h { margin: 0; }
+  .series3-line { max-width: 22rem; text-align: right; margin: 0; }
+  .series3-grid { align-items: stretch; }
+  .sl-list { display: flex; flex-direction: column; justify-content: space-between; }
+  .sl-list li { flex: 1; display: flex; }
+  .sl-list li[hidden] { display: none; }
+  .sl { align-self: center; }
+
+  /* about: calmer heading inside the text column */
+  .about6 { min-height: min(86svh, 860px); }
+  .about6-pic img { min-height: min(86svh, 860px); }
+  .about6-h { margin: 0 0 24px 0; font-size: clamp(2.4rem, 1.6rem + 2.4vw, 3.6rem); line-height: .92; text-shadow: none; }
+  .about6-h span { display: inline; }
+
+  /* contact: headline in proportion */
+  .contact6-h { font-size: clamp(3rem, 2rem + 3.6vw, 5.4rem); }
+}
