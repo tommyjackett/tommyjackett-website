@@ -1,7 +1,7 @@
 {
   "service": "Web3Forms (https://web3forms.com)",
   "endpoint": "https://api.web3forms.com/submit",
-  "accessKey": "PASTE_WEB3FORMS_KEY_HERE",
+  "accessKey": "1e250cdd-b36b-4107-9953-fa1e2ceb7f04",
   "placeholder": "PASTE_WEB3FORMS_KEY_HERE",
   "howTo": "Create a NEW Web3Forms form for tommyjackett.com (not VIDPOD's), paste its access key into accessKey above, then rebuild. While the placeholder is in place the form renders on staging, a send shows a friendly failure, and the root-domain build (python3 scripts/build.py --root) refuses to run.",
   "messages": {
