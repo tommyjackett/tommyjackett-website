@@ -797,3 +797,14 @@ h0 clamp(1.3rem, 1.05rem + 1.1vw, 1.9rem)/1.2 var(--serif); color: var(--ink); m
 .ft3-pic--sq { background: #0e5e5c; }
 .ft3-pic--sq img { object-fit: contain; }
 .play--go svg { margin-left: 0; transform: rotate(-45deg); }
+@media (min-width: 900px) {
+  .hero { --fs: min(13vw, 22svh, 14rem); }
+  .hero-copy { max-width: min(36rem, 46vw); }
+}
+@media (min-width: 900px) {
+  .hero { --fs: max(110px, min(13vw, calc((100svh - 500px) / 1.86), 14rem)); }
+}
+@media (min-width: 900px) {
+  .hero-copy { max-width: 46vw; padding-bottom: clamp(36px, 6svh, 80px); }
+  .hero-l1, .hero-l2 { font-size: clamp(.98rem, .9rem + .25vw, 1.08rem); line-height: 1.55; max-width: 34rem; }
+}

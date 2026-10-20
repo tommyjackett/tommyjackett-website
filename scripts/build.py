@@ -326,7 +326,7 @@ def build_home():
 <div class="hero-copy">
 {social_icons("soc hero-soc")}
 <p class="hero-l1">{esc(h["heroLine1"])}</p>
-<p class="hero-l2">{esc(h["heroLine2"])}</p>
+<p class="hero-l2">{linked(h["heroLine2"])}</p>
 <p><a class="btn" href="{esc(WATCH)}">{esc(h["heroButton"])}</a></p>
 </div></section>'''
 
