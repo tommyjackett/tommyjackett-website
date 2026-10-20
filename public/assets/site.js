@@ -191,11 +191,17 @@
     img.classList.add('swap');
     setTimeout(function () {
       img.src = s.cover; img.alt = s.alt; title.textContent = s.title; line.textContent = s.line;
+      img.parentNode.classList.toggle('ft3-pic--sq', !!s.sq);
       img.onload = function () { img.classList.remove('swap'); };
       setTimeout(function () { img.classList.remove('swap'); }, 400);
     }, 180);
     tag.hidden = s.slug !== items[0].slug;
-    playBtn.setAttribute('aria-label', 'Play ' + s.title);
+    playBtn.setAttribute('aria-label', s.ids.length ? 'Play ' + s.title : 'Go to ' + s.title);
+    playBtn.classList.toggle('play--go', !s.ids.length);
+    playBtn.querySelector('path').setAttribute('d', s.ids.length ? 'M8 5.5v13l11-6.5z' : 'M5 12h12M12 6.5l5.5 5.5-5.5 5.5');
+    playBtn.querySelector('path').setAttribute('fill', s.ids.length ? 'currentColor' : 'none');
+    playBtn.querySelector('path').setAttribute('stroke', s.ids.length ? 'none' : 'currentColor');
+    playBtn.querySelector('path').setAttribute('stroke-width', '2');
     [].forEach.call(wrap.querySelectorAll('[data-pick]'), function (b) { b.parentNode.hidden = b.getAttribute('data-pick') === s.slug; });
     if (focusPlay) playBtn.focus({ preventScroll: true });
   }

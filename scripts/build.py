@@ -361,10 +361,10 @@ def build_home():
                 "sq": bool(s.get("square"))} for s in ser]
     first = ser[0]
     rows = "".join(
-        (f'<li><a class="sl" href="{esc(s["external"]["url"])}">' if s.get("external") else f'<li{" hidden" if s is first else ""}><button class="sl" type="button" data-pick="{esc(s["slug"])}">')
+        f'<li{" hidden" if s is first else ""}><button class="sl" type="button" data-pick="{esc(s["slug"])}">'
         + f'<span class="sl-pic{" sl-pic--sq" if s.get("square") else ""}">' + img(s["cover"], sizes="(min-width: 900px) 150px, 34vw", focal=False)
         + f'</span><span class="sl-txt"><span class="sl-t">{esc(s["title"])}</span><span class="sl-l">{esc(s["line"])}</span></span>'
-        + ('<span class="sl-go" aria-hidden="true">&nearr;</span></a></li>' if s.get("external") else '<span class="sl-go" aria-hidden="true">&rarr;</span></button></li>')
+        + '<span class="sl-go" aria-hidden="true">&rarr;</span></button></li>'
         for s in ser)
     lately = (f'<section class="sec series3" id="series" aria-labelledby="series-h"><div class="wrap wrap--narrow">'
               f'<div class="series3-head rv"><h2 class="sec-h" id="series-h">{esc(h["latelyTitle"])}</h2>'

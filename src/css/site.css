@@ -794,3 +794,6 @@ h0 clamp(1.3rem, 1.05rem + 1.1vw, 1.9rem)/1.2 var(--serif); color: var(--ink); m
   /* contact: headline in proportion */
   .contact6-h { font-size: clamp(3rem, 2rem + 3.6vw, 5.4rem); }
 }
+.ft3-pic--sq { background: #0e5e5c; }
+.ft3-pic--sq img { object-fit: contain; }
+.play--go svg { margin-left: 0; transform: rotate(-45deg); }
