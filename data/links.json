@@ -58,9 +58,9 @@
     "label": "LinkedIn",
     "url": "https://www.linkedin.com/in/tommyjackett/",
     "group": "tommy",
-    "verified": false,
-    "sameAs": false,
-    "note": "UNVERIFIED (sign-in wall). Held out until Tommy confirms."
+    "verified": true,
+    "sameAs": true,
+    "note": "Confirmed by Tommy 20 Oct 2026."
   },
   {
     "id": "film-site",

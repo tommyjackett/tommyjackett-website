@@ -397,7 +397,16 @@ def build_home():
                f'<div class="contact6-form rv">{form_html()}</div>'
                f'</div></section>')
 
-    ld = [website_ld(), person_ld(), vidpod_ld(), movie_ld()]
+    vids = []
+    for s in SERIES["series"]:
+        for v in s.get("videos", []):
+            if v.get("date"):
+                vids.append({"@type": "VideoObject", "name": v["title"], "description": s["line"], "uploadDate": v["date"],
+                             "thumbnailUrl": ["https://i.ytimg.com/vi/" + v["id"] + "/hqdefault.jpg"],
+                             "contentUrl": "https://www.youtube.com/watch?v=" + v["id"], "embedUrl": "https://www.youtube-nocookie.com/embed/" + v["id"],
+                             "creator": {"@id": absu("/") + "#person"}})
+    ld = [website_ld(), person_ld(), vidpod_ld(), movie_ld(), {"@type": "ItemList", "name": "Originals by Tommy Jackett",
+          "itemListElement": [{"@type": "ListItem", "position": k + 1, "item": v} for k, v in enumerate(vids)]}]
     add("/", SITE["home"]["title"], SITE["home"]["description"], "\n".join([hero, doco, lately, about, contact]),
         og="salt-flats-tommy-wide", og_alt="Tommy Jackett standing alone on the Bonneville Salt Flats at dusk", ld=ld,
         cls="home", preload=["salt-flats-tommy-wide", "salt-flats-tommy-cutout"], film_credit=False, cur="")
@@ -682,24 +691,18 @@ def sitemap():
 def llms():
     f = SITE["film"]
     L = ["# Tommy Jackett\n", f"> {SITE['entityStatement']}\n",
-         (f"Facts that stay the same: In Guns We Trust is a {f['runtimeMinutes']} minute documentary, free on YouTube worldwide from Thursday 22 October 2026 at 8pm US Eastern "
-          f"(Friday 23 October 2026 at 11am Melbourne time, AEDT). It is directed by Josh Janssen and made by 2A Film, Full Stack Films and Rethink Films. "
-          f"Tommy Jackett co-hosts and co-wrote it. The film takes no side on guns.\n"),
-         "## Pages", f"- [Home]({absu('/')}): who Tommy is and what he is making",
-         f"- [The doco]({absu(f['sitePath'])}): In Guns We Trust, the documentary",
-         f"- [Stories]({absu('/stories/')}): the stories he has told, in the order they happened",
-         f"- [About]({absu('/about/')}): his bio and career, from breakfast radio to film",
-         f"- [Work]({absu('/work/')}): VIDPOD, his video production company",
-         f"- [Contact]({absu('/contact/')}): send a message\n", "## Stories"]
-    for s in STORIES:
-        if s.get("external"):
-            L.append(f"- [{s['title']}]({resolve(s['external'])}): {s['indexLine']}")
-        else:
-            L.append(f"- [{s['title']}]({absu('/stories/' + s['slug'] + '/')}): {s['lede']}")
+         ("In Guns We Trust (2026) is a 76 minute feature documentary, free on YouTube worldwide from Friday 23 October 2026, 11am AEDT "
+          "(Thursday 22 October, 8pm US Eastern). Hosted by Tommy Jackett and Josh Janssen. Story by Josh Janssen, Naysan Naraqi and Tommy Jackett. "
+          "Directed by Josh Janssen. Made by 2A Film, Full Stack Films and Rethink Films. The film takes no side on guns.\n"),
+         "## On this site", f"- [Home]({absu('/')}): who Tommy is, the doco, his originals, about and contact",
+         f"- [In Guns We Trust]({absu('/')}#doco)", f"- [Originals]({absu('/')}#series): series and shows he makes",
+         f"- [About]({absu('/')}#about)", f"- [Contact]({absu('/')}#contact)\n", "## Originals"]
+    for s in SERIES["series"]:
+        u = s["external"]["url"] if s.get("external") else "https://www.youtube.com/watch?v=" + ([v for v in s["videos"] if not v.get("short")] or s["videos"])[0]["id"]
+        L.append(f"- [{s['title']}]({u}): {s['line']}")
     L += ["", "## Elsewhere"] + [f"- [{l['label']}]({l['url']})" for l in LINKS if l["group"] == "tommy" and l.get("verified")]
-    L += [f"- [The Daily Talk Show]({LINK['dts']['url']})", f"- [VIDPOD]({SITE['vidpod']['url']})", f"- [In Guns We Trust, official site]({LINK['film-site']['url']})", ""]
+    L += [f"- [In Guns We Trust, official site]({LINK['film-site']['url']})", f"- [The Daily Talk Show]({LINK['dts']['url']})", f"- [VIDPOD]({SITE['vidpod']['url']})", ""]
     return "\n".join(L)
-
 
 def write(path, text):
     os.makedirs(os.path.dirname(path), exist_ok=True)
