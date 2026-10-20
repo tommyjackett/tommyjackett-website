@@ -823,3 +823,7 @@ h0 clamp(1.3rem, 1.05rem + 1.1vw, 1.9rem)/1.2 var(--serif); color: var(--ink); m
   .series3-line { text-align: left; max-width: 40rem; margin: 0; }
 }
 .series3-line { color: var(--ink-2); line-height: 1.6; }
+/* Latest tag as a strip of tape */
+.ft3-tag { width: auto; height: auto; padding: 7px 16px 6px; top: -10px; left: -14px; font-size: .9rem; line-height: 1; transform: rotate(-6deg); background: rgba(240,234,220,.92); }
+.ft3-tag[hidden] { transform: rotate(-6deg) scale(.8); }
+@media (max-width: 699px) { .ft3-tag { padding: 6px 13px 5px; font-size: .8rem; left: -8px; } }
