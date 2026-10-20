@@ -817,3 +817,9 @@ h0 clamp(1.3rem, 1.05rem + 1.1vw, 1.9rem)/1.2 var(--serif); color: var(--ink); m
   .hero-pic { top: 0; bottom: 0; height: auto; width: 56vw; }
   .hero-pic img { object-fit: cover; object-position: 50% 50%; }
 }
+@media (min-width: 900px) {
+  .series3-head { display: block; }
+  .series3-head .sec-h { margin: 0 0 12px; }
+  .series3-line { text-align: left; max-width: 40rem; margin: 0; }
+}
+.series3-line { color: var(--ink-2); line-height: 1.6; }

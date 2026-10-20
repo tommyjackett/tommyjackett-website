@@ -285,6 +285,7 @@ def linked(text):
     out = esc(text)
     out = out.replace("[[dts]]", '<a class="link" href="https://www.thedailytalkshow.com">The Daily Talk Show</a>')
     out = out.replace("[[vidpod]]", '<a class="link" href="https://www.vidpod.com.au">VIDPOD</a>')
+    out = re.sub(r"\[\[yt:([^\]]+)\]\]", lambda m: f'<a class="link" href="https://www.youtube.com/@TommyJackett">{m.group(1)}</a>', out)
     out = re.sub(r"\[\[josh:([^\]]+)\]\]", lambda m: f'<a class="link" href="https://joshjanssen.com">{m.group(1)}</a>', out)
     return out
 
@@ -368,7 +369,7 @@ def build_home():
         for s in ser)
     lately = (f'<section class="sec series3" id="series" aria-labelledby="series-h"><div class="wrap wrap--narrow">'
               f'<div class="series3-head rv"><h2 class="sec-h" id="series-h">{esc(h["latelyTitle"])}</h2>'
-              f'<p class="series3-line">{esc(h["latelyLine"])}</p></div>'
+              f'<p class="series3-line">{linked(h["latelyLine"])}</p></div>'
               f'<div class="series3-grid" data-series>'
               f'<div class="ft3 rv"><div class="ft3-pic"><img data-ft-img src="{esc(cover_src(first, 1280))}" alt="{esc(IMAGES[first["cover"]]["alt"])}" width="1280" height="720" loading="lazy">'
               f'<span class="ft3-tag" data-ft-tag>Latest</span>'
