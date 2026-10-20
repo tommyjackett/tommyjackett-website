@@ -9,7 +9,7 @@ set -uo pipefail
 DIR="$(cd "$(dirname "$0")/.." && pwd)"
 BASE="$(cd "$DIR/../.." && pwd)"
 export GH_T="$(tr -d '[:space:]' < "$BASE/.secrets/github-token-tommyjackett-website.txt")"
-SITE="${SITE:-https://tommyjackett.github.io/tommyjackett-website}"
+SITE="${SITE:-https://tommyjackett.com}"
 FILE="${1:-index.html}"
 
 cd "$DIR"
