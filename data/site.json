@@ -31,8 +31,8 @@
     ],
     "launchISO": "2026-10-22T20:00:00-04:00",
     "launchDisplayAEDT": "Friday 23 October 2026, 11am AEDT",
-    "watchUrl": "https://www.youtube.com/@InGunsWeTrustFilm",
-    "watchUrlIsChannel": true,
+    "watchUrl": "https://www.youtube.com/watch?v=y0QHreIeIRA",
+    "watchUrlIsChannel": false,
     "sitePath": "/in-guns-we-trust/",
     "filmSite": "https://ingunswetrustfilm.com",
     "whenShort": {
@@ -56,8 +56,7 @@
       "before": "Our feature documentary, free on YouTube from Friday 23 October.",
       "after": "Here it is. Our feature documentary is out now."
     },
-    "launchNote": "Switches to the after text at 2026-10-23T00:00:00Z (Thu 22 Oct 8pm ET, Fri 23 Oct 11am AEDT).",
-    "watchUrlPending": "https://www.youtube.com/watch?v=Z-1Gawl-yC0"
+    "launchNote": "Switches to the after text at 2026-10-23T00:00:00Z (Thu 22 Oct 8pm ET, Fri 23 Oct 11am AEDT)."
   },
   "nav": [
     {
