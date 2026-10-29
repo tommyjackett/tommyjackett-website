@@ -352,7 +352,7 @@ def build_home():
     stills_sec = (f'<section class="fstills" aria-labelledby="stills-h"><div class="wrap wrap--narrow stills-head">'
                   f'<h2 class="stills-h" id="stills-h">Stills from the film</h2><p class="stills-n">{len(STILLS)} frames, tap to look closer</p></div>'
                   f'<div class="wrap wrap--narrow strip-wrap"><ul class="strip" data-strip>{items}</ul></div>'
-                  f'<div class="wrap wrap--narrow"><p class="stills-credit">{esc(SITE["film"]["creditLine"])}</p></div>'
+                  
                   f'<script type="application/json" id="stills-data">{json.dumps(sdata, ensure_ascii=False).replace("</", "<\\/")}</script>'
                   f'<dialog class="lb" data-lb aria-label="Film still"><button class="lb-x" type="button" data-lb-close aria-label="Close">&times;</button>'
                   f'<button class="lb-nav lb-prev" type="button" data-lb-prev aria-label="Previous still">&larr;</button>'
