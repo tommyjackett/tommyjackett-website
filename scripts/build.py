@@ -33,6 +33,7 @@ def load(name):
 
 SITE, STORIES, PAGES, LINKS, FORM = load("site"), load("stories"), load("pages"), load("links"), load("form")
 SERIES = load("series")
+STILLS = load("stills")
 IMAGES = {i["id"]: i for i in load("images")}
 LINK = {l["id"]: l for l in LINKS}
 P = {"base": "", "url": "", "prod": False, "bake_after": False, "versions": {}}
@@ -343,6 +344,21 @@ def build_home():
 <div class="doco3-btns"><a class="btn" href="{esc(WATCH)}">Watch on YouTube</a><a class="btn btn--ghost" href="{esc(LINK["film-site"]["url"])}">About the doco</a></div>
 </div></section>'''
 
+    items = "".join(
+        f'<li><button type="button" class="st-b" data-st="{k}" aria-label="View still {k + 1} of {len(STILLS)}: {esc(s["title"])}">'
+        f'<img src="{esc(url("/img/stills/" + s["slug"] + "-640.webp"))}" width="640" height="360" alt="{esc(s["caption"] or s["title"])}" loading="lazy" decoding="async"></button></li>'
+        for k, s in enumerate(STILLS))
+    sdata = [{"t": s["title"], "c": s["caption"], "f": url("/img/stills/" + s["slug"] + "-1280.webp")} for s in STILLS]
+    stills_sec = (f'<section class="fstills" aria-labelledby="stills-h"><div class="wrap wrap--narrow stills-head">'
+                  f'<h2 class="stills-h" id="stills-h">Stills from the film</h2><p class="stills-n">{len(STILLS)} frames, tap to look closer</p></div>'
+                  f'<div class="wrap wrap--narrow strip-wrap"><ul class="strip" data-strip>{items}</ul></div>'
+                  f'<div class="wrap wrap--narrow"><p class="stills-credit">{esc(SITE["film"]["creditLine"])}</p></div>'
+                  f'<script type="application/json" id="stills-data">{json.dumps(sdata, ensure_ascii=False).replace("</", "<\\/")}</script>'
+                  f'<dialog class="lb" data-lb aria-label="Film still"><button class="lb-x" type="button" data-lb-close aria-label="Close">&times;</button>'
+                  f'<button class="lb-nav lb-prev" type="button" data-lb-prev aria-label="Previous still">&larr;</button>'
+                  f'<figure class="lb-fig"><img data-lb-img alt=""><figcaption><span class="lb-t" data-lb-t></span><span class="lb-c" data-lb-c></span><span class="lb-n" data-lb-n></span></figcaption></figure>'
+                  f'<button class="lb-nav lb-next" type="button" data-lb-next aria-label="Next still">&rarr;</button></dialog></section>')
+
     ser = SERIES["series"]
 
     def ids(s):
@@ -407,7 +423,7 @@ def build_home():
                              "creator": {"@id": absu("/") + "#person"}})
     ld = [website_ld(), person_ld(), vidpod_ld(), movie_ld(), {"@type": "ItemList", "name": "Originals by Tommy Jackett",
           "itemListElement": [{"@type": "ListItem", "position": k + 1, "item": v} for k, v in enumerate(vids)]}]
-    add("/", SITE["home"]["title"], SITE["home"]["description"], "\n".join([hero, doco, lately, about, contact]),
+    add("/", SITE["home"]["title"], SITE["home"]["description"], "\n".join([hero, doco, stills_sec, lately, about, contact]),
         og="salt-flats-tommy-wide", og_alt="Tommy Jackett standing alone on the Bonneville Salt Flats at dusk", ld=ld,
         cls="home", preload=["salt-flats-tommy-wide", "salt-flats-tommy-cutout"], film_credit=False, cur="")
 
@@ -829,6 +845,7 @@ def main():
     os.makedirs(os.path.join(out, "img"))
     for fn in sorted(used):
         shutil.copy(os.path.join(ROOT, "src", "img", fn), os.path.join(out, "img", fn))
+    shutil.copytree(os.path.join(ROOT, "src", "img", "stills"), os.path.join(out, "img", "stills"))
     if os.path.isdir(os.path.join(ROOT, "src", "icons")):
         shutil.copytree(os.path.join(ROOT, "src", "icons"), os.path.join(out, "icons"))
     if os.path.exists(os.path.join(out, "icons", "icon-48.png")):

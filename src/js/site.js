@@ -225,3 +225,27 @@
   dlg.addEventListener('click', function (e) { if (e.target === dlg) close(); });
   dlg.addEventListener('cancel', function (e) { e.preventDefault(); close(); });
 })();
+
+/* Stills lightbox: tap a frame, swipe or arrow through, Esc to close. */
+(function () {
+  var el = document.getElementById('stills-data'), dlg = document.querySelector('[data-lb]');
+  if (!el || !dlg) return;
+  var S = JSON.parse(el.textContent), i = 0;
+  var img = dlg.querySelector('[data-lb-img]'), t = dlg.querySelector('[data-lb-t]'), c = dlg.querySelector('[data-lb-c]'), n = dlg.querySelector('[data-lb-n]');
+  function show(k) {
+    i = (k + S.length) % S.length;
+    img.src = S[i].f; img.alt = S[i].c || S[i].t; t.textContent = S[i].t; c.textContent = S[i].c; n.textContent = (i + 1) + ' / ' + S.length;
+    var nx = new Image(); nx.src = S[(i + 1) % S.length].f;
+  }
+  function open(k) { show(k); if (dlg.showModal) dlg.showModal(); else dlg.setAttribute('open', ''); }
+  function close() { if (dlg.close) dlg.close(); else dlg.removeAttribute('open'); var b = document.querySelector('[data-st="' + i + '"]'); if (b) b.focus({ preventScroll: true }); }
+  [].forEach.call(document.querySelectorAll('[data-st]'), function (b) { b.addEventListener('click', function () { open(+b.getAttribute('data-st')); }); });
+  dlg.querySelector('[data-lb-close]').addEventListener('click', close);
+  dlg.querySelector('[data-lb-prev]').addEventListener('click', function () { show(i - 1); });
+  dlg.querySelector('[data-lb-next]').addEventListener('click', function () { show(i + 1); });
+  dlg.addEventListener('click', function (e) { if (e.target === dlg) close(); });
+  dlg.addEventListener('keydown', function (e) { if (e.key === 'ArrowRight') show(i + 1); if (e.key === 'ArrowLeft') show(i - 1); });
+  var x0 = null;
+  dlg.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+  dlg.addEventListener('touchend', function (e) { if (x0 === null) return; var dx = e.changedTouches[0].clientX - x0; if (Math.abs(dx) > 40) show(i + (dx < 0 ? 1 : -1)); x0 = null; });
+})();
