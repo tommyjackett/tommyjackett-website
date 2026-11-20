@@ -38,6 +38,20 @@ IMAGES = {i["id"]: i for i in load("images")}
 LINK = {l["id"]: l for l in LINKS}
 P = {"base": "", "url": "", "prod": False, "bake_after": False, "versions": {}}
 
+# Public GA4 measurement ID (not a secret). Standard gtag.js, not a GTM container and not Universal Analytics.
+GA_ID = "G-LXF7BP7LLZ"
+GA_SNIPPET = (
+    "<!-- Google tag (gtag.js) -->\n"
+    f'<script async src="https://www.googletagmanager.com/gtag/js?id={GA_ID}"></script>\n'
+    "<script>\n"
+    "  window.dataLayer = window.dataLayer || [];\n"
+    "  function gtag(){dataLayer.push(arguments);}\n"
+    "  gtag('js', new Date());\n"
+    "\n"
+    f"  gtag('config', '{GA_ID}');\n"
+    "</script>"
+)
+
 
 # ---------------------------------------------------------------- text
 def esc(s):
@@ -676,6 +690,7 @@ def render(p):
     page = f'''<!doctype html>
 <html lang="{SITE["locale"]}">
 <head>
+{GA_SNIPPET}
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 {chr(10).join(h)}
